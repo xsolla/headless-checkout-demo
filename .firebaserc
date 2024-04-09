@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "headless-checkout-app"
+  },
+  "targets": {
+    "headless-checkout-app": {
+      "hosting": {
+        "react-demo": [
+          "headless-checkout-demo-react"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
