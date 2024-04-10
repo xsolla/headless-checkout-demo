@@ -4,7 +4,8 @@
     "composite": true,
     "skipLibCheck": true,
     "module": "nodenext",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true
   },
   "include": ["vite.config.ts", "e2e"]
 }

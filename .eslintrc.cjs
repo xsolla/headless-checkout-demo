@@ -14,6 +14,9 @@ module.exports = {
     tsconfigRootDir: __dirname,
   },
   settings: {
+    react: {
+      version: "18",
+    },
     'import/resolver': {
       alias: {
         // Resolve Vite public path like: import logo from "/brand-logo_xsolla.png"
@@ -27,6 +30,7 @@ module.exports = {
   },
   rules: {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    'react/react-in-jsx-scope': ['off'],
   },
   overrides: [
     {
