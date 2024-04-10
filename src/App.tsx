@@ -1,8 +1,8 @@
-import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './layout.tsx';
 import { NoMatch } from './routes/not-found';
 import { Home } from './routes/home';
+import { LocalizationContextProvider } from './app/contexts/localization-context/localization-context-provider.tsx';
 
 const router = createBrowserRouter([
   {
@@ -22,5 +22,9 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <LocalizationContextProvider>
+      <RouterProvider router={router} />
+    </LocalizationContextProvider>
+  );
 }
