@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../store.ts';
 import { getToken } from '../../api/token';
 import { getUrlSearchParameter } from '../../shared/get-url-search-parameter.function.ts';
-import { useAppSelector } from '../hooks.ts';
+import { getErrorMessage } from '../../shared/get-error-message.function.ts';
 
 export const generateToken = createAsyncThunk(
   'token/fetch',
@@ -14,8 +14,7 @@ export const generateToken = createAsyncThunk(
 
       return response;
     } catch (error: unknown) {
-      // @ts-expect-error need default error type
-      const message = error.message;
+      const message = getErrorMessage(error);
 
       return thunkAPI.rejectWithValue(message);
     }
@@ -54,8 +53,7 @@ const tokenSlice = createSlice({
 
 export const { setToken } = tokenSlice.actions;
 
-export const selectToken = () => useAppSelector((state: RootState) => state.token.token);
-export const selectTokenIsFetching = () =>
-  useAppSelector((state: RootState) => state.token.isFetching);
+export const selectToken = (state: RootState) => state.token.token;
+export const selectTokenIsFetching = (state: RootState) => state.token.isFetching;
 
 export default tokenSlice.reducer;

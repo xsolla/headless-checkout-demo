@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store.ts';
 import { getUrlSearchParameter } from '../../shared/get-url-search-parameter.function.ts';
-import { useAppSelector } from '../hooks.ts';
 
 const initialState = {
   sandbox: (() => {
@@ -15,6 +14,6 @@ const sandboxSlice = createSlice({
   reducers: {},
 });
 
-export const selectIsSandbox = () => useAppSelector((state: RootState) => state.sandbox.sandbox);
+export const selectIsSandbox = (state: RootState) => state.sandbox.sandbox;
 
 export default sandboxSlice.reducer;
