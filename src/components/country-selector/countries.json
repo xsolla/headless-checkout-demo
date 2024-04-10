@@ -1,0 +1,1394 @@
+[
+  {
+    "id_country": 3477,
+    "value": "af",
+    "aliases": null,
+    "label": "Afghanistan"
+  },
+  {
+    "id_country": 104,
+    "value": "ax",
+    "aliases": null,
+    "label": "Aland Islands"
+  },
+  {
+    "id_country": 3737,
+    "value": "al",
+    "aliases": null,
+    "label": "Albania"
+  },
+  {
+    "id_country": 3446,
+    "value": "dz",
+    "aliases": null,
+    "label": "Algeria"
+  },
+  {
+    "id_country": 191,
+    "value": "as",
+    "aliases": null,
+    "label": "American Samoa"
+  },
+  {
+    "id_country": 5151,
+    "value": "ad",
+    "aliases": null,
+    "label": "Andorra"
+  },
+  {
+    "id_country": 3413,
+    "value": "ao",
+    "aliases": null,
+    "label": "Angola"
+  },
+  {
+    "id_country": 203,
+    "value": "ai",
+    "aliases": null,
+    "label": "Anguilla"
+  },
+  {
+    "id_country": 4223,
+    "value": "ag",
+    "aliases": null,
+    "label": "Antigua and Barbuda"
+  },
+  {
+    "id_country": 96,
+    "value": "an",
+    "aliases": null,
+    "label": "Antilles"
+  },
+  {
+    "id_country": 3406,
+    "value": "ar",
+    "aliases": null,
+    "label": "Argentina"
+  },
+  {
+    "id_country": 3539,
+    "value": "am",
+    "aliases": null,
+    "label": "Armenia"
+  },
+  {
+    "id_country": 199,
+    "value": "aw",
+    "aliases": null,
+    "label": "Aruba"
+  },
+  {
+    "id_country": 1,
+    "value": "au",
+    "aliases": null,
+    "label": "Australia"
+  },
+  {
+    "id_country": 3518,
+    "value": "at",
+    "aliases": null,
+    "label": "Austria"
+  },
+  {
+    "id_country": 3803,
+    "value": "az",
+    "aliases": null,
+    "label": "Azerbaijan"
+  },
+  {
+    "id_country": 3799,
+    "value": "bh",
+    "aliases": null,
+    "label": "Bahrain"
+  },
+  {
+    "id_country": 3473,
+    "value": "bd",
+    "aliases": null,
+    "label": "Bangladesh"
+  },
+  {
+    "id_country": 4267,
+    "value": "bb",
+    "aliases": null,
+    "label": "Barbados"
+  },
+  {
+    "id_country": 668,
+    "value": "by",
+    "aliases": null,
+    "label": "Belarus"
+  },
+  {
+    "id_country": 3490,
+    "value": "be",
+    "aliases": null,
+    "label": "Belgium"
+  },
+  {
+    "id_country": 3405,
+    "value": "bz",
+    "aliases": null,
+    "label": "Belize"
+  },
+  {
+    "id_country": 3420,
+    "value": "bj",
+    "aliases": null,
+    "label": "Benin"
+  },
+  {
+    "id_country": 79,
+    "value": "bm",
+    "aliases": null,
+    "label": "Bermuda"
+  },
+  {
+    "id_country": 5008,
+    "value": "bt",
+    "aliases": null,
+    "label": "Bhutan"
+  },
+  {
+    "id_country": 2540,
+    "value": "bo",
+    "aliases": null,
+    "label": "Bolivia"
+  },
+  {
+    "id_country": 5474,
+    "value": "bq",
+    "aliases": null,
+    "label": "Bonaire, Sint Eustatius, and Saba"
+  },
+  {
+    "id_country": 3726,
+    "value": "ba",
+    "aliases": null,
+    "label": "Bosnia and Herzegovina"
+  },
+  {
+    "id_country": 3423,
+    "value": "bw",
+    "aliases": null,
+    "label": "Botswana"
+  },
+  {
+    "id_country": 220,
+    "value": "bv",
+    "aliases": null,
+    "label": "Bouvet"
+  },
+  {
+    "id_country": 4180,
+    "value": "br",
+    "aliases": null,
+    "label": "Brazil"
+  },
+  {
+    "id_country": 205,
+    "value": "io",
+    "aliases": null,
+    "label": "British Indian Ocean Territory"
+  },
+  {
+    "id_country": 160,
+    "value": "vg",
+    "aliases": null,
+    "label": "British Virgin Islands"
+  },
+  {
+    "id_country": 3482,
+    "value": "bn",
+    "aliases": null,
+    "label": "Brunei"
+  },
+  {
+    "id_country": 3677,
+    "value": "bg",
+    "aliases": null,
+    "label": "Bulgaria"
+  },
+  {
+    "id_country": 3432,
+    "value": "bf",
+    "aliases": null,
+    "label": "Burkina Faso"
+  },
+  {
+    "id_country": 5120,
+    "value": "bi",
+    "aliases": null,
+    "label": "Burundi"
+  },
+  {
+    "id_country": 5271,
+    "value": "kh",
+    "aliases": null,
+    "label": "Cambodia"
+  },
+  {
+    "id_country": 3445,
+    "value": "cm",
+    "aliases": null,
+    "label": "Cameroon"
+  },
+  {
+    "id_country": 53,
+    "value": "ca",
+    "aliases": null,
+    "label": "Canada"
+  },
+  {
+    "id_country": 3425,
+    "value": "cv",
+    "aliases": null,
+    "label": "Cape Verde"
+  },
+  {
+    "id_country": 3439,
+    "value": "cf",
+    "aliases": null,
+    "label": "Central African Republic"
+  },
+  {
+    "id_country": 3422,
+    "value": "td",
+    "aliases": null,
+    "label": "Chad"
+  },
+  {
+    "id_country": 4265,
+    "value": "cl",
+    "aliases": null,
+    "label": "Chile"
+  },
+  {
+    "id_country": 3466,
+    "value": "cn",
+    "aliases": null,
+    "label": "China"
+  },
+  {
+    "id_country": 3918,
+    "value": "co",
+    "aliases": null,
+    "label": "Colombia"
+  },
+  {
+    "id_country": 3452,
+    "value": "km",
+    "aliases": null,
+    "label": "Comoros"
+  },
+  {
+    "id_country": 3430,
+    "value": "cg",
+    "aliases": null,
+    "label": "Congo"
+  },
+  {
+    "id_country": 222,
+    "value": "ck",
+    "aliases": null,
+    "label": "Cook Islands"
+  },
+  {
+    "id_country": 4216,
+    "value": "cr",
+    "aliases": null,
+    "label": "Costa Rica"
+  },
+  {
+    "id_country": 4728,
+    "value": "hr",
+    "aliases": null,
+    "label": "Croatia"
+  },
+  {
+    "id_country": 5455,
+    "value": "cw",
+    "aliases": null,
+    "label": "Curacao"
+  },
+  {
+    "id_country": 3515,
+    "value": "cy",
+    "aliases": null,
+    "label": "Cyprus"
+  },
+  {
+    "id_country": 3489,
+    "value": "cz",
+    "aliases": null,
+    "label": "Czech Republic"
+  },
+  {
+    "id_country": 3410,
+    "value": "ci",
+    "aliases": null,
+    "label": "Côte d'Ivoire"
+  },
+  {
+    "id_country": 3436,
+    "value": "cd",
+    "aliases": null,
+    "label": "Democratic Republic of Congo"
+  },
+  {
+    "id_country": 3512,
+    "value": "dk",
+    "aliases": null,
+    "label": "Denmark"
+  },
+  {
+    "id_country": 3449,
+    "value": "dj",
+    "aliases": null,
+    "label": "Djibouti"
+  },
+  {
+    "id_country": 4804,
+    "value": "dm",
+    "aliases": null,
+    "label": "Dominica"
+  },
+  {
+    "id_country": 3875,
+    "value": "ec",
+    "aliases": null,
+    "label": "Ecuador"
+  },
+  {
+    "id_country": 3408,
+    "value": "eg",
+    "aliases": null,
+    "label": "Egypt"
+  },
+  {
+    "id_country": 4483,
+    "value": "sv",
+    "aliases": null,
+    "label": "El Salvador"
+  },
+  {
+    "id_country": 3459,
+    "value": "gq",
+    "aliases": null,
+    "label": "Equatorial Guinea"
+  },
+  {
+    "id_country": 3723,
+    "value": "ee",
+    "aliases": null,
+    "label": "Estonia"
+  },
+  {
+    "id_country": 3440,
+    "value": "sz",
+    "aliases": null,
+    "label": "Eswatini"
+  },
+  {
+    "id_country": 5119,
+    "value": "et",
+    "aliases": null,
+    "label": "Ethiopia"
+  },
+  {
+    "id_country": 5051,
+    "value": "fo",
+    "aliases": null,
+    "label": "Faroe Islands"
+  },
+  {
+    "id_country": 5272,
+    "value": "fj",
+    "aliases": null,
+    "label": "Fiji"
+  },
+  {
+    "id_country": 3678,
+    "value": "fi",
+    "aliases": null,
+    "label": "Finland"
+  },
+  {
+    "id_country": 3464,
+    "value": "fr",
+    "aliases": null,
+    "label": "France"
+  },
+  {
+    "id_country": 177,
+    "value": "gf",
+    "aliases": null,
+    "label": "French Guiana"
+  },
+  {
+    "id_country": 5275,
+    "value": "pf",
+    "aliases": null,
+    "label": "French Polynesia"
+  },
+  {
+    "id_country": 233,
+    "value": "tf",
+    "aliases": null,
+    "label": "French Southern and Antarctic Lands"
+  },
+  {
+    "id_country": 3416,
+    "value": "ga",
+    "aliases": "gabon",
+    "label": "Gabon"
+  },
+  {
+    "id_country": 3428,
+    "value": "gm",
+    "aliases": null,
+    "label": "Gambia"
+  },
+  {
+    "id_country": 3537,
+    "value": "ge",
+    "aliases": null,
+    "label": "Georgia"
+  },
+  {
+    "id_country": 3463,
+    "value": "de",
+    "aliases": "германия germany",
+    "label": "Germany"
+  },
+  {
+    "id_country": 3411,
+    "value": "gh",
+    "aliases": null,
+    "label": "Ghana"
+  },
+  {
+    "id_country": 74,
+    "value": "gi",
+    "aliases": null,
+    "label": "Gibraltar"
+  },
+  {
+    "id_country": 3484,
+    "value": "gr",
+    "aliases": null,
+    "label": "Greece"
+  },
+  {
+    "id_country": 72,
+    "value": "gl",
+    "aliases": null,
+    "label": "Greenland"
+  },
+  {
+    "id_country": 4795,
+    "value": "gd",
+    "aliases": null,
+    "label": "Grenada"
+  },
+  {
+    "id_country": 122,
+    "value": "gp",
+    "aliases": null,
+    "label": "Guadeloupe"
+  },
+  {
+    "id_country": 3811,
+    "value": "gu",
+    "aliases": null,
+    "label": "Guam"
+  },
+  {
+    "id_country": 4619,
+    "value": "gt",
+    "aliases": "guatemala",
+    "label": "Guatemala"
+  },
+  {
+    "id_country": 165,
+    "value": "gg",
+    "aliases": null,
+    "label": "Guernsey"
+  },
+  {
+    "id_country": 3442,
+    "value": "gn",
+    "aliases": null,
+    "label": "Guinea"
+  },
+  {
+    "id_country": 5208,
+    "value": "gw",
+    "aliases": null,
+    "label": "Guinea-Bissau"
+  },
+  {
+    "id_country": 4632,
+    "value": "gy",
+    "aliases": null,
+    "label": "Guyana"
+  },
+  {
+    "id_country": 4176,
+    "value": "ht",
+    "aliases": null,
+    "label": "Haiti"
+  },
+  {
+    "id_country": 5477,
+    "value": "hm",
+    "aliases": null,
+    "label": "Heard Island and McDonald Islands"
+  },
+  {
+    "id_country": 4021,
+    "value": "hn",
+    "aliases": null,
+    "label": "Honduras"
+  },
+  {
+    "id_country": 3471,
+    "value": "hk",
+    "aliases": null,
+    "label": "Hong Kong"
+  },
+  {
+    "id_country": 3729,
+    "value": "hu",
+    "aliases": null,
+    "label": "Hungary"
+  },
+  {
+    "id_country": 3454,
+    "value": "is",
+    "aliases": null,
+    "label": "Iceland"
+  },
+  {
+    "id_country": 3404,
+    "value": "in",
+    "aliases": null,
+    "label": "India"
+  },
+  {
+    "id_country": 3474,
+    "value": "id",
+    "aliases": null,
+    "label": "Indonesia"
+  },
+  {
+    "id_country": 3513,
+    "value": "iq",
+    "aliases": null,
+    "label": "Iraq"
+  },
+  {
+    "id_country": 3510,
+    "value": "ie",
+    "aliases": null,
+    "label": "Ireland"
+  },
+  {
+    "id_country": 3483,
+    "value": "il",
+    "aliases": null,
+    "label": "Israel"
+  },
+  {
+    "id_country": 3511,
+    "value": "it",
+    "aliases": null,
+    "label": "Italy"
+  },
+  {
+    "id_country": 4485,
+    "value": "jm",
+    "aliases": null,
+    "label": "Jamaica"
+  },
+  {
+    "id_country": 3461,
+    "value": "jp",
+    "aliases": null,
+    "label": "Japan"
+  },
+  {
+    "id_country": 128,
+    "value": "je",
+    "aliases": null,
+    "label": "Jersey"
+  },
+  {
+    "id_country": 4740,
+    "value": "jo",
+    "aliases": null,
+    "label": "Jordan"
+  },
+  {
+    "id_country": 3741,
+    "value": "kz",
+    "aliases": null,
+    "label": "Kazakhstan"
+  },
+  {
+    "id_country": 3415,
+    "value": "ke",
+    "aliases": null,
+    "label": "Kenya"
+  },
+  {
+    "id_country": 5451,
+    "value": "ki",
+    "aliases": null,
+    "label": "Kiribati"
+  },
+  {
+    "id_country": 3731,
+    "value": "kw",
+    "aliases": null,
+    "label": "Kuwait"
+  },
+  {
+    "id_country": 4961,
+    "value": "kg",
+    "aliases": null,
+    "label": "Kyrgyzstan"
+  },
+  {
+    "id_country": 5082,
+    "value": "la",
+    "aliases": null,
+    "label": "Laos"
+  },
+  {
+    "id_country": 3683,
+    "value": "lv",
+    "aliases": null,
+    "label": "Latvia"
+  },
+  {
+    "id_country": 3540,
+    "value": "lb",
+    "aliases": null,
+    "label": "Lebanon"
+  },
+  {
+    "id_country": 3429,
+    "value": "ls",
+    "aliases": null,
+    "label": "Lesotho"
+  },
+  {
+    "id_country": 3450,
+    "value": "lr",
+    "aliases": null,
+    "label": "Liberia"
+  },
+  {
+    "id_country": 3424,
+    "value": "ly",
+    "aliases": null,
+    "label": "Libya"
+  },
+  {
+    "id_country": 5045,
+    "value": "li",
+    "aliases": null,
+    "label": "Liechtenstein"
+  },
+  {
+    "id_country": 3740,
+    "value": "lt",
+    "aliases": null,
+    "label": "Lithuania"
+  },
+  {
+    "id_country": 3745,
+    "value": "lu",
+    "aliases": null,
+    "label": "Luxembourg"
+  },
+  {
+    "id_country": 5273,
+    "value": "mo",
+    "aliases": null,
+    "label": "Macau"
+  },
+  {
+    "id_country": 3421,
+    "value": "mg",
+    "aliases": null,
+    "label": "Madagascar"
+  },
+  {
+    "id_country": 3412,
+    "value": "mw",
+    "aliases": null,
+    "label": "Malawi"
+  },
+  {
+    "id_country": 3467,
+    "value": "my",
+    "aliases": null,
+    "label": "Malaysia"
+  },
+  {
+    "id_country": 4739,
+    "value": "mv",
+    "aliases": null,
+    "label": "Maldives"
+  },
+  {
+    "id_country": 3419,
+    "value": "ml",
+    "aliases": null,
+    "label": "Mali"
+  },
+  {
+    "id_country": 3781,
+    "value": "mt",
+    "aliases": null,
+    "label": "Malta"
+  },
+  {
+    "id_country": 5206,
+    "value": "mh",
+    "aliases": null,
+    "label": "Marshall Islands"
+  },
+  {
+    "id_country": 113,
+    "value": "mq",
+    "aliases": null,
+    "label": "Martinique"
+  },
+  {
+    "id_country": 3447,
+    "value": "mr",
+    "aliases": null,
+    "label": "Mauritania"
+  },
+  {
+    "id_country": 3409,
+    "value": "mu",
+    "aliases": null,
+    "label": "Mauritius"
+  },
+  {
+    "id_country": 166,
+    "value": "yt",
+    "aliases": null,
+    "label": "Mayotte"
+  },
+  {
+    "id_country": 26,
+    "value": "mx",
+    "aliases": null,
+    "label": "Mexico"
+  },
+  {
+    "id_country": 3865,
+    "value": "fm",
+    "aliases": null,
+    "label": "Micronesia"
+  },
+  {
+    "id_country": 3541,
+    "value": "md",
+    "aliases": null,
+    "label": "Moldova"
+  },
+  {
+    "id_country": 5058,
+    "value": "mc",
+    "aliases": null,
+    "label": "Monaco"
+  },
+  {
+    "id_country": 4540,
+    "value": "mn",
+    "aliases": null,
+    "label": "Mongolia"
+  },
+  {
+    "id_country": 3488,
+    "value": "me",
+    "aliases": null,
+    "label": "Montenegro"
+  },
+  {
+    "id_country": 210,
+    "value": "ms",
+    "aliases": null,
+    "label": "Montserrat"
+  },
+  {
+    "id_country": 3444,
+    "value": "ma",
+    "aliases": null,
+    "label": "Morocco"
+  },
+  {
+    "id_country": 3427,
+    "value": "mz",
+    "aliases": null,
+    "label": "Mozambique"
+  },
+  {
+    "id_country": 5005,
+    "value": "mm",
+    "aliases": null,
+    "label": "Myanmar"
+  },
+  {
+    "id_country": 3448,
+    "value": "na",
+    "aliases": null,
+    "label": "Namibia"
+  },
+  {
+    "id_country": 5007,
+    "value": "np",
+    "aliases": null,
+    "label": "Nepal"
+  },
+  {
+    "id_country": 3387,
+    "value": "nl",
+    "aliases": "holland",
+    "label": "Netherlands"
+  },
+  {
+    "id_country": 3481,
+    "value": "nc",
+    "aliases": null,
+    "label": "New Caledonia"
+  },
+  {
+    "id_country": 3469,
+    "value": "nz",
+    "aliases": null,
+    "label": "New Zealand"
+  },
+  {
+    "id_country": 5136,
+    "value": "ni",
+    "aliases": null,
+    "label": "Nicaragua"
+  },
+  {
+    "id_country": 3438,
+    "value": "ne",
+    "aliases": null,
+    "label": "Niger"
+  },
+  {
+    "id_country": 3417,
+    "value": "ng",
+    "aliases": null,
+    "label": "Nigeria"
+  },
+  {
+    "id_country": 231,
+    "value": "nu",
+    "aliases": null,
+    "label": "Niue"
+  },
+  {
+    "id_country": 235,
+    "value": "nf",
+    "aliases": null,
+    "label": "Norfolk Island"
+  },
+  {
+    "id_country": 3751,
+    "value": "mk",
+    "aliases": null,
+    "label": "North Macedonia"
+  },
+  {
+    "id_country": 237,
+    "value": "mp",
+    "aliases": null,
+    "label": "Northern Mariana Islands"
+  },
+  {
+    "id_country": 3517,
+    "value": "no",
+    "aliases": null,
+    "label": "Norway"
+  },
+  {
+    "id_country": 3679,
+    "value": "om",
+    "aliases": null,
+    "label": "Oman"
+  },
+  {
+    "id_country": 3468,
+    "value": "pk",
+    "aliases": null,
+    "label": "Pakistan"
+  },
+  {
+    "id_country": 4226,
+    "value": "pa",
+    "aliases": null,
+    "label": "Panama"
+  },
+  {
+    "id_country": 5006,
+    "value": "pg",
+    "aliases": null,
+    "label": "Papua New Guinea"
+  },
+  {
+    "id_country": 4657,
+    "value": "py",
+    "aliases": null,
+    "label": "Paraguay"
+  },
+  {
+    "id_country": 3999,
+    "value": "pe",
+    "aliases": null,
+    "label": "Peru"
+  },
+  {
+    "id_country": 3475,
+    "value": "ph",
+    "aliases": null,
+    "label": "Philippines"
+  },
+  {
+    "id_country": 5454,
+    "value": "pn",
+    "aliases": null,
+    "label": "Pitcairn Islands"
+  },
+  {
+    "id_country": 3487,
+    "value": "pl",
+    "aliases": null,
+    "label": "Poland"
+  },
+  {
+    "id_country": 3534,
+    "value": "pt",
+    "aliases": null,
+    "label": "Portugal"
+  },
+  {
+    "id_country": 402,
+    "value": "pr",
+    "aliases": null,
+    "label": "Puerto Rico"
+  },
+  {
+    "id_country": 4841,
+    "value": "qa",
+    "aliases": null,
+    "label": "Qatar"
+  },
+  {
+    "id_country": 92,
+    "value": "re",
+    "aliases": null,
+    "label": "Reunion"
+  },
+  {
+    "id_country": 3763,
+    "value": "ro",
+    "aliases": null,
+    "label": "Romania"
+  },
+  {
+    "id_country": 3462,
+    "value": "ru",
+    "aliases": "russian federation россия russia",
+    "label": "Russia"
+  },
+  {
+    "id_country": 3426,
+    "value": "rw",
+    "aliases": null,
+    "label": "Rwanda"
+  },
+  {
+    "id_country": 217,
+    "value": "sh",
+    "aliases": null,
+    "label": "Saint Helena"
+  },
+  {
+    "id_country": 4803,
+    "value": "kn",
+    "aliases": null,
+    "label": "Saint Kitts and Nevis"
+  },
+  {
+    "id_country": 4802,
+    "value": "lc",
+    "aliases": null,
+    "label": "Saint Lucia"
+  },
+  {
+    "id_country": 5475,
+    "value": "mf",
+    "aliases": null,
+    "label": "Saint Martin"
+  },
+  {
+    "id_country": 5461,
+    "value": "vc",
+    "aliases": null,
+    "label": "Saint Vincent and the Grenadines"
+  },
+  {
+    "id_country": 5473,
+    "value": "bl",
+    "aliases": null,
+    "label": "Saint-Barthélemy"
+  },
+  {
+    "id_country": 5270,
+    "value": "ws",
+    "aliases": null,
+    "label": "Samoa"
+  },
+  {
+    "id_country": 4849,
+    "value": "sm",
+    "aliases": null,
+    "label": "San Marino"
+  },
+  {
+    "id_country": 5348,
+    "value": "st",
+    "aliases": null,
+    "label": "Sao Tome and Principe"
+  },
+  {
+    "id_country": 3455,
+    "value": "sa",
+    "aliases": null,
+    "label": "Saudi Arabia"
+  },
+  {
+    "id_country": 3443,
+    "value": "sn",
+    "aliases": null,
+    "label": "Senegal"
+  },
+  {
+    "id_country": 3755,
+    "value": "rs",
+    "aliases": null,
+    "label": "Serbia"
+  },
+  {
+    "id_country": 3451,
+    "value": "sc",
+    "aliases": null,
+    "label": "Seychelles"
+  },
+  {
+    "id_country": 3472,
+    "value": "sg",
+    "aliases": null,
+    "label": "Singapore"
+  },
+  {
+    "id_country": 3724,
+    "value": "sk",
+    "aliases": null,
+    "label": "Slovakia"
+  },
+  {
+    "id_country": 4645,
+    "value": "si",
+    "aliases": null,
+    "label": "Slovenia"
+  },
+  {
+    "id_country": 5449,
+    "value": "sb",
+    "aliases": null,
+    "label": "Solomon Islands"
+  },
+  {
+    "id_country": 3434,
+    "value": "so",
+    "aliases": null,
+    "label": "Somalia"
+  },
+  {
+    "id_country": 3407,
+    "value": "za",
+    "aliases": null,
+    "label": "South Africa"
+  },
+  {
+    "id_country": 3470,
+    "value": "kr",
+    "aliases": null,
+    "label": "South Korea"
+  },
+  {
+    "id_country": 3521,
+    "value": "es",
+    "aliases": null,
+    "label": "Spain"
+  },
+  {
+    "id_country": 4643,
+    "value": "lk",
+    "aliases": null,
+    "label": "Sri Lanka"
+  },
+  {
+    "id_country": 5210,
+    "value": "sr",
+    "aliases": null,
+    "label": "Surinam"
+  },
+  {
+    "id_country": 216,
+    "value": "sj",
+    "aliases": null,
+    "label": "Svalbard and Jan Mayen"
+  },
+  {
+    "id_country": 3486,
+    "value": "se",
+    "aliases": null,
+    "label": "Sweden"
+  },
+  {
+    "id_country": 3485,
+    "value": "ch",
+    "aliases": null,
+    "label": "Switzerland"
+  },
+  {
+    "id_country": 3476,
+    "value": "tw",
+    "aliases": null,
+    "label": "Taiwan"
+  },
+  {
+    "id_country": 3527,
+    "value": "tj",
+    "aliases": null,
+    "label": "Tajikistan"
+  },
+  {
+    "id_country": 3418,
+    "value": "tz",
+    "aliases": null,
+    "label": "Tanzania"
+  },
+  {
+    "id_country": 221,
+    "value": "cc",
+    "aliases": null,
+    "label": "Territory of the Cocos Islands"
+  },
+  {
+    "id_country": 3465,
+    "value": "th",
+    "aliases": null,
+    "label": "Thailand"
+  },
+  {
+    "id_country": 3364,
+    "value": "bs",
+    "aliases": null,
+    "label": "The Bahamas"
+  },
+  {
+    "id_country": 3453,
+    "value": "ky",
+    "aliases": null,
+    "label": "The Cayman Islands"
+  },
+  {
+    "id_country": 4482,
+    "value": "do",
+    "aliases": null,
+    "label": "The Dominican Republic"
+  },
+  {
+    "id_country": 95,
+    "value": "fk",
+    "aliases": null,
+    "label": "The Falkland Islands"
+  },
+  {
+    "id_country": 176,
+    "value": "im",
+    "aliases": null,
+    "label": "The Isle of Man"
+  },
+  {
+    "id_country": 5102,
+    "value": "ps",
+    "aliases": null,
+    "label": "The Palestinian Authority"
+  },
+  {
+    "id_country": 4552,
+    "value": "tc",
+    "aliases": null,
+    "label": "The Turks and Caicos Islands"
+  },
+  {
+    "id_country": 3441,
+    "value": "tg",
+    "aliases": null,
+    "label": "Togo"
+  },
+  {
+    "id_country": 229,
+    "value": "tk",
+    "aliases": null,
+    "label": "Tokelau"
+  },
+  {
+    "id_country": 5285,
+    "value": "to",
+    "aliases": null,
+    "label": "Tonga"
+  },
+  {
+    "id_country": 4631,
+    "value": "tt",
+    "aliases": null,
+    "label": "Trinidad and Tobago"
+  },
+  {
+    "id_country": 3460,
+    "value": "tn",
+    "aliases": null,
+    "label": "Tunisia"
+  },
+  {
+    "id_country": 3535,
+    "value": "tr",
+    "aliases": null,
+    "label": "Turkey"
+  },
+  {
+    "id_country": 4962,
+    "value": "tm",
+    "aliases": null,
+    "label": "Turkmenistan"
+  },
+  {
+    "id_country": 5450,
+    "value": "tv",
+    "aliases": null,
+    "label": "Tuvalu"
+  },
+  {
+    "id_country": 5476,
+    "value": "um",
+    "aliases": null,
+    "label": "U.S. Minor Outlying Islands"
+  },
+  {
+    "id_country": 208,
+    "value": "vi",
+    "aliases": null,
+    "label": "U.S. Virgin Islands"
+  },
+  {
+    "id_country": 3514,
+    "value": "ae",
+    "aliases": null,
+    "label": "UAE"
+  },
+  {
+    "id_country": 3,
+    "value": "us",
+    "aliases": "United States",
+    "label": "United States"
+  },
+  {
+    "id_country": 3431,
+    "value": "ug",
+    "aliases": null,
+    "label": "Uganda"
+  },
+  {
+    "id_country": 3456,
+    "value": "ua",
+    "aliases": null,
+    "label": "Ukraine"
+  },
+  {
+    "id_country": 3403,
+    "value": "gb",
+    "aliases": "great britain",
+    "label": "United Kingdom"
+  },
+  {
+    "id_country": 3389,
+    "value": "uy",
+    "aliases": null,
+    "label": "Uruguay"
+  },
+  {
+    "id_country": 3802,
+    "value": "uz",
+    "aliases": null,
+    "label": "Uzbekistan"
+  },
+  {
+    "id_country": 215,
+    "value": "vu",
+    "aliases": null,
+    "label": "Vanuatu"
+  },
+  {
+    "id_country": 4772,
+    "value": "va",
+    "aliases": null,
+    "label": "Vatican City State"
+  },
+  {
+    "id_country": 3478,
+    "value": "vn",
+    "aliases": null,
+    "label": "Vietnam"
+  },
+  {
+    "id_country": 224,
+    "value": "eh",
+    "aliases": null,
+    "label": "Western Sahara"
+  },
+  {
+    "id_country": 4070,
+    "value": "ye",
+    "aliases": null,
+    "label": "Yemen"
+  },
+  {
+    "id_country": 3414,
+    "value": "zm",
+    "aliases": null,
+    "label": "Zambia"
+  },
+  {
+    "id_country": 3435,
+    "value": "zw",
+    "aliases": null,
+    "label": "Zimbabwe"
+  }
+]

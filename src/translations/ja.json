@@ -1,3 +1,8 @@
 {
-  "hello-world": "Hello world"
+   "country-selector.not-found" : "国または地域が見つかりません",
+   "start.page.button" : "ライブで見る",
+   "start.page.capture" : "決済フローを最大限にコントロールし、ゲームやストアのデザインに合わせてレイアウト、フィールド、スタイルをカスタマイズできます。",
+   "start.page.country" : "国または地域",
+   "start.page.demo" : "デモ",
+   "start.page.title" : "ヘッドレスチェックアウト"
 }
