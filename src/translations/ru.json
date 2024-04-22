@@ -1,3 +1,8 @@
 {
-  "hello-world": "Привет мир"
+   "country-selector.not-found" : "Страна или регион не найдены",
+   "start.page.button" : "Как это работает?",
+   "start.page.capture" : "Полный контроль над платежами и гибкая кастомизация страницы, полей и стилей, которые будут сочетаться с вашей игрой или магазином",
+   "start.page.country" : "Страна или регион",
+   "start.page.demo" : "демо",
+   "start.page.title" : "Headless Checkout"
 }

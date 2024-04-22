@@ -1,3 +1,8 @@
 {
-  "hello-world": "Hello world"
+   "country-selector.not-found" : "No se encontró tu país o región",
+   "start.page.button" : "Verlo activo",
+   "start.page.capture" : "Ten un control total de los flujos de pago y personaliza el diseño, los campos y los estilos para que se ajusten al diseño de tu juego o tienda.",
+   "start.page.country" : "País o región",
+   "start.page.demo" : "demo",
+   "start.page.title" : "Interfaz de pago «headless»"
 }

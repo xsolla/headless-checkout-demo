@@ -1,30 +1,17 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Layout from './layout.tsx';
-import { NoMatch } from './routes/not-found';
-import { Home } from './routes/home';
-import { LocalizationContextProvider } from './app/contexts/localization-context/localization-context-provider.tsx';
+import React from 'react';
+import { RouterProvider } from 'react-router-dom';
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Layout />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: '*',
-        element: <NoMatch />,
-      },
-    ],
-  },
-]);
+import { router } from './routes';
+import { Provider } from 'react-redux';
+import { store } from './redux/store.ts';
+import { LocalizationContextProvider } from './app/contexts/localization-context/localization-context-provider.tsx';
 
 export default function App() {
   return (
-    <LocalizationContextProvider>
-      <RouterProvider router={router} />
-    </LocalizationContextProvider>
+    <Provider store={store}>
+      <LocalizationContextProvider>
+        <RouterProvider router={router} />
+      </LocalizationContextProvider>
+    </Provider>
   );
 }

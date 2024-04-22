@@ -1,3 +1,8 @@
 {
-  "hello-world": "Hello world"
+   "country-selector.not-found" : "Pays ou région introuvable",
+   "start.page.button" : "Le voir en direct",
+   "start.page.capture" : "Contrôlez au maximum le flux de payment et personnalisez la présentation, les champs et les styles en fonction de la conception de votre jeu ou de votre store",
+   "start.page.country" : "Pays ou région",
+   "start.page.demo" : "démo",
+   "start.page.title" : "Caisse sans tête"
 }
