@@ -2,13 +2,13 @@ import React, { useCallback } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { generateToken, selectTokenIsFetching } from '../../../redux/token';
 import { selectIsSandbox } from '../../../redux/sandbox';
-import { useAppDispatch } from '../../../redux/hooks.ts';
+import { useAppDispatch, useAppSelector } from '../../../redux/hooks.ts';
 import { Loader } from '../../../components/loader';
 import { StyledShopButton } from '../styled/shop-button.styles.ts';
 
 export const OpenDemoButton = () => {
-  const isSandbox = selectIsSandbox();
-  const isFetching = selectTokenIsFetching();
+  const isSandbox = useAppSelector(selectIsSandbox);
+  const isFetching = useAppSelector(selectTokenIsFetching);
   const dispatch = useAppDispatch();
 
   const handleOpenDemoClick = useCallback(() => {

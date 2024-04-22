@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../store.ts';
 import { getUrlSearchParameter } from '../../shared/get-url-search-parameter.function.ts';
-import { useAppSelector } from '../hooks.ts';
 
 const defaultCountryIso = 'us';
 
@@ -23,6 +22,6 @@ const countrySlice = createSlice({
 
 export const { setCountry } = countrySlice.actions;
 
-export const selectCountry = () => useAppSelector((state: RootState) => state.country.country);
+export const selectCountry = (state: RootState) => state.country.country;
 
 export default countrySlice.reducer;
