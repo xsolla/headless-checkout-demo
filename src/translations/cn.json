@@ -1,3 +1,8 @@
 {
-  "start.page.title": "Headless Checkout"
+   "country-selector.not-found" : "未找到国家或地区",
+   "start.page.button" : "查看实时效果",
+   "start.page.capture" : "对支付流程进行最大控制，自定义布局、字段及样式以匹配游戏或商店的设计风格",
+   "start.page.country" : "国家或地区",
+   "start.page.demo" : "演示",
+   "start.page.title" : "无头结算"
 }

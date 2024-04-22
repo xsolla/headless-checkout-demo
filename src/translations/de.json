@@ -1,3 +1,8 @@
 {
-  "start.page.title": "Headless Checkout"
+   "country-selector.not-found" : "Land oder Region nicht gefunden",
+   "start.page.button" : "In Aktion erleben",
+   "start.page.capture" : "Erhalten Sie maximale Kontrolle über den Bezahlvorgang und passen Sie das Layout, die Felder und die Stile an Ihr Spiel- oder Shop-Design an.",
+   "start.page.country" : "Land oder Region",
+   "start.page.demo" : "Demo",
+   "start.page.title" : "Headless Checkout"
 }

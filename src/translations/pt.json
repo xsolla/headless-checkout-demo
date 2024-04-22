@@ -1,3 +1,8 @@
 {
-  "start.page.title": "Headless Checkout"
+   "country-selector.not-found" : "País ou região não encontrado",
+   "start.page.button" : "Ver ao vivo",
+   "start.page.capture" : "Tenha controle máximo sobre o fluxo de pagamento e personalize o layout, campos e estilos para corresponder ao design do seu jogo ou loja.",
+   "start.page.country" : "País ou região",
+   "start.page.demo" : "demonstração",
+   "start.page.title" : "Headless Commerce"
 }

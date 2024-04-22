@@ -1,3 +1,8 @@
 {
-  "start.page.title": "Headless Checkout"
+   "country-selector.not-found" : "국가 또는 지역을 찾을 수 없음",
+   "start.page.button" : "라이브 보기",
+   "start.page.capture" : "결제 절차를 최대한 제어하고 게임이나 스토어 디자인에 맞게 레이아웃, 입력란, 스타일을 사용자 정의해 보세요.",
+   "start.page.country" : "국가 또는 지역",
+   "start.page.demo" : "데모",
+   "start.page.title" : "헤드리스 체크아웃"
 }
