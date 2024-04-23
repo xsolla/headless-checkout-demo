@@ -1,7 +1,7 @@
 import { StylesConfig } from 'react-select';
 import { optionStyles } from './option-styles.ts';
 
-export const countrySelectorStylesConfig: StylesConfig = {
+export const languageSelectorStylesConfig: StylesConfig = {
   option: (styles, { isFocused }) => ({
     ...styles,
     ...optionStyles,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import Coins from '../../../assets/coin.svg';
-import { SelectCountryWrapper } from './SelectCountryWrapper.tsx';
+import { SelectLanguageWrapper } from './SelectLanguageWrapper.tsx';
 import { OpenDemoButton } from './OpenDemoButton.tsx';
 import { StyledLeftColumn } from '../styled/left-column.styles.ts';
 
@@ -29,7 +29,7 @@ export const LeftColumn = () => (
         }
       ></FormattedMessage>
     </p>
-    <SelectCountryWrapper />
+    <SelectLanguageWrapper />
     <OpenDemoButton />
   </StyledLeftColumn>
 );

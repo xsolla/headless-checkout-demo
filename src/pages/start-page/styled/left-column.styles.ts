@@ -54,10 +54,10 @@ export const StyledLeftColumn = styled.div`
     }
   }
 
-  .country-selector-wrapper {
+  .language-selector-wrapper {
     margin-bottom: 12px;
 
-    .country-label {
+    .language-label {
       display: inline-block;
       margin-bottom: 4px;
       font-family: Sharpgrotesk, sans-serif;

@@ -1,0 +1,56 @@
+[
+  {
+    "currency": "USD",
+    "value": "en",
+    "flag": "us",
+    "label": "English"
+  },
+  {
+    "currency": "KRW",
+    "value": "ko",
+    "flag": "kr",
+    "label": "한국어"
+  },
+  {
+    "currency": "CNY",
+    "value": "cn",
+    "flag": "cn",
+    "label": "简体中文"
+  },
+  {
+    "currency": "EUR",
+    "value": "de",
+    "flag": "de",
+    "label": "Deutsch"
+  },
+  {
+    "currency": "BRL",
+    "value": "pt",
+    "flag": "br",
+    "label": "Português"
+  },
+  {
+    "currency": "RUB",
+    "value": "ru",
+    "flag": "ru",
+    "label": "Русский"
+  },
+  {
+    "currency": "EUR",
+    "value": "es",
+    "flag": "es",
+    "label": "Español"
+  },
+  {
+    "currency": "EUR",
+    "value": "fr",
+    "flag": "fr",
+    "label": "Français"
+  },
+  {
+    "currency": "JPY",
+    "value": "ja",
+    "flag": "jp",
+    "label": "日本語"
+  }
+]

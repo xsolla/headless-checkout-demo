@@ -4,7 +4,6 @@ import { getPaymentFormSdk } from '../../sdk/payment-form';
 import { PaymentFormState } from './payment-form-state.interface.ts';
 import { Field } from '@xsolla/pay-station-sdk/dist/core/form/field.interface';
 import { FormConfiguration } from '@xsolla/pay-station-sdk/dist/core/form/form-configuration.interface';
-import { selectCountry } from '../country';
 import { getErrorMessage } from '../../shared/get-error-message.function.ts';
 
 export const getPaymentForm = createAsyncThunk(
@@ -15,11 +14,6 @@ export const getPaymentForm = createAsyncThunk(
         paymentMethodId: parameters.pid,
         returnUrl: import.meta.env.VITE_RETURN_URL,
       };
-      const state: RootState = thunkAPI.getState() as RootState;
-      const country = selectCountry(state);
-      if (country) {
-        formConfig.country = country;
-      }
       const response = await getPaymentFormSdk(formConfig);
       const fields = response;
       thunkAPI.dispatch(setPaymentFormFields({ fields }));
