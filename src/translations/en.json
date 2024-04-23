@@ -4,5 +4,13 @@
   "start.page.button": "See it live",
   "start.page.demo": "demo",
   "start.page.language": "Language",
-  "language-selector.not-found": "Country or region not found"
+  "language-selector.not-found": "Country or region not found",
+  "store.page.title": "Store",
+  "store.page.balance": "balance",
+  "store.page.navigation.gifts": "Gifts",
+  "store.page.navigation.special-offers": "Special offers",
+  "store.page.navigation.jems": "Jems",
+  "store.page.navigation.web-coins": "Web coins",
+  "store.page.user": "user",
+  "store.page.shopping-cart.title": "Shopping cart"
 }

@@ -26,6 +26,7 @@ const initialState = {
     return getUrlSearchParameter('token');
   })(),
   isFetching: false,
+  tokenGenerated: false,
 };
 
 const tokenSlice = createSlice({
@@ -34,6 +35,7 @@ const tokenSlice = createSlice({
   reducers: {
     setToken: (state, action: PayloadAction<string>) => {
       state.token = action.payload;
+      state.tokenGenerated = true;
     },
   },
   extraReducers: (builder) => {
@@ -44,6 +46,7 @@ const tokenSlice = createSlice({
       .addCase(generateToken.fulfilled, (state, action: PayloadAction<string>) => {
         state.isFetching = false;
         state.token = action.payload;
+        state.tokenGenerated = true;
       })
       .addCase(generateToken.rejected, (state) => {
         state.isFetching = false;
@@ -55,5 +58,6 @@ export const { setToken } = tokenSlice.actions;
 
 export const selectToken = (state: RootState) => state.token.token;
 export const selectTokenIsFetching = (state: RootState) => state.token.isFetching;
+export const selectTokenGenerated = (state: RootState) => state.token.tokenGenerated;
 
 export default tokenSlice.reducer;
