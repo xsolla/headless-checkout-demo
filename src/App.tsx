@@ -8,10 +8,10 @@ import { LocalizationContextProvider } from './app/contexts/localization-context
 
 export default function App() {
   return (
-    <Provider store={store}>
-      <LocalizationContextProvider>
+    <LocalizationContextProvider>
+      <Provider store={store}>
         <RouterProvider router={router} />
-      </LocalizationContextProvider>
-    </Provider>
+      </Provider>
+    </LocalizationContextProvider>
   );
 }

@@ -6,18 +6,21 @@ import { Lang } from '@xsolla/pay-station-sdk';
 import { SdkInitConfig } from './sdk-init-config.interface.ts';
 import { selectIsSandbox } from '../sandbox';
 import { getErrorMessage } from '../../shared/get-error-message.function.ts';
+import { useContext } from 'react';
+import { LocalizationContext } from '../../app/contexts/localization-context/localization-context.ts';
 
 export const initPayStationSdk = createAsyncThunk('sdk/init', async (_, thunkAPI) => {
   try {
     const state: RootState = thunkAPI.getState() as RootState;
     const sdkInitializing = selectSdkIsInitializing(state);
+    const { currentLocale } = useContext(LocalizationContext);
     if (sdkInitializing) {
       return;
     }
     const config: SdkInitConfig = {
       isWebview: false,
       theme: 'default',
-      language: Lang.EN,
+      language: currentLocale as unknown as Lang,
     };
     const isSandboxMode = selectIsSandbox(state);
     if (isSandboxMode) {

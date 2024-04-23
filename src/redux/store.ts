@@ -1,5 +1,4 @@
 import { configureStore } from '@reduxjs/toolkit';
-import country from './country';
 import token from './token';
 import sandbox from './sandbox';
 import pid from './pid';
@@ -9,7 +8,6 @@ import setTokenMiddleware from './token/set-token.middleware.ts';
 
 export const store = configureStore({
   reducer: {
-    country,
     token,
     sandbox,
     pid,
