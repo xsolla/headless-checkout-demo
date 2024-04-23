@@ -34,3 +34,43 @@
   font-weight: 600;
   font-style: normal;
 }
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: GraphikLCWebUikit;
+  src:
+    url('./assets/fonts/graphik/Graphik-Regular-Web.woff2') format('woff2'),
+    url('./assets/fonts/graphik/Graphik-Regular-Web.woff') format('woff'),
+    url('./assets/fonts/graphik/Graphik-Regular-Web.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 500;
+  font-style: normal;
+  font-family: GraphikLCWebUikit;
+  src:
+    url('./assets/fonts/graphik/Graphik-Medium-Web.woff2') format('woff2'),
+    url('./assets/fonts/graphik/Graphik-Medium-Web.woff') format('woff'),
+    url('./assets/fonts/graphik/Graphik-Medium-Web.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: bold;
+  font-style: normal;
+  font-family: GraphikLCWebUikit;
+  src:
+    url('./assets/fonts/graphik/Graphik-Bold-Web.woff2') format('woff2'),
+    url('./assets/fonts/graphik/Graphik-Bold-Web.woff') format('woff'),
+    url('./assets/fonts/graphik/Graphik-Bold-Web.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: Bagnard;
+  src: url('./assets/fonts/bagnard/Bagnard.otf') format('opentype');
+}
