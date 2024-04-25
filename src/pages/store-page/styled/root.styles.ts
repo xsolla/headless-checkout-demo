@@ -23,6 +23,13 @@ export const StyledContentContainer = styled.div`
   }
 `;
 
+export const StyledPaymentMethodsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  margin-bottom: 20px;
+`;
+
 export const StyledMain = styled.main`
   display: flex;
   flex-direction: column;

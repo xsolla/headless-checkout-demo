@@ -1,18 +1,18 @@
 import { configureStore } from '@reduxjs/toolkit';
-import token from './token';
-import sandbox from './sandbox';
-import pid from './pid';
-import paymentForm from './payment-form';
+import sdkConfigurationSlice from './sdk-configuration';
+import paymentFormSlice from './payment-form';
 import sdkInitSlice from './paystation-sdk-initialization';
-import setTokenMiddleware from './token/set-token.middleware.ts';
+import sdkSetTokenSlice from './paystation-sdk-set-token';
+import setTokenMiddleware from './sdk-configuration/set-token.middleware.ts';
+import paymentMethodsSlice from './payment-methods';
 
 export const store = configureStore({
   reducer: {
-    token,
-    sandbox,
-    pid,
-    paymentForm,
-    sdkInitializing: sdkInitSlice,
+    sdkConfigurationSlice,
+    paymentFormSlice,
+    paymentMethodsSlice,
+    sdkInitSlice,
+    sdkSetTokenSlice,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().prepend(setTokenMiddleware.middleware),

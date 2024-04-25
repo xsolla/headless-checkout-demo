@@ -1,8 +1,8 @@
-import { Languages } from '../../app/localization/languages.enum.ts';
+import { Lang } from '@xsolla/pay-station-sdk';
 
 export interface Language {
   currency: string;
-  value: Languages;
+  value: Lang;
   flag: string;
   label: string;
 }

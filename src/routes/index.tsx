@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
         },
       },
       {
-        path: Routes.storePage,
+        path: `${Routes.storePage}/*`,
         async lazy() {
           const { StorePage } = await import('../pages/store-page');
           return {

@@ -1,7 +1,7 @@
-import { Languages } from '../../localization/languages.enum.ts';
 import { Dispatch, SetStateAction } from 'react';
+import { Lang } from '@xsolla/pay-station-sdk';
 
 export interface ILocalizationContext {
-  currentLocale: Languages;
-  setCurrentLocale: Dispatch<SetStateAction<Languages>>;
+  currentLocale: Lang;
+  setCurrentLocale: Dispatch<SetStateAction<Lang>>;
 }

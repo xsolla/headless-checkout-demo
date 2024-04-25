@@ -5,9 +5,10 @@ import { LeftColumn } from './ui/LeftColumn.tsx';
 import { RightColumn } from './ui/RightColumn.tsx';
 import { StyledBody } from './styled/body.styles.ts';
 import { useAppSelector } from '../../redux/hooks.ts';
-import { selectTokenGenerated } from '../../redux/token';
+import { selectTokenGenerated } from '../../redux/sdk-configuration';
 import { useNavigate } from 'react-router-dom';
 import { Routes } from '../../routes/routes.enum.ts';
+import { StorePageRoutes } from '../../routes/store-page/store-page-routes.enum.ts';
 
 export function StartPage() {
   const tokenGenerated = useAppSelector(selectTokenGenerated);
@@ -15,7 +16,7 @@ export function StartPage() {
 
   useEffect(() => {
     if (tokenGenerated) {
-      navigate(`/${Routes.storePage}`);
+      navigate(`/${Routes.storePage}/${StorePageRoutes.paymentMethods}`);
     }
   }, [tokenGenerated]);
 

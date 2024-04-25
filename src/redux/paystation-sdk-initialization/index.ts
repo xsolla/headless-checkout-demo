@@ -1,40 +1,40 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store.ts';
-import { initPayStationSdkLib } from '../../sdk/initialization';
+import { initHeadlessCheckoutLib } from '../../sdk/initialization';
 import { SdkInitState } from './sdk-init-state.interface.ts';
 import { Lang } from '@xsolla/pay-station-sdk';
 import { SdkInitConfig } from './sdk-init-config.interface.ts';
-import { selectIsSandbox } from '../sandbox';
 import { getErrorMessage } from '../../shared/get-error-message.function.ts';
-import { useContext } from 'react';
-import { LocalizationContext } from '../../app/contexts/localization-context/localization-context.ts';
+import { selectIsSandbox } from '../sdk-configuration';
 
-export const initPayStationSdk = createAsyncThunk('sdk/init', async (_, thunkAPI) => {
-  try {
-    const state: RootState = thunkAPI.getState() as RootState;
-    const sdkInitializing = selectSdkIsInitializing(state);
-    const { currentLocale } = useContext(LocalizationContext);
-    if (sdkInitializing) {
-      return;
-    }
-    const config: SdkInitConfig = {
-      isWebview: false,
-      theme: 'default',
-      language: currentLocale as unknown as Lang,
-    };
-    const isSandboxMode = selectIsSandbox(state);
-    if (isSandboxMode) {
-      config.sandbox = !!isSandboxMode;
-    }
-    await initPayStationSdkLib(config);
-    thunkAPI.dispatch(setSdkInitialized());
-    return;
-  } catch (error: unknown) {
-    const message = getErrorMessage(error);
+export const initPayStationSdk = createAsyncThunk(
+  'sdk/init',
+  async (parameters: { language: Lang }, thunkAPI) => {
+    try {
+      const state: RootState = thunkAPI.getState() as RootState;
+      if (state.sdkInitSlice.initialized) {
+        return;
+      }
 
-    return thunkAPI.rejectWithValue(message);
-  }
-});
+      const config: SdkInitConfig = {
+        isWebview: false,
+        theme: 'default',
+        language: parameters.language,
+      };
+      const isSandboxMode = selectIsSandbox(state);
+      if (isSandboxMode) {
+        config.sandbox = !!isSandboxMode;
+      }
+
+      await initHeadlessCheckoutLib(config);
+      thunkAPI.dispatch(setSdkInitialized());
+    } catch (error: unknown) {
+      const message = getErrorMessage(error);
+
+      return thunkAPI.rejectWithValue(message);
+    }
+  },
+);
 
 const initialState: SdkInitState = {
   initialized: false,
@@ -56,7 +56,6 @@ const sdkInitSlice = createSlice({
       })
       .addCase(initPayStationSdk.fulfilled, (state) => {
         state.isFetching = false;
-        state.initialized = true;
       })
       .addCase(initPayStationSdk.rejected, (state) => {
         state.isFetching = false;
@@ -66,7 +65,7 @@ const sdkInitSlice = createSlice({
 
 export const { setSdkInitialized } = sdkInitSlice.actions;
 
-export const selectSdkInitStatus = (state: RootState) => state.sdkInitializing.initialized;
-export const selectSdkIsInitializing = (state: RootState) => state.sdkInitializing.isFetching;
+export const selectSdkInitStatus = (state: RootState) => state.sdkInitSlice.initialized;
+export const selectSdkIsInitializing = (state: RootState) => state.sdkInitSlice.isFetching;
 
 export default sdkInitSlice.reducer;

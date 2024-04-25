@@ -8,14 +8,14 @@ import { IconSingleValue } from './ui/IconSingleValue.tsx';
 import { CustomIndicatorContainer } from './ui/CustomIndicatorContainer.tsx';
 import { LanguageSelectorProps } from './language-selector-props.interface.ts';
 import { Language } from './language.interface.ts';
-import { Languages } from '../../app/localization/languages.enum.ts';
+import { Lang } from '@xsolla/pay-station-sdk';
 
 // @ts-expect-error @typescript-eslint/ban-ts-comment
 const options = languages.default as Language[];
 
 const defaultLanguage: Language = {
   currency: 'USD',
-  value: Languages.EN,
+  value: Lang.EN,
   flag: 'us',
   label: 'English',
 };
