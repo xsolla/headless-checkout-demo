@@ -1,7 +1,10 @@
 import React, { useCallback } from 'react';
 import { FormattedMessage } from 'react-intl';
-import { generateToken, selectTokenIsFetching } from '../../../redux/token';
-import { selectIsSandbox } from '../../../redux/sandbox';
+import {
+  createToken,
+  selectIsSandbox,
+  selectTokenIsFetching,
+} from '../../../redux/sdk-configuration';
 import { useAppDispatch, useAppSelector } from '../../../redux/hooks.ts';
 import { Loader } from '../../../components/loader';
 import { StyledShopButton } from '../styled/shop-button.styles.ts';
@@ -16,7 +19,7 @@ export const OpenDemoButton = () => {
       return;
     }
 
-    dispatch(generateToken({ sandbox: !!isSandbox }));
+    dispatch(createToken({ sandbox: !!isSandbox }));
   }, [isSandbox, isFetching]);
 
   return (

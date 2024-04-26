@@ -1,26 +1,24 @@
-import { Languages } from './languages.enum.ts';
+import { Lang } from '@xsolla/pay-station-sdk';
 
-export async function loadMessages(
-  locale: Languages,
-): Promise<{ default: Record<string, string> }> {
+export async function loadMessages(locale: Lang): Promise<{ default: Record<string, string> }> {
   switch (locale) {
-    case Languages.CN:
+    case Lang.CN:
       return import(`@translations/cn.json`);
-    case Languages.DE:
+    case Lang.DE:
       return import(`@translations/de.json`);
-    case Languages.EN:
+    case Lang.EN:
       return import(`@translations/en.json`);
-    case Languages.ES:
+    case Lang.ES:
       return import(`@translations/es.json`);
-    case Languages.FR:
+    case Lang.FR:
       return import(`@translations/fr.json`);
-    case Languages.JA:
+    case Lang.JA:
       return import(`@translations/ja.json`);
-    case Languages.KO:
+    case Lang.KO:
       return import(`@translations/ko.json`);
-    case Languages.PT:
+    case Lang.PT:
       return import(`@translations/pt.json`);
-    case Languages.RU:
+    case Lang.RU:
       return import(`@translations/ru.json`);
     default:
       return import(`@translations/en.json`);

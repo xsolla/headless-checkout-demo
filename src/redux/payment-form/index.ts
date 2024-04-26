@@ -57,7 +57,7 @@ const paymentFormSlice = createSlice({
 
 export const { setPaymentFormFields } = paymentFormSlice.actions;
 
-export const selectPaymentFormFields = (state: RootState) => state.paymentForm.fields;
-export const selectPaymentFormIsFetching = (state: RootState) => state.paymentForm.isFetching;
+export const selectPaymentFormFields = (state: RootState) => state.paymentFormSlice.fields;
+export const selectPaymentFormIsFetching = (state: RootState) => state.paymentFormSlice.isFetching;
 
 export default paymentFormSlice.reducer;
