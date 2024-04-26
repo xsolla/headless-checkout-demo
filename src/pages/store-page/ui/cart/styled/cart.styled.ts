@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { screenXsMax } from '../../../shared/media-break-points.const.ts';
+import { screenXsMax } from '../../../../../shared/media-break-points.const.ts';
 
 export const StyledCartContainer = styled.div`
   padding: 20px 20px 18px;

@@ -1,6 +1,6 @@
 import React from 'react';
-import Logo from '../../../assets/logo.svg';
-import { StyledHeader, StyledLogo } from '../styled/header.styles.ts';
+import Logo from '../../../../assets/logo.svg';
+import { StyledHeader, StyledLogo } from '../../styled/header.styles.ts';
 
 export const Header = () => (
   <StyledHeader>

@@ -5,6 +5,7 @@ import { PaymentMethodsState } from './payment-methods-state.interface.ts';
 import { PaymentMethod } from '@xsolla/pay-station-sdk/dist/core/payment-method.interface';
 import { getPaymentMethodsPayStationSdk } from '../../sdk/payment-methods';
 import { isDevMode } from '../../utils/is-dev-mode.const.ts';
+import { displayedPaymentMethodsIdsConst } from '../../shared/payment/payment-methods-ids.const.ts';
 
 export const getPaymentMethods = createAsyncThunk('sdk/methods', async (_, thunkAPI) => {
   try {
@@ -43,7 +44,12 @@ const paymentMethodsSlice = createSlice({
       })
       .addCase(getPaymentMethods.fulfilled, (state, action) => {
         state.isFetching = false;
-        state.paymentMethods = action.payload;
+        state.paymentMethods = action.payload.filter((method) =>
+          /*
+           * Only selected payment methods should be shown.
+           */
+          displayedPaymentMethodsIdsConst.includes(method.id),
+        );
       })
       .addCase(getPaymentMethods.rejected, (state) => {
         state.isFetching = false;

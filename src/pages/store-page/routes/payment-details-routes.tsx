@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { StorePageRoutes } from '../../../routes/store-page/store-page-routes.enum.ts';
-import { PaymentMethods } from '../ui/PaymentMethods.tsx';
+import { PaymentMethods } from '../ui/payment-methods';
 import React from 'react';
 
 export const PaymentDetailsRoutes = () => {

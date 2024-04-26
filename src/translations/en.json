@@ -20,5 +20,6 @@
   "store.items.royal_chest_of_gems": "Royal chest of gems ",
   "store.items.magic_sacred_pack": "Magic sacred pack",
   "shop.in_cart": "In the cart",
-  "cart.remove": "Remove"
+  "cart.remove": "Remove",
+  "store.page.payment-methods.more-button": "More methods"
 }

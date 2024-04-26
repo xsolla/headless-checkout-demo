@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { screenXsMax } from '../../../shared/media-break-points.const.ts';
+import { screenXsMax } from '../../../../../shared/media-break-points.const.ts';
 export const StyledCartItemContainer = styled.div`
   display: flex;
 

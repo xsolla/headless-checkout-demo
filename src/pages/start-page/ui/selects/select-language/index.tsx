@@ -1,8 +1,8 @@
 import React, { useCallback, useContext } from 'react';
 import { FormattedMessage } from 'react-intl';
-import { LanguageSelector } from '../../../components/language-selector';
-import { LocalizationContext } from '../../../app/contexts/localization-context/localization-context.ts';
-import { Language } from '../../../components/language-selector/language.interface.ts';
+import { LanguageSelector } from '../../../../../components/language-selector';
+import { LocalizationContext } from '../../../../../app/contexts/localization-context/localization-context.ts';
+import { Language } from '../../../../../components/language-selector/language.interface.ts';
 
 export const SelectLanguageWrapper = () => {
   const { setCurrentLocale } = useContext(LocalizationContext);

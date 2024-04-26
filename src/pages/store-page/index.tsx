@@ -23,7 +23,7 @@ export function StorePage() {
     if (tokenFromUrl) {
       dispatch(createToken({ tokenFromUrl }));
     }
-  }, []);
+  }, [tokenFromUrl]);
   return (
     <StyledRootDiv>
       <StyledContentContainer>

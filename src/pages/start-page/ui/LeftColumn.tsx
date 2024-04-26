@@ -1,8 +1,8 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import Coins from '../../../assets/coin.svg';
-import { SelectLanguageWrapper } from './SelectLanguageWrapper.tsx';
-import { OpenDemoButton } from './OpenDemoButton.tsx';
+import { SelectLanguageWrapper } from './selects/select-language';
+import { OpenDemoButton } from './buttons/open-demo';
 import { StyledLeftColumn } from '../styled/left-column.styles.ts';
 
 export const LeftColumn = () => (

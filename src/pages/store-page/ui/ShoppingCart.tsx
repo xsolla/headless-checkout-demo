@@ -2,8 +2,8 @@ import React from 'react';
 import { StyledShoppingCart } from '../styled/shopping-cart.styles.ts';
 import { StyledSectionTitle } from '../styled/root.styles.ts';
 import { FormattedMessage } from 'react-intl';
-import { Cart } from '../../../components/cart';
-import { Shop } from '../../../components/shop';
+import { Cart } from './cart';
+import { Shop } from './shop';
 
 export const ShoppingCart = () => (
   <StyledShoppingCart>
