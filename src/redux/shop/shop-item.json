@@ -1,0 +1,30 @@
+[
+  {
+    "id": "giant_gem_pack",
+    "price": {
+      "amount": "8.00",
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "nature_crystal",
+    "price": {
+      "amount": "4.99",
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "royal_chest_of_gems",
+    "price": {
+      "amount": "22.00",
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "magic_sacred_pack",
+    "price": {
+      "amount": "18.99",
+      "currency": "USD"
+    }
+  }
+]

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { screenXsMax } from '../../../shared/media-break-points.const.ts';
+import { bagnardFontFamily } from '../../../shared/styled/bagnard-font-family.const.ts';
 
 export const StyledRootDiv = styled.div`
   position: relative;
@@ -46,7 +47,7 @@ export const StyledMain = styled.main`
 export const StoreTitle = styled.h1`
   padding: 0 0 0 30px;
   margin: 0 0 20px;
-  font-family: Bagnard sans-serif;
+  font-family: ${bagnardFontFamily};
   font-size: 96px;
   font-weight: 400;
   line-height: 96px;
@@ -66,7 +67,7 @@ export const StoreTitle = styled.h1`
 export const StyledSectionTitle = styled.h2`
   padding: 0;
   margin: 0 0 20px;
-  font-family: Bagnard sans-serif;
+  font-family: ${bagnardFontFamily};
   font-size: 32px;
   font-weight: 400;
   line-height: 40px;
@@ -83,10 +84,11 @@ export const StyledSectionTitle = styled.h2`
 
 export const StyledColumns = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0;
   margin: 0;
   width: 100%;
+  max-width: 1148px;
 
   @media (max-width: ${screenXsMax}) {
     display: block;

@@ -33,6 +33,7 @@ export const StyledNavigation = styled.nav`
   }
 
   a {
+    user-select: none;
     font-family: ${graphikFontFamily};
     font-size: 20px;
     font-weight: 500;

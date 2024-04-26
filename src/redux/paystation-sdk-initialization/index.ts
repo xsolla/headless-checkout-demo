@@ -2,8 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store.ts';
 import { initHeadlessCheckoutLib } from '../../sdk/initialization';
 import { SdkInitState } from './sdk-init-state.interface.ts';
-import { Lang } from '@xsolla/pay-station-sdk';
-import { SdkInitConfig } from './sdk-init-config.interface.ts';
+import { InitialOptions, Lang } from '@xsolla/pay-station-sdk';
 import { getErrorMessage } from '../../shared/get-error-message.function.ts';
 import { selectIsSandbox } from '../sdk-configuration';
 
@@ -16,7 +15,7 @@ export const initPayStationSdk = createAsyncThunk(
         return;
       }
 
-      const config: SdkInitConfig = {
+      const config: InitialOptions = {
         isWebview: false,
         theme: 'default',
         language: parameters.language,
