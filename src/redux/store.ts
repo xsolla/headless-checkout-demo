@@ -8,6 +8,7 @@ import paymentMethodsSlice from './payment-methods';
 import setSdkInitializedMiddleware from './cart/sdk-initialized.middleware.ts';
 import cartSlice from './cart';
 import shopSlice from './shop';
+import updateCartMiddleware from './cart/update-cart.middleware.ts';
 
 export const store = configureStore({
   reducer: {
@@ -22,7 +23,8 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()
       .prepend(setTokenMiddleware.middleware)
-      .prepend(setSdkInitializedMiddleware.middleware),
+      .prepend(setSdkInitializedMiddleware.middleware)
+      .prepend(updateCartMiddleware.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
