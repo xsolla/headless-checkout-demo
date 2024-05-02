@@ -10,6 +10,7 @@ export const StyledBalance = styled.div`
   font-size: 20px;
   font-weight: 500;
   line-height: 20px;
+  user-select: none;
 
   .icon {
     width: 30px;

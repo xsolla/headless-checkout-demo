@@ -12,5 +12,13 @@
   "store.page.navigation.jems": "Jems",
   "store.page.navigation.web-coins": "Web coins",
   "store.page.user": "user",
-  "store.page.shopping-cart.title": "Shopping cart"
+  "store.page.shopping-cart.title": "Shopping cart",
+  "store.items.potion_of_wisdom": "Potion of wisdom",
+  "store.items.calm_crystal": "Calm crystal",
+  "store.items.giant_gem_pack": "Giant gem pack",
+  "store.items.nature_crystal": "Nature crystal",
+  "store.items.royal_chest_of_gems": "Royal chest of gems ",
+  "store.items.magic_sacred_pack": "Magic sacred pack",
+  "shop.in_cart": "In the cart",
+  "cart.remove": "Remove"
 }

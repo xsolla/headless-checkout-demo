@@ -3,11 +3,7 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "jsx": "react-jsx",
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable"
-    ],
+    "lib": ["esnext", "dom", "dom.iterable"],
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "bundler",
@@ -16,18 +12,14 @@
     "isolatedModules": true,
     "noEmit": true,
     "paths": {
-      "@translations/*": [
-        "./src/translations/*"
-      ]
+      "@translations/*": ["./src/translations/*"]
     }
   },
-  "include": [
-    "src",
-    "test"
-  ],
+  "include": ["src", "test"],
   "references": [
     {
       "path": "./tsconfig.node.json"
     }
-  ]
+  ],
+  "files": ["./src/custom-elements.d.ts"]
 }

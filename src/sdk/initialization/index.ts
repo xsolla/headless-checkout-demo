@@ -1,7 +1,7 @@
 import { payStationSdkApiClient } from '../pay-station-sdk-client.ts';
-import { SdkInitConfig } from '../../redux/paystation-sdk-initialization/sdk-init-config.interface.ts';
+import { InitialOptions } from '@xsolla/pay-station-sdk';
 
-export const initHeadlessCheckoutLib = (parameters: SdkInitConfig): Promise<void> => {
+export const initHeadlessCheckoutLib = (parameters: InitialOptions): Promise<void> => {
   return payStationSdkApiClient.init(parameters);
 };
 

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "potion_of_wisdom",
+    "price": {
+      "amount": "4.99",
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "calm_crystal",
+    "price": {
+      "amount": "3.99",
+      "currency": "USD"
+    }
+  }
+]
