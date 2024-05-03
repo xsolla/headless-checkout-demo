@@ -19,7 +19,7 @@ export const OpenDemoButton = () => {
       return;
     }
 
-    dispatch(createToken({ sandbox: !!isSandbox }));
+    dispatch(createToken());
   }, [isSandbox, isFetching]);
 
   return (

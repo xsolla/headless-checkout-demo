@@ -5,18 +5,22 @@ import { getUrlSearchParameter } from '../../shared/get-url-search-parameter.fun
 import { getErrorMessage } from '../../shared/get-error-message.function.ts';
 import { SdkConfigurationInitState } from './sdk-configuration-init-state.interface.ts';
 import { Lang } from '@xsolla/pay-station-sdk';
+import { selectCartItemsIds } from '../cart';
 
 export const createToken = createAsyncThunk(
   'token/fetch',
-  async (parameters: { sandbox?: boolean; tokenFromUrl?: string }, thunkAPI) => {
+  async (parameters: { tokenFromUrl?: string } | void, thunkAPI) => {
     try {
-      if (parameters.tokenFromUrl) {
+      if (parameters && parameters.tokenFromUrl) {
         thunkAPI.dispatch(setToken(parameters.tokenFromUrl));
         return;
       }
       const state = thunkAPI.getState() as RootState;
       const locale = selectCurrentLanguage(state);
-      const requestParams = { sandbox: parameters.sandbox, locale };
+      const cartItems = selectCartItemsIds(state);
+      const isSandbox = selectIsSandbox(state);
+
+      const requestParams = { sandbox: isSandbox === '1', locale, items: cartItems };
 
       const response = await getToken(requestParams);
       const token = response;

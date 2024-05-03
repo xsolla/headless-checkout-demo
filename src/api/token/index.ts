@@ -3,10 +3,11 @@ import { tokenApiClient } from '../client';
 export const getToken = async (parameters: {
   sandbox?: boolean;
   locale: string;
+  items: string[];
 }): Promise<string> => {
-  const { sandbox, locale } = parameters;
+  const { sandbox, locale, items } = parameters;
   const response = await tokenApiClient.get('', {
-    params: { ...(sandbox ? { sandbox: '1' } : {}), locale },
+    params: { ...(sandbox ? { sandbox: '1' } : {}), locale, items: items.join(',') },
   });
 
   if (response.data.error) {
