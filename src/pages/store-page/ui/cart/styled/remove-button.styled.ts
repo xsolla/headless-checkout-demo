@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { graphikFontFamily } from '../../../shared/styled/graphik-font-family.const.ts';
+import { graphikFontFamily } from '../../../../../shared/styled/graphik-font-family.const.ts';
 
 export const StyledRemoveButton = styled.button`
   display: flex;

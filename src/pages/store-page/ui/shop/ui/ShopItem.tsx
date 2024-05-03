@@ -4,8 +4,8 @@ import { ShopItemProps } from './shop-item-props.interface.ts';
 import { useIntl } from 'react-intl';
 import { Currency } from 'react-intl-number-format';
 import { StyledBuyButton } from '../styled/buy-button.styled.ts';
-import { addItem, selectItemIsInCart } from '../../../redux/cart';
-import { useAppDispatch, useAppSelector } from '../../../redux/hooks.ts';
+import { addItem, selectItemIsInCart } from '../../../../../redux/cart';
+import { useAppDispatch, useAppSelector } from '../../../../../redux/hooks.ts';
 import { InCartState } from './InCartState.tsx';
 export const ShopItem = (props: ShopItemProps) => {
   const intl = useIntl();

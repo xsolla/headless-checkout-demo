@@ -1,7 +1,7 @@
 import React from 'react';
 import { CartItem } from './CartItem.tsx';
-import { useAppSelector } from '../../../redux/hooks.ts';
-import { selectCartItemsEntities, selectCartItemsIds } from '../../../redux/cart';
+import { useAppSelector } from '../../../../../redux/hooks.ts';
+import { selectCartItemsEntities, selectCartItemsIds } from '../../../../../redux/cart';
 import { StyledCartItemsContainer } from '../styled/cart-items.styled.ts';
 
 export function CartItems() {

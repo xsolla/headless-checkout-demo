@@ -1,4 +1,4 @@
-import { StyledPaymentMethodSkeleton } from '../styled/payment-method-skeleton.styles.ts';
+import { StyledPaymentMethodSkeleton } from '../../../styled/payment-method-skeleton.styles.ts';
 import { FC } from 'react';
 
 export const PaymentMethodsSkeleton: FC<{ count?: number }> = ({ count = 5 }) => {

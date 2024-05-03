@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { screenXsMax } from '../../../shared/media-break-points.const.ts';
+import { graphikFontFamily } from '../../../shared/styled/graphik-font-family.const.ts';
+import { montserratFontFamily } from '../../../shared/styled/montserrat-font-family.const.ts';
 import { bagnardFontFamily } from '../../../shared/styled/bagnard-font-family.const.ts';
 
 export const StyledRootDiv = styled.div`
@@ -29,6 +31,64 @@ export const StyledPaymentMethodsContainer = styled.div`
   flex-direction: column;
   row-gap: 4px;
   margin-bottom: 20px;
+`;
+
+export const StyledPaymentMethodContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 72px;
+  border-radius: 16px;
+  padding: 16px;
+  background: rgba(16, 15, 22, 0.6);
+
+  .name {
+    font-family: ${graphikFontFamily};
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 12px;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .expand-button {
+    background: none;
+    border: none;
+    margin-left: auto;
+    cursor: pointer;
+
+    svg {
+      transition: all 0.3s ease;
+
+      path {
+        fill: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+`;
+
+export const StyledMoreMethodsButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 72px;
+  border-radius: 16px;
+  padding: 12px 16px;
+  background: rgba(16, 15, 22, 0.6);
+
+  button {
+    font-family: ${montserratFontFamily};
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    width: 100%;
+    height: 100%;
+    color: rgba(135, 107, 250, 1);
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
 `;
 
 export const StyledMain = styled.main`

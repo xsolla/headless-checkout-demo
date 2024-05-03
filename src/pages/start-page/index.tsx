@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { StyledRootDiv } from './styled/root.styles.ts';
-import { Header } from './ui/Header.tsx';
+import { Header } from './ui/header';
 import { LeftColumn } from './ui/LeftColumn.tsx';
 import { RightColumn } from './ui/RightColumn.tsx';
 import { StyledBody } from './styled/body.styles.ts';

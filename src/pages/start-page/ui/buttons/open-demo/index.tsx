@@ -4,10 +4,10 @@ import {
   createToken,
   selectIsSandbox,
   selectTokenIsFetching,
-} from '../../../redux/sdk-configuration';
-import { useAppDispatch, useAppSelector } from '../../../redux/hooks.ts';
-import { Loader } from '../../../components/loader';
-import { StyledShopButton } from '../styled/shop-button.styles.ts';
+} from '../../../../../redux/sdk-configuration';
+import { useAppDispatch, useAppSelector } from '../../../../../redux/hooks.ts';
+import { Loader } from '../../../../../components/loader';
+import { StyledShopButton } from '../../../styled/shop-button.styles.ts';
 
 export const OpenDemoButton = () => {
   const isSandbox = useAppSelector(selectIsSandbox);
