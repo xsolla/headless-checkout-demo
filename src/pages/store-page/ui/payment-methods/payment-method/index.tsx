@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import { StyledPaymentMethodContainer } from '../../../styled/root.styles.ts';
 import { BrandLogoIcon } from '../../../../../components/brand-logo-icon';
-import { SvgIcon } from '../../../../../components/svg-icon';
-
-const plusIconUrl = `${import.meta.env.VITE_CDN_URL}/icons/common-icons/plus--line.svg`;
-const minusIconUrl = `${import.meta.env.VITE_CDN_URL}/icons/common-icons/minus--line.svg`;
+import { Checkout } from '../../checkout';
+import { StyledPaymentMethodContainer } from '../../../styled/payment-methods.styles.ts';
+import { useAppSelector } from '../../../../../redux/hooks.ts';
+import { selectPaymentFormSettings } from '../../../../../redux/payment-form';
+import { ExpandButton } from '../../buttons/expand-button';
 
 export const PaymentMethod: FC<{
   name: string;
@@ -13,14 +13,22 @@ export const PaymentMethod: FC<{
   isExpanded: boolean;
   handleCLick: () => void;
 }> = ({ iconName, name, pid, isExpanded, handleCLick }) => {
-  const iconUrl = isExpanded ? minusIconUrl : plusIconUrl;
+  const { isSecondStep, isFetching } = useAppSelector(selectPaymentFormSettings);
+
   return (
-    <StyledPaymentMethodContainer>
-      <BrandLogoIcon name={iconName} pid={pid} />
-      <div className={'name'}>{name}</div>
-      <button className={'expand-button'} onClick={handleCLick}>
-        <SvgIcon url={iconUrl} />
-      </button>
+    <StyledPaymentMethodContainer $isFetching={isFetching}>
+      {!isSecondStep && (
+        <div className={'payment-method'}>
+          <BrandLogoIcon name={iconName} pid={pid} />
+          <div className={'name'}>{name}</div>
+          <ExpandButton
+            isExpanded={isExpanded}
+            handleCLick={handleCLick}
+            className={'expand-button'}
+          />
+        </div>
+      )}
+      {isExpanded && <Checkout />}
     </StyledPaymentMethodContainer>
   );
 };

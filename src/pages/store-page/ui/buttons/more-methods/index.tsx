@@ -1,6 +1,6 @@
-import { StyledMoreMethodsButtonContainer } from '../../../styled/root.styles.ts';
 import { FC } from 'react';
 import { FormattedMessage } from 'react-intl';
+import { StyledMoreMethodsButtonContainer } from '../../../styled/payment-methods.styles.ts';
 
 export const MoreMethodsButton: FC<{ handleClick: () => void }> = ({ handleClick }) => {
   return (

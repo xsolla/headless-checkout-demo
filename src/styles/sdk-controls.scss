@@ -1,0 +1,150 @@
+psdk-text,
+psdk-phone,
+psdk-card-number,
+psdk-google-pay-button,
+psdk-apple-pay {
+  font-family: Montserrat, sans-serif;
+
+  .label {
+    display: none;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .wrapper {
+    height: 40px;
+  }
+
+  .field-error {
+    color: rgba(255, 102, 138, 1);
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 4px;
+  }
+}
+
+psdk-select {
+  font-family: Montserrat, sans-serif;
+
+  .select {
+    background: rgba(255, 255, 255, 0.07);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 10px;
+    color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    height: 40px;
+    font-weight: 400;
+    font-size: 14px;
+
+
+    &:focus {
+      background: rgba(23, 19, 32, 1);
+      border: 1px solid rgba(255, 233, 204, 1);
+    }
+
+    &.invalid {
+      border: 1px solid rgba(255, 102, 138, 1);
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .arrow {
+    display: flex;
+
+    &.arrow-up {
+      transform: rotate(180deg);
+    }
+  }
+
+  .select-options {
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
+  }
+
+  .dropdown {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 216px;
+    padding: 8px 0;
+    border-radius: 8px;
+    background: rgba(24, 23, 28, 1);
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border: 1px solid transparent;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      border: 4px solid transparent;
+      border-radius: 1px;
+    }
+  }
+
+  .dropdown-wrapper {
+    position: relative;
+
+    &.dropdown-opened {
+      & .dropdown {
+        display: flex;
+      }
+    }
+  }
+
+  .option {
+    display: flex;
+    font-size: 14px;
+
+    :hover, &.active {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    &.focused {
+      background: rgb(61, 70, 245);
+    }
+
+    .option-content {
+      width: 100%;
+      height: 100%;
+      padding: 11px 12px;
+      cursor: pointer;
+    }
+  }
+}
+
+psdk-google-pay-button {
+  display: block;
+  height: 48px;
+}
+
+psdk-qr-code {
+  iframe {
+    width: 160px;
+    height: 160px;
+    border: none;
+  }
+}
