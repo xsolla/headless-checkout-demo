@@ -21,5 +21,8 @@
   "store.items.magic_sacred_pack": "Magic sacred pack",
   "shop.in_cart": "In the cart",
   "cart.remove": "Remove",
-  "store.page.payment-methods.more-button": "More methods"
+  "store.page.payment-methods.more-button": "More methods",
+  "store.page.long-form.billing-information": "Billing information",
+  "store.page.long-form.address": "Address",
+  "store.page.checkout.pay-now": "Pay now"
 }

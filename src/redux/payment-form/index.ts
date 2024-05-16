@@ -5,6 +5,7 @@ import { PaymentFormState } from './payment-form-state.interface.ts';
 import { Field } from '@xsolla/pay-station-sdk/dist/core/form/field.interface';
 import { FormConfiguration } from '@xsolla/pay-station-sdk/dist/core/form/form-configuration.interface';
 import { getErrorMessage } from '../../shared/get-error-message.function.ts';
+import { creditCardId } from '../../shared/payment/payment-methods-ids.const.ts';
 
 export const getPaymentForm = createAsyncThunk(
   'form/fetch',
@@ -14,11 +15,11 @@ export const getPaymentForm = createAsyncThunk(
         paymentMethodId: parameters.pid,
         returnUrl: import.meta.env.VITE_RETURN_URL,
       };
-      const response = await getPaymentFormSdk(formConfig);
-      const fields = response;
-      thunkAPI.dispatch(setPaymentFormFields({ fields }));
+      const { fields, isFormAutoSubmitted, submitButtonText, pid } =
+        await getPaymentFormSdk(formConfig);
+      thunkAPI.dispatch(setPaymentForm({ fields, isFormAutoSubmitted, submitButtonText }));
 
-      return response;
+      return { fields, isFormAutoSubmitted, submitButtonText, pid };
     } catch (error: unknown) {
       const message = getErrorMessage(error);
 
@@ -29,25 +30,67 @@ export const getPaymentForm = createAsyncThunk(
 
 const initialState: PaymentFormState = {
   fields: null,
+  visibleFields: null,
+  pid: null,
   isFetching: false,
+  isFormAutoSubmitted: false,
+  submitButtonText: '',
+  isSecondStep: false,
+  isCreditCardForm: false,
+  isSubmitButtonVisible: false,
 };
 
 const paymentFormSlice = createSlice({
   name: 'payment-form',
   initialState,
   reducers: {
-    setPaymentFormFields: (state, action: PayloadAction<{ fields: Field[] }>) => {
+    setPaymentForm: (
+      state,
+      action: PayloadAction<{
+        fields: Field[];
+        isFormAutoSubmitted: boolean;
+        submitButtonText: string;
+        isSecondStep?: boolean;
+      }>,
+    ) => {
       state.fields = action.payload.fields;
+      state.visibleFields = state.fields.filter((field) => field.isVisible === '1');
+      state.isFormAutoSubmitted = action.payload.isFormAutoSubmitted;
+      state.submitButtonText = action.payload.submitButtonText;
+      state.isSecondStep = !!action.payload.isSecondStep;
+      state.isSubmitButtonVisible = true;
+    },
+    setPid: (state, action: PayloadAction<{ pid: number }>) => {
+      state.pid = action.payload.pid;
+      state.isCreditCardForm = state.pid === creditCardId;
+    },
+    resetPaymentForm: (state) => {
+      state.fields = null;
+      state.visibleFields = null;
+      state.isFormAutoSubmitted = false;
+      state.submitButtonText = '';
+      state.pid = null;
+    },
+    resetSecondStep: (state) => {
+      state.isSecondStep = false;
+      state.fields = null;
+      state.visibleFields = null;
+      state.isFormAutoSubmitted = false;
+      state.submitButtonText = '';
+    },
+    hideSubmitButton: (state) => {
+      state.isSubmitButtonVisible = false;
     },
   },
   extraReducers: (builder) => {
     builder
       .addCase(getPaymentForm.pending, (state) => {
         state.isFetching = true;
+        state.fields = null;
+        state.visibleFields = null;
       })
-      .addCase(getPaymentForm.fulfilled, (state, action) => {
+      .addCase(getPaymentForm.fulfilled, (state) => {
         state.isFetching = false;
-        state.fields = action.payload;
       })
       .addCase(getPaymentForm.rejected, (state) => {
         state.isFetching = false;
@@ -55,9 +98,10 @@ const paymentFormSlice = createSlice({
   },
 });
 
-export const { setPaymentFormFields } = paymentFormSlice.actions;
+export const { setPaymentForm, setPid, resetPaymentForm, resetSecondStep, hideSubmitButton } =
+  paymentFormSlice.actions;
 
-export const selectPaymentFormFields = (state: RootState) => state.paymentFormSlice.fields;
-export const selectPaymentFormIsFetching = (state: RootState) => state.paymentFormSlice.isFetching;
+export const selectPaymentFormSettings = (state: RootState) => state.paymentFormSlice;
 
+export const selectPid = (state: RootState) => state.paymentFormSlice.pid;
 export default paymentFormSlice.reducer;
