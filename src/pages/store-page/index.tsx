@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   StoreTitle,
   StyledColumns,
@@ -14,6 +14,7 @@ import { FormattedMessage } from 'react-intl';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks.ts';
 import { createToken, selectToken } from '../../redux/sdk-configuration';
 import { getUrlSearchParameter } from '../../shared/get-url-search-parameter.function.ts';
+import { selectShopVisibility } from '../../redux/shop';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 
 export function StorePage() {
@@ -22,6 +23,8 @@ export function StorePage() {
   const navigate = useNavigate();
   const [params] = useSearchParams();
   const tokenFromUrl = getUrlSearchParameter('token');
+  const shopIsVisible = useAppSelector(selectShopVisibility);
+  const [shopClassName, setShopClassName] = useState('');
 
   useEffect(() => {
     if (tokenFromUrl) {
@@ -31,17 +34,26 @@ export function StorePage() {
       navigate({ pathname: '/start-page', search: params.toString() });
     }
   }, [tokenFromUrl]);
+
+  useEffect(() => {
+    setShopClassName(shopIsVisible ? 'with-shop' : 'without-shop');
+  }, [shopIsVisible]);
+
   return (
     <StyledRootDiv>
       <StyledContentContainer>
         <Header />
         <StyledMain>
-          <StoreTitle>
+          <StoreTitle className={shopClassName}>
             <FormattedMessage id={'store.page.title'} defaultMessage={'Store'}></FormattedMessage>
           </StoreTitle>
-          <StyledColumns>
-            <ShoppingCart></ShoppingCart>
-            <PaymentDetails></PaymentDetails>
+          <StyledColumns className={shopClassName}>
+            <div className='cart-column'>
+              <ShoppingCart></ShoppingCart>
+            </div>
+            <div className='payment-details-column'>
+              <PaymentDetails></PaymentDetails>
+            </div>
           </StyledColumns>
         </StyledMain>
       </StyledContentContainer>

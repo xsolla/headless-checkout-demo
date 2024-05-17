@@ -41,7 +41,6 @@ psdk-select {
     font-weight: 400;
     font-size: 14px;
 
-
     &:focus {
       background: rgba(23, 19, 32, 1);
       border: 1px solid rgba(255, 233, 204, 1);
@@ -119,7 +118,8 @@ psdk-select {
     display: flex;
     font-size: 14px;
 
-    :hover, &.active {
+    :hover,
+    &.active {
       background: rgba(255, 255, 255, 0.1);
     }
 
@@ -142,9 +142,10 @@ psdk-google-pay-button {
 }
 
 psdk-qr-code {
+  display: flex;
+  min-height: 170px;
+
   iframe {
-    width: 160px;
-    height: 160px;
     border: none;
   }
 }

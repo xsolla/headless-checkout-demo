@@ -5,14 +5,18 @@ import { PaymentFormState } from './payment-form-state.interface.ts';
 import { Field } from '@xsolla/pay-station-sdk/dist/core/form/field.interface';
 import { FormConfiguration } from '@xsolla/pay-station-sdk/dist/core/form/form-configuration.interface';
 import { getErrorMessage } from '../../shared/get-error-message.function.ts';
+import { getReturnUrl } from './get-return-url.function.ts';
+import { selectIsSandbox } from '../sdk-configuration';
 
 export const getPaymentForm = createAsyncThunk(
   'form/fetch',
   async (parameters: { pid: number }, thunkAPI) => {
     try {
+      const state: RootState = thunkAPI.getState() as RootState;
+      const isSandboxMode = selectIsSandbox(state);
       const formConfig: FormConfiguration = {
         paymentMethodId: parameters.pid,
-        returnUrl: import.meta.env.VITE_RETURN_URL,
+        returnUrl: getReturnUrl(isSandboxMode === '1'),
       };
       const { fields, isFormAutoSubmitted, submitButtonText, pid } =
         await getPaymentFormSdk(formConfig);

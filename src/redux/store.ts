@@ -9,6 +9,8 @@ import setSdkInitializedMiddleware from './cart/sdk-initialized.middleware.ts';
 import cartSlice from './cart';
 import shopSlice from './shop';
 import updateCartMiddleware from './cart/update-cart.middleware.ts';
+import paymentNavigationSlice from './payment-navigation';
+import paymentStatusSlice from './payment-status';
 
 export const store = configureStore({
   reducer: {
@@ -19,6 +21,8 @@ export const store = configureStore({
     sdkSetTokenSlice,
     cartSlice,
     shopSlice,
+    paymentNavigationSlice,
+    paymentStatusSlice,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()

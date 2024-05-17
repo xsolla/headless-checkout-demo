@@ -55,6 +55,12 @@ export const StoreTitle = styled.h1`
     line-height: 60px;
     text-align: center;
   }
+
+  @media (min-width: ${screenXsMax}) {
+    &.without-shop {
+      margin-bottom: 80px;
+    }
+  }
 `;
 
 export const StyledSectionTitle = styled.h2`
@@ -85,5 +91,35 @@ export const StyledColumns = styled.div`
 
   @media (max-width: ${screenXsMax}) {
     display: block;
+
+    .payment-details-column {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: ${screenXsMax}) {
+    &.with-shop {
+      .cart-column {
+        max-width: 600px;
+        width: 52.3%;
+        margin-right: 48px;
+      }
+
+      .payment-details-column {
+        max-width: 500px;
+        width: 44%;
+      }
+    }
+
+    &.without-shop {
+      .cart-column {
+        width: 50%;
+        margin-right: 48px;
+      }
+
+      .payment-details-column {
+        width: 50%;
+      }
+    }
   }
 `;

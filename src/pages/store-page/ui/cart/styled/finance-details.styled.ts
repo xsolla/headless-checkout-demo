@@ -1,15 +1,10 @@
 import styled from 'styled-components';
+import { screenXsMax } from '../../../../../shared/media-break-points.const.ts';
 
 export const StyledFinanceDetails = styled.div`
   psdk-finance-details {
-    &:empty {
-      margin: 0;
-    }
-
     display: flex;
     flex-direction: column;
-    margin-bottom: 14px;
-    margin-top: 16px;
 
     .cart-items {
       display: none;
@@ -19,6 +14,18 @@ export const StyledFinanceDetails = styled.div`
       margin: 0 0 20px;
       border: none;
       background: rgba(255, 255, 255, 0.15);
+    }
+
+    .cart-items + .divider {
+      margin-top: 16px;
+    }
+
+    .transaction-details + .cart-items + .divider {
+      margin-top: 0;
+
+      @media (max-width: ${screenXsMax}) {
+        margin-bottom: 12px;
+      }
     }
 
     .subtotal-row,
@@ -39,13 +46,26 @@ export const StyledFinanceDetails = styled.div`
         font-weight: 400;
         line-height: 16px;
       }
+
+      .price-container {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
     }
 
     .transaction-details {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 8px;
+      margin-top: 16px;
       padding-top: 16px;
       border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+      @media (max-width: ${screenXsMax}) {
+        margin-top: 12px;
+        padding-top: 12px;
+      }
     }
 
     .transaction-invoice {

@@ -2,9 +2,7 @@ import styled from 'styled-components';
 import { screenXsMax } from '../../../shared/media-break-points.const.ts';
 
 export const StyledShoppingCart = styled.section`
-  max-width: 600px;
-  width: 52.3%;
-  margin-right: 48px;
+  width: 100%;
 
   .cart {
     margin-bottom: 20px;
