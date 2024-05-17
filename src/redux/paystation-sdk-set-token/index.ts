@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../store.ts';
 import { setTokenHeadlessCheckoutLib } from '../../sdk/initialization';
 import { getErrorMessage } from '../../shared/get-error-message.function.ts';
@@ -9,7 +9,7 @@ export const setTokenPayStationSdk = createAsyncThunk(
   async (parameters: { token: string }, thunkAPI) => {
     try {
       await setTokenHeadlessCheckoutLib(parameters.token);
-      thunkAPI.dispatch(sdkSetToken());
+      thunkAPI.dispatch(setSdkTokenIsSet(true));
     } catch (error: unknown) {
       const message = getErrorMessage(error);
 
@@ -26,8 +26,8 @@ const sdkSetTokenSlice = createSlice({
   name: 'sdk-set-token',
   initialState,
   reducers: {
-    sdkSetToken: (state) => {
-      state.tokenIsSet = true;
+    setSdkTokenIsSet: (state, action: PayloadAction<boolean>) => {
+      state.tokenIsSet = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -44,7 +44,7 @@ const sdkSetTokenSlice = createSlice({
   },
 });
 
-export const { sdkSetToken } = sdkSetTokenSlice.actions;
+export const { setSdkTokenIsSet } = sdkSetTokenSlice.actions;
 
 export const selectTokenIsSet = (state: RootState) => state.sdkSetTokenSlice.tokenIsSet;
 

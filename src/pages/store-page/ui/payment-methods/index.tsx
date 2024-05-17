@@ -2,7 +2,11 @@ import { PaymentMethodsSkeleton } from './payment-method-skeleton';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../../redux/hooks.ts';
 import { selectTokenIsSet } from '../../../../redux/paystation-sdk-set-token';
-import { getPaymentMethods, selectPaymentMethods } from '../../../../redux/payment-methods';
+import {
+  getPaymentMethods,
+  selectPaymentMethods,
+  setPaymentMethods,
+} from '../../../../redux/payment-methods';
 import { PaymentMethod } from './payment-method';
 import { PaymentMethod as PaymentMethodInterface } from '@xsolla/pay-station-sdk/dist/core/payment-method.interface';
 import { MoreMethodsButton } from '../buttons/more-methods';
@@ -12,6 +16,7 @@ import {
   setPid,
 } from '../../../../redux/payment-form';
 import { StyledPaymentMethodsContainer } from '../../styled/payment-methods.styles.ts';
+import { selectToken } from '../../../../redux/sdk-configuration';
 
 export const PaymentMethods = () => {
   const defaultMethodsCount = 4;
@@ -19,6 +24,7 @@ export const PaymentMethods = () => {
   const dispatch = useAppDispatch();
 
   const tokenIsSetInSdk = useAppSelector(selectTokenIsSet);
+  const token = useAppSelector(selectToken);
   const paymentMethods = useAppSelector(selectPaymentMethods);
   const { isSecondStep } = useAppSelector(selectPaymentFormSettings);
 
@@ -45,10 +51,16 @@ export const PaymentMethods = () => {
   const needShowMoreButton = displayCount === defaultMethodsCount && !isSecondStep;
 
   useEffect(() => {
+    dispatch(setPaymentMethods({ paymentMethods: [] }));
+
     if (tokenIsSetInSdk) {
       dispatch(getPaymentMethods());
     }
-  }, [tokenIsSetInSdk]);
+
+    if (idExpandedMethod) {
+      dispatch(setPid({ pid: idExpandedMethod }));
+    }
+  }, [tokenIsSetInSdk, token]);
 
   const showMoreMethodsHandler = useCallback(() => {
     if (paymentMethods) {
