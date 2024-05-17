@@ -8,5 +8,6 @@ declare namespace JSX {
     'psdk-finance-details': unknown;
     'psdk-total': unknown;
     'psdk-submit-button': unknown;
+    'psdk-payment-form-messages': unknown;
   }
 }

@@ -11,13 +11,36 @@ export const StyledCheckoutContainer = styled.div<{ $isLoading: boolean; $isSeco
 
   .submit-button {
     display: ${(props) => (props.$isLoading ? 'none' : 'block')};
-
     margin-top: 16px;
+  }
+
+  .form-messages {
+    display: ${(props) => (props.$isLoading ? 'none' : 'block')};
+
+    .form-message {
+      padding: 12px;
+      background: rgba(65, 57, 96, 1);
+      border-radius: 12px;
+      color: rgba(191, 192, 217, 1);
+      font-family: ${montserratFontFamily};
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0;
+    }
+
+    & a {
+      color: rgba(191, 192, 217, 1);
+    }
   }
 
   .form {
     display: ${(props) => (props.$isLoading ? 'none' : 'flex')};
     flex-direction: column;
+    margin: 16px 0;
+
+    .form-error {
+      margin-top: 16px;
+    }
 
     psdk-qr-code {
       margin: 0 auto;

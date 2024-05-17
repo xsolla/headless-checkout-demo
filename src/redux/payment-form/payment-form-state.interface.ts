@@ -10,4 +10,6 @@ export interface PaymentFormState {
   isSecondStep: boolean;
   isCreditCardForm: boolean;
   isSubmitButtonVisible: boolean;
+  formError: string | null;
+  canBeMounted: boolean;
 }
