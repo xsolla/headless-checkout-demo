@@ -73,9 +73,14 @@ const paymentFormSlice = createSlice({
     resetPaymentForm: (state) => {
       state.fields = null;
       state.visibleFields = null;
+      state.pid = null;
+      state.isFetching = false;
       state.isFormAutoSubmitted = false;
       state.submitButtonText = '';
-      state.pid = null;
+      state.isSecondStep = false;
+      state.isCreditCardForm = false;
+      state.isSubmitButtonVisible = false;
+      state.formError = null;
       state.canBeMounted = false;
     },
     resetSecondStep: (state) => {

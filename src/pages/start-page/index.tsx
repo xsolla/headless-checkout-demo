@@ -6,17 +6,21 @@ import { RightColumn } from './ui/RightColumn.tsx';
 import { StyledBody } from './styled/body.styles.ts';
 import { useAppSelector } from '../../redux/hooks.ts';
 import { selectTokenGenerated } from '../../redux/sdk-configuration';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Routes } from '../../routes/routes.enum.ts';
 import { StorePageRoutes } from '../../routes/store-page/store-page-routes.enum.ts';
 
 export function StartPage() {
   const tokenGenerated = useAppSelector(selectTokenGenerated);
   const navigate = useNavigate();
+  const [params] = useSearchParams();
 
   useEffect(() => {
     if (tokenGenerated) {
-      navigate(`/${Routes.storePage}/${StorePageRoutes.paymentMethods}`);
+      navigate({
+        pathname: `/${Routes.storePage}/${StorePageRoutes.paymentMethods}`,
+        search: params.toString(),
+      });
     }
   }, [tokenGenerated]);
 
