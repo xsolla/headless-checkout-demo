@@ -4,6 +4,8 @@ import {
   hideSubmitButton,
   selectPaymentFormSettings,
   selectPid,
+  setFormCanBeMounted,
+  setFormError,
   setPaymentForm,
 } from '../../../../redux/payment-form';
 import { onNextAction, setupAndAwaitFieldsLoading } from '../../../../sdk/payment-form';
@@ -19,6 +21,7 @@ import { ThreeDsAction } from '@xsolla/pay-station-sdk/dist/core/actions/three-d
 import { RedirectAction } from '@xsolla/pay-station-sdk/dist/core/actions/redirect/redirect.action.type';
 import { SpecialButtonAction } from '@xsolla/pay-station-sdk/dist/core/actions/special-button.action.type';
 import { ShowQrCodeAction } from '@xsolla/pay-station-sdk/dist/core/actions/show-qr-code.action.type';
+import { ShowErrorsAction } from '@xsolla/pay-station-sdk/dist/core/actions/show-errors.action.type';
 
 export const useHandleForm = (formContainerRef: RefObject<HTMLDivElement | null>) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -30,7 +33,11 @@ export const useHandleForm = (formContainerRef: RefObject<HTMLDivElement | null>
     onNextAction((nextAction) => {
       switch (nextAction.type) {
         case NextActionType.showFields:
+          handleShowErrorsAction(nextAction as unknown as ShowErrorsAction);
           handleShowFields(nextAction);
+          break;
+        case NextActionType.showErrors:
+          handleShowErrorsAction(nextAction);
           break;
         case NextActionType.threeDS:
           handleThreeDSAction(nextAction);
@@ -65,20 +72,28 @@ export const useHandleForm = (formContainerRef: RefObject<HTMLDivElement | null>
   }, [fields]);
 
   const handleShowFields = (nextAction: ShowFieldsAction) => {
-    const hasErrors = nextAction.data.errors?.length;
+    const error = nextAction.data.errors?.[0].message;
 
-    if (!hasErrors) {
-      setIsLoading(true);
-    }
+    setIsLoading(true);
 
-    dispatch(
-      setPaymentForm({
-        fields: nextAction.data.fields,
-        isFormAutoSubmitted: false,
-        submitButtonText: '',
-        isSecondStep: !hasErrors,
-      }),
-    );
+    dispatch(setFormCanBeMounted(false));
+
+    setTimeout(() => {
+      dispatch(
+        setPaymentForm({
+          fields: nextAction.data.fields,
+          isFormAutoSubmitted: false,
+          submitButtonText: '',
+          isSecondStep: !error,
+        }),
+      );
+    });
+  };
+
+  const handleShowErrorsAction = (nextAction: ShowErrorsAction) => {
+    const error = nextAction.data.errors?.[0].message;
+
+    dispatch(setFormError(error ?? null));
   };
 
   const handleThreeDSAction = (nextAction: ThreeDsAction) => {

@@ -38,6 +38,8 @@ const initialState: PaymentFormState = {
   isSecondStep: false,
   isCreditCardForm: false,
   isSubmitButtonVisible: false,
+  formError: null,
+  canBeMounted: false,
 };
 
 const paymentFormSlice = createSlice({
@@ -59,6 +61,10 @@ const paymentFormSlice = createSlice({
       state.submitButtonText = action.payload.submitButtonText;
       state.isSecondStep = !!action.payload.isSecondStep;
       state.isSubmitButtonVisible = true;
+      state.canBeMounted = true;
+    },
+    setFormError: (state, action: PayloadAction<string | null>) => {
+      state.formError = action.payload;
     },
     setPid: (state, action: PayloadAction<{ pid: number }>) => {
       state.pid = action.payload.pid;
@@ -70,6 +76,7 @@ const paymentFormSlice = createSlice({
       state.isFormAutoSubmitted = false;
       state.submitButtonText = '';
       state.pid = null;
+      state.canBeMounted = false;
     },
     resetSecondStep: (state) => {
       state.isSecondStep = false;
@@ -77,6 +84,9 @@ const paymentFormSlice = createSlice({
       state.visibleFields = null;
       state.isFormAutoSubmitted = false;
       state.submitButtonText = '';
+    },
+    setFormCanBeMounted: (state, action: PayloadAction<boolean>) => {
+      state.canBeMounted = action.payload;
     },
     hideSubmitButton: (state) => {
       state.isSubmitButtonVisible = false;
@@ -98,8 +108,15 @@ const paymentFormSlice = createSlice({
   },
 });
 
-export const { setPaymentForm, setPid, resetPaymentForm, resetSecondStep, hideSubmitButton } =
-  paymentFormSlice.actions;
+export const {
+  setPaymentForm,
+  setPid,
+  resetPaymentForm,
+  resetSecondStep,
+  hideSubmitButton,
+  setFormError,
+  setFormCanBeMounted,
+} = paymentFormSlice.actions;
 
 export const selectPaymentFormSettings = (state: RootState) => state.paymentFormSlice;
 

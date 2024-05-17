@@ -10,8 +10,15 @@ import { useRef } from 'react';
 
 export const Checkout = () => {
   const dispatch = useAppDispatch();
-  const { visibleFields, isSecondStep, isCreditCardForm, isSubmitButtonVisible, submitButtonText } =
-    useAppSelector(selectPaymentFormSettings);
+  const {
+    visibleFields,
+    isSecondStep,
+    isCreditCardForm,
+    isSubmitButtonVisible,
+    submitButtonText,
+    formError,
+    canBeMounted,
+  } = useAppSelector(selectPaymentFormSettings);
   useSecureComponentStyles();
   const formContainerRef = useRef<HTMLDivElement>(null);
   const { isLoading, setIsLoading } = useHandleForm(formContainerRef);
@@ -26,17 +33,16 @@ export const Checkout = () => {
     <StyledCheckoutContainer $isLoading={isLoading} $isSecondStep={isSecondStep}>
       {showBackButton && <BackButton onClick={handleBackButtonClick} className={'back-button'} />}
       {isLoading && <FormSkeleton />}
-      {!!visibleFields && (
-        <FormContainer
-          isCreditCardForm={isCreditCardForm}
-          isSecondStep={isSecondStep}
-          visibleFields={visibleFields}
-          className={'form'}
-          ref={formContainerRef}
-          isSubmitButtonVisible={isSubmitButtonVisible}
-          submitButtonText={submitButtonText}
-        />
-      )}
+      <FormContainer
+        isCreditCardForm={isCreditCardForm}
+        isSecondStep={isSecondStep}
+        visibleFields={visibleFields}
+        ref={formContainerRef}
+        isSubmitButtonVisible={isSubmitButtonVisible}
+        submitButtonText={submitButtonText}
+        formError={formError}
+        canBeMounted={canBeMounted}
+      />
     </StyledCheckoutContainer>
   );
 };
