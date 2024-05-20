@@ -1,4 +1,4 @@
-import { StyledCreditCardShortFormContainer } from '../../../../styled/checkout.styles.ts';
+import { StyledCreditCardShortFormContainer } from '../../../../styled/checkout/checkout.styles.ts';
 import { FieldName } from '../../field-name.enum.ts';
 
 export const CreditCardShortForm = () => {

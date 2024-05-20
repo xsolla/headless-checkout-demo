@@ -9,7 +9,7 @@ import {
 import { FieldName } from '../../field-name.enum.ts';
 import { Field } from '@xsolla/pay-station-sdk/dist/core/form/field.interface';
 import { WebComponentAbstract } from '@xsolla/pay-station-sdk/dist/core/web-components/web-component.abstract';
-import { StyledDefaultFormContainer } from '../../../../styled/checkout.styles.ts';
+import { StyledDefaultFormContainer } from '../../../../styled/checkout/checkout.styles.ts';
 
 export const DefaultForm: FC<{
   visibleFields: Field[];

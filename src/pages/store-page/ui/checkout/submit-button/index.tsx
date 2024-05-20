@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { StyledSubmitButtonContainer } from '../../../styled/checkout.styles.ts';
+import { StyledSubmitButtonContainer } from '../../../styled/checkout/checkout.styles.ts';
 import { useIntl } from 'react-intl';
 
 export const SubmitButton: FC<{ text?: string; className?: string; isLoading?: boolean }> = ({

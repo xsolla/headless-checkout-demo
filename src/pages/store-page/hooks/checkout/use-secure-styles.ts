@@ -3,6 +3,10 @@ import { setSecureComponentStyles } from '../../../../sdk/styles/set-secure-comp
 import styled from 'styled-components';
 
 const useSecureStyles = styled.div`
+  .icon {
+    z-index: 1;
+  }
+
   input {
     position: relative;
     outline: none;
