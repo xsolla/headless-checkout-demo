@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { graphikFontFamily } from '../../../shared/styled/graphik-font-family.const.ts';
-import { montserratFontFamily } from '../../../shared/styled/montserrat-font-family.const.ts';
+import { graphikFontFamily } from '../../../../shared/styled/graphik-font-family.const.ts';
+import { montserratFontFamily } from '../../../../shared/styled/montserrat-font-family.const.ts';
 
 export const StyledCheckoutContainer = styled.div<{ $isLoading: boolean; $isSecondStep: boolean }>`
   margin-top: ${(props) => (props.$isSecondStep ? '0' : '16px')};
@@ -36,7 +36,7 @@ export const StyledCheckoutContainer = styled.div<{ $isLoading: boolean; $isSeco
   .form {
     display: ${(props) => (props.$isLoading ? 'none' : 'flex')};
     flex-direction: column;
-    margin: 16px 0;
+    margin: ${(props) => (props.$isSecondStep ? '0 0 16px' : '16px 0')};
 
     .form-error {
       margin-top: 16px;

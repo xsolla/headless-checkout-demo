@@ -1,4 +1,4 @@
-import { StyledFormSkeletonContainer } from '../../../styled/checkout.styles.ts';
+import { StyledFormSkeletonContainer } from '../../../styled/checkout/checkout.styles.ts';
 
 export const FormSkeleton = () => {
   return (

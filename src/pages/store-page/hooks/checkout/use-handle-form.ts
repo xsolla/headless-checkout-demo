@@ -12,7 +12,6 @@ import { onNextAction, setupAndAwaitFieldsLoading } from '../../../../sdk/paymen
 import {
   GooglePayButtonComponent,
   NextActionType,
-  QrCodeComponent,
   ThreeDsComponent,
 } from '@xsolla/pay-station-sdk';
 import { useAppDispatch, useAppSelector } from '../../../../redux/hooks.ts';
@@ -22,6 +21,7 @@ import { RedirectAction } from '@xsolla/pay-station-sdk/dist/core/actions/redire
 import { SpecialButtonAction } from '@xsolla/pay-station-sdk/dist/core/actions/special-button.action.type';
 import { ShowQrCodeAction } from '@xsolla/pay-station-sdk/dist/core/actions/show-qr-code.action.type';
 import { ShowErrorsAction } from '@xsolla/pay-station-sdk/dist/core/actions/show-errors.action.type';
+import { ShowMobilePaymentScreenAction } from '@xsolla/pay-station-sdk/dist/core/actions/show-mobile-payment-screen.action.type';
 
 export const useHandleForm = (formContainerRef: RefObject<HTMLDivElement | null>) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -50,6 +50,9 @@ export const useHandleForm = (formContainerRef: RefObject<HTMLDivElement | null>
           break;
         case NextActionType.showQrCode:
           handleQrCodeAction(nextAction);
+          break;
+        case NextActionType.showMobilePaymentScreen:
+          handleShowMobilePaymentScreenAction(nextAction);
           break;
         default:
           break;
@@ -130,21 +133,23 @@ export const useHandleForm = (formContainerRef: RefObject<HTMLDivElement | null>
   };
 
   const handleQrCodeAction = (qrCodeAction: ShowQrCodeAction) => {
-    if (!formContainerRef.current) {
-      return;
-    }
-
-    formContainerRef.current.innerHTML = '';
-
-    const qrCode = new QrCodeComponent();
-    formContainerRef.current?.appendChild(qrCode);
-
     dispatch(
       setPaymentForm({
         fields: qrCodeAction.data.fields,
         isFormAutoSubmitted: false,
         submitButtonText: qrCodeAction.data.submitButtonText,
-        isSecondStep: false,
+        isSecondStep: true,
+      }),
+    );
+  };
+
+  const handleShowMobilePaymentScreenAction = (nextAction: ShowMobilePaymentScreenAction) => {
+    dispatch(
+      setPaymentForm({
+        fields: null,
+        isFormAutoSubmitted: false,
+        submitButtonText: nextAction.data.submitButtonText,
+        isSecondStep: true,
       }),
     );
   };

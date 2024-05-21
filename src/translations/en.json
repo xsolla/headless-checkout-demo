@@ -24,5 +24,8 @@
   "store.page.payment-methods.more-button": "More methods",
   "store.page.long-form.billing-information": "Billing information",
   "store.page.long-form.address": "Address",
-  "store.page.checkout.pay-now": "Pay now"
+  "store.page.checkout.pay-now": "Pay now",
+  "store.page.qr-code-form.description": "Open Alipay app on your device and scan the QR code to confirm the purchase. To check if the payment went through, click \"Check status\".",
+  "store.page.mobile-form.title": "Confirm payment",
+  "store.page.mobile-form.description": "Wait for an SMS from your mobile carrier and confirm the payment, then check the status."
 }

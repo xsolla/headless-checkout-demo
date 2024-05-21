@@ -13,5 +13,6 @@ export enum FieldName {
   city = 'city',
   zip = 'zip',
   state = 'state',
+  installments = 'installments',
   phone = 'phone',
 }

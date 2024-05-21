@@ -2,7 +2,7 @@ import { useAppDispatch, useAppSelector } from '../../../../redux/hooks.ts';
 import { resetSecondStep, selectPaymentFormSettings } from '../../../../redux/payment-form';
 import { useSecureComponentStyles } from '../../hooks/checkout/use-secure-styles.ts';
 import { FormSkeleton } from './form-skeleton';
-import { StyledCheckoutContainer } from '../../styled/checkout.styles.ts';
+import { StyledCheckoutContainer } from '../../styled/checkout/checkout.styles.ts';
 import { useHandleForm } from '../../hooks/checkout/use-handle-form.ts';
 import { BackButton } from './back-button';
 import { FormContainer } from './form-container';
@@ -11,9 +11,9 @@ import { useRef } from 'react';
 export const Checkout = () => {
   const dispatch = useAppDispatch();
   const {
+    pid,
     visibleFields,
     isSecondStep,
-    isCreditCardForm,
     isSubmitButtonVisible,
     submitButtonText,
     formError,
@@ -34,7 +34,7 @@ export const Checkout = () => {
       {showBackButton && <BackButton onClick={handleBackButtonClick} className={'back-button'} />}
       {isLoading && <FormSkeleton />}
       <FormContainer
-        isCreditCardForm={isCreditCardForm}
+        pid={pid}
         isSecondStep={isSecondStep}
         visibleFields={visibleFields}
         ref={formContainerRef}

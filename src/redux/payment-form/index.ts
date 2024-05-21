@@ -5,7 +5,6 @@ import { PaymentFormState } from './payment-form-state.interface.ts';
 import { Field } from '@xsolla/pay-station-sdk/dist/core/form/field.interface';
 import { FormConfiguration } from '@xsolla/pay-station-sdk/dist/core/form/form-configuration.interface';
 import { getErrorMessage } from '../../shared/get-error-message.function.ts';
-import { creditCardId } from '../../shared/payment/payment-methods-ids.const.ts';
 
 export const getPaymentForm = createAsyncThunk(
   'form/fetch',
@@ -36,7 +35,6 @@ const initialState: PaymentFormState = {
   isFormAutoSubmitted: false,
   submitButtonText: '',
   isSecondStep: false,
-  isCreditCardForm: false,
   isSubmitButtonVisible: false,
   formError: null,
   canBeMounted: false,
@@ -49,14 +47,14 @@ const paymentFormSlice = createSlice({
     setPaymentForm: (
       state,
       action: PayloadAction<{
-        fields: Field[];
+        fields: Field[] | null;
         isFormAutoSubmitted: boolean;
         submitButtonText: string;
         isSecondStep?: boolean;
       }>,
     ) => {
       state.fields = action.payload.fields;
-      state.visibleFields = state.fields.filter((field) => field.isVisible === '1');
+      state.visibleFields = state.fields?.filter((field) => field.isVisible === '1') ?? null;
       state.isFormAutoSubmitted = action.payload.isFormAutoSubmitted;
       state.submitButtonText = action.payload.submitButtonText;
       state.isSecondStep = !!action.payload.isSecondStep;
@@ -68,7 +66,6 @@ const paymentFormSlice = createSlice({
     },
     setPid: (state, action: PayloadAction<{ pid: number }>) => {
       state.pid = action.payload.pid;
-      state.isCreditCardForm = state.pid === creditCardId;
     },
     resetPaymentForm: (state) => {
       state.fields = null;
@@ -78,7 +75,6 @@ const paymentFormSlice = createSlice({
       state.isFormAutoSubmitted = false;
       state.submitButtonText = '';
       state.isSecondStep = false;
-      state.isCreditCardForm = false;
       state.isSubmitButtonVisible = false;
       state.formError = null;
       state.canBeMounted = false;

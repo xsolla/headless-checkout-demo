@@ -9,5 +9,6 @@ declare namespace JSX {
     'psdk-total': unknown;
     'psdk-submit-button': unknown;
     'psdk-payment-form-messages': unknown;
+    'psdk-qr-code': unknown;
   }
 }
