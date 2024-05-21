@@ -2,9 +2,14 @@ import styled from 'styled-components';
 
 export const StyledFinanceDetails = styled.div`
   psdk-finance-details {
+    &:empty {
+      margin: 0;
+    }
+
     display: flex;
     flex-direction: column;
     margin-bottom: 14px;
+    margin-top: 16px;
 
     .cart-items {
       display: none;
