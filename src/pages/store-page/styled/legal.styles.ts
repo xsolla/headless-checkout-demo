@@ -17,7 +17,11 @@ export const StyledLegal = styled.div`
 
   .legal-links {
     display: flex;
-    column-gap: 3px;
+    column-gap: 8px;
     margin-top: 20px;
+
+    .divider {
+      display: none;
+    }
   }
 `;
