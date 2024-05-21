@@ -8,6 +8,8 @@ export enum FieldName {
   cpfName = 'cpf_name',
   birthDate = 'birth_date',
   street = 'street',
+  address1 = 'address',
+  address2 = 'address2',
   streetNumber = 'street_number',
   apt = 'apt',
   city = 'city',

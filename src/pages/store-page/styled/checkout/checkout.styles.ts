@@ -193,13 +193,17 @@ export const StyledCreditCardLongFormContainer = styled.div`
     row-gap: 16px;
   }
 
-  .billing-information {
-    margin-bottom: 24px;
+  .address {
+    margin-top: 24px;
   }
 
   .row {
     display: flex;
     column-gap: 12px;
+
+    &:empty {
+      display: none;
+    }
   }
 
   h4 {

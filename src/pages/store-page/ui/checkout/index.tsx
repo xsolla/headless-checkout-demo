@@ -9,7 +9,7 @@ import { FormContainer } from './form-container';
 import { useEffect, useRef } from 'react';
 import { selectPaymentNextPage } from '../../../../redux/payment-navigation';
 import { Routes } from '../../../../routes/routes.enum.ts';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 export const Checkout = () => {
   const dispatch = useAppDispatch();
@@ -33,9 +33,10 @@ export const Checkout = () => {
     setIsLoading(true);
   };
   const navigate = useNavigate();
+  const [params] = useSearchParams();
   useEffect(() => {
     if (nextPaymentPage) {
-      navigate(`/${Routes.storePage}/${nextPaymentPage}`);
+      navigate({ pathname: `/${Routes.storePage}/${nextPaymentPage}`, search: params.toString() });
     }
   }, [nextPaymentPage]);
 

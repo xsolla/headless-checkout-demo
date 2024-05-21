@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
-    "@xsolla/pay-station-sdk": "^0.0.26",
+    "@xsolla/pay-station-sdk": "^0.0.27",
     "axios": "^1.6.8",
     "install": "^0.13.0",
     "npm": "^10.5.1",

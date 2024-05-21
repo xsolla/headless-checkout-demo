@@ -3,6 +3,7 @@ psdk-phone,
 psdk-card-number,
 psdk-google-pay-button,
 psdk-apple-pay {
+  width: 100%;
   font-family: Montserrat, sans-serif;
 
   .label {
@@ -48,6 +49,14 @@ psdk-select {
 
     &.invalid {
       border: 1px solid rgba(255, 102, 138, 1);
+    }
+
+    #dropdown-icon {
+      svg {
+        path {
+          fill: rgba(255, 255, 255, 1);
+        }
+      }
     }
 
     display: flex;

@@ -9,8 +9,9 @@ export const bitPayId = 2682;
 
 export const displayedPaymentMethodsIdsConst = [
   creditCardId,
-  paypalId,
   googlePayId,
+  paypalId,
+  alipayId,
   applePayId,
   mobileId,
   alipayId,

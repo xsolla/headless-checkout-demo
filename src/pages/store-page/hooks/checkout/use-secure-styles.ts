@@ -7,6 +7,15 @@ const useSecureStyles = styled.div`
     z-index: 1;
   }
 
+  input,
+  select {
+    font-size: 16px;
+  }
+
+  @media (min-width: 740px) {
+    font-size: 14px;
+  }
+
   input {
     position: relative;
     outline: none;

@@ -4,11 +4,16 @@ import { getPaymentStatus, selectPaymentStatusState } from '../../../../redux/pa
 import { StyledPaymentStatus } from '../../styled/payment-status.styles.ts';
 import { selectShopVisibility, setShopVisibility } from '../../../../redux/shop';
 import { PaymentStatusStates } from '../../../../redux/payment-status/payment-status-states.enum.ts';
+import { setNextPage } from '../../../../redux/payment-navigation';
 
 export const PaymentStatus = () => {
   const dispatch = useAppDispatch();
   const statusState = useAppSelector(selectPaymentStatusState);
   const shopIsVisible = useAppSelector(selectShopVisibility);
+
+  useEffect(() => {
+    dispatch(setNextPage(null));
+  }, []);
 
   useEffect(() => {
     if (!statusState) {

@@ -44,12 +44,13 @@ const paymentMethodsSlice = createSlice({
       })
       .addCase(getPaymentMethods.fulfilled, (state, action) => {
         state.isFetching = false;
-        state.paymentMethods = action.payload.filter((method) =>
-          /*
-           * Only selected payment methods should be shown.
-           */
-          displayedPaymentMethodsIdsConst.includes(method.id),
-        );
+        state.paymentMethods = action.payload
+          .filter((method) => displayedPaymentMethodsIdsConst.includes(method.id))
+          .sort(
+            (a, b) =>
+              displayedPaymentMethodsIdsConst.indexOf(a.id) -
+              displayedPaymentMethodsIdsConst.indexOf(b.id),
+          );
       })
       .addCase(getPaymentMethods.rejected, (state) => {
         state.isFetching = false;

@@ -13,6 +13,6 @@ export const StyledFormErrorContainer = styled.div`
   a,
   a:hover,
   a:visited {
-    color: rgba(153, 0, 66, 1);
+    color: rgba(255, 153, 172, 1);
   }
 `;
