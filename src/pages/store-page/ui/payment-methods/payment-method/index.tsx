@@ -18,14 +18,10 @@ export const PaymentMethod: FC<{
   return (
     <StyledPaymentMethodContainer $isFetching={isFetching}>
       {!isSecondStep && (
-        <div className={'payment-method'}>
+        <div className={'payment-method'} onClick={handleCLick}>
           <BrandLogoIcon name={iconName} pid={pid} />
           <div className={'name'}>{name}</div>
-          <ExpandButton
-            isExpanded={isExpanded}
-            handleCLick={handleCLick}
-            className={'expand-button'}
-          />
+          <ExpandButton isExpanded={isExpanded} className={'expand-button'} />
         </div>
       )}
       {isExpanded && <Checkout />}

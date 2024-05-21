@@ -18,6 +18,7 @@ export const StyledPaymentMethodContainer = styled.div<{ $isFetching: boolean }>
   .payment-method {
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     .name {
       font-family: ${graphikFontFamily};

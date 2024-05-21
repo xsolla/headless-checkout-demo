@@ -7,12 +7,11 @@ const minusIconUrl = `${import.meta.env.VITE_CDN_URL}/icons/common-icons/minus--
 
 export const ExpandButton: FC<{
   isExpanded: boolean;
-  handleCLick: () => void;
   className: string;
-}> = ({ isExpanded, handleCLick, className }) => {
+}> = ({ isExpanded, className }) => {
   const iconUrl = isExpanded ? minusIconUrl : plusIconUrl;
   return (
-    <StyledExpandButton className={className} onClick={handleCLick}>
+    <StyledExpandButton className={className}>
       <SvgIcon url={iconUrl} />
     </StyledExpandButton>
   );
