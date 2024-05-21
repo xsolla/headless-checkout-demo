@@ -18,6 +18,7 @@ export const StyledContentContainer = styled.div`
   height: 100vh;
   width: 100%;
   color: white;
+  padding-bottom: 40px;
 
   @media (max-width: ${screenXsMax}) {
     padding: 20px 16px 0 16px;
