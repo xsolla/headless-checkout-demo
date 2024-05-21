@@ -20,6 +20,8 @@ import { ThreeDsAction } from '@xsolla/pay-station-sdk/dist/core/actions/three-d
 import { RedirectAction } from '@xsolla/pay-station-sdk/dist/core/actions/redirect/redirect.action.type';
 import { SpecialButtonAction } from '@xsolla/pay-station-sdk/dist/core/actions/special-button.action.type';
 import { ShowQrCodeAction } from '@xsolla/pay-station-sdk/dist/core/actions/show-qr-code.action.type';
+import { StorePageRoutes } from '../../../../routes/store-page/store-page-routes.enum.ts';
+import { setNextPage } from '../../../../redux/payment-navigation';
 import { ShowErrorsAction } from '@xsolla/pay-station-sdk/dist/core/actions/show-errors.action.type';
 import { ShowMobilePaymentScreenAction } from '@xsolla/pay-station-sdk/dist/core/actions/show-mobile-payment-screen.action.type';
 
@@ -50,6 +52,9 @@ export const useHandleForm = (formContainerRef: RefObject<HTMLDivElement | null>
           break;
         case NextActionType.showQrCode:
           handleQrCodeAction(nextAction);
+          break;
+        case NextActionType.checkStatus:
+          handleCheckStatusAction();
           break;
         case NextActionType.showMobilePaymentScreen:
           handleShowMobilePaymentScreenAction(nextAction);
@@ -152,6 +157,11 @@ export const useHandleForm = (formContainerRef: RefObject<HTMLDivElement | null>
         isSecondStep: true,
       }),
     );
+  };
+
+  const handleCheckStatusAction = () => {
+    setIsLoading(true);
+    dispatch(setNextPage(StorePageRoutes.status));
   };
 
   return { isLoading, setIsLoading };

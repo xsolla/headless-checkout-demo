@@ -17,6 +17,7 @@ import {
 } from '../../../../redux/payment-form';
 import { StyledPaymentMethodsContainer } from '../../styled/payment-methods.styles.ts';
 import { selectToken } from '../../../../redux/sdk-configuration';
+import { selectShopVisibility, setShopVisibility } from '../../../../redux/shop';
 
 export const PaymentMethods = () => {
   const defaultMethodsCount = 4;
@@ -82,6 +83,13 @@ export const PaymentMethods = () => {
     },
     [idExpandedMethod],
   );
+
+  const shopIsVisible = useAppSelector(selectShopVisibility);
+  useEffect(() => {
+    if (!shopIsVisible) {
+      dispatch(setShopVisibility(true));
+    }
+  }, [shopIsVisible]);
 
   return (
     <StyledPaymentMethodsContainer>
