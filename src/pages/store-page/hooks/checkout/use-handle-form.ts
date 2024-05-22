@@ -8,7 +8,7 @@ import {
   setFormError,
   setPaymentForm,
 } from '../../../../redux/payment-form';
-import { onNextAction, setupAndAwaitFieldsLoading } from '../../../../sdk/payment-form';
+import { setupAndAwaitFieldsLoading } from '../../../../sdk/payment-form';
 import {
   GooglePayButtonComponent,
   NextActionType,
@@ -24,6 +24,8 @@ import { StorePageRoutes } from '../../../../routes/store-page/store-page-routes
 import { setNextPage } from '../../../../redux/payment-navigation';
 import { ShowErrorsAction } from '@xsolla/pay-station-sdk/dist/core/actions/show-errors.action.type';
 import { ShowMobilePaymentScreenAction } from '@xsolla/pay-station-sdk/dist/core/actions/show-mobile-payment-screen.action.type';
+import { selectPaymentFormNextAction } from '../../../../redux/payment-form-next-action';
+import { applePayId } from '../../../../shared/payment/payment-methods-ids.const.ts';
 
 export const useHandleForm = (formContainerRef: RefObject<HTMLDivElement | null>) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -31,8 +33,10 @@ export const useHandleForm = (formContainerRef: RefObject<HTMLDivElement | null>
   const pid = useAppSelector(selectPid);
   const { fields, isSecondStep } = useAppSelector(selectPaymentFormSettings);
 
+  const nextAction = useAppSelector(selectPaymentFormNextAction);
+
   useEffect(() => {
-    onNextAction((nextAction) => {
+    if (nextAction) {
       switch (nextAction.type) {
         case NextActionType.showFields:
           handleShowErrorsAction(nextAction as unknown as ShowErrorsAction);
@@ -59,11 +63,14 @@ export const useHandleForm = (formContainerRef: RefObject<HTMLDivElement | null>
         case NextActionType.showMobilePaymentScreen:
           handleShowMobilePaymentScreenAction(nextAction);
           break;
+        case NextActionType.hideForm:
+          hideForm();
+          break;
         default:
           break;
       }
-    });
-  }, []);
+    }
+  }, [nextAction]);
 
   useEffect(() => {
     if (pid && !isSecondStep) {
@@ -95,6 +102,10 @@ export const useHandleForm = (formContainerRef: RefObject<HTMLDivElement | null>
           isSecondStep: !error,
         }),
       );
+
+      if (nextAction.data.errors?.length && pid === applePayId) {
+        dispatch(hideSubmitButton());
+      }
     });
   };
 
@@ -162,6 +173,14 @@ export const useHandleForm = (formContainerRef: RefObject<HTMLDivElement | null>
   const handleCheckStatusAction = () => {
     setIsLoading(true);
     dispatch(setNextPage(StorePageRoutes.status));
+  };
+
+  const hideForm = () => {
+    if (!formContainerRef.current) {
+      return;
+    }
+
+    formContainerRef.current.style.display = 'none';
   };
 
   return { isLoading, setIsLoading };

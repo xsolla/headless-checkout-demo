@@ -11,6 +11,9 @@ import shopSlice from './shop';
 import updateCartMiddleware from './cart/update-cart.middleware.ts';
 import paymentNavigationSlice from './payment-navigation';
 import paymentStatusSlice from './payment-status';
+import paymentFormNextActionSlice from './payment-form-next-action';
+import nextActionMiddleware from './payment-form-next-action/next-action.middleware.ts';
+import resetNextActionMiddleware from './payment-form-next-action/reset-next-action.middleware.ts';
 
 export const store = configureStore({
   reducer: {
@@ -23,12 +26,15 @@ export const store = configureStore({
     shopSlice,
     paymentNavigationSlice,
     paymentStatusSlice,
+    paymentFormNextActionSlice,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()
       .prepend(setTokenMiddleware.middleware)
       .prepend(setSdkInitializedMiddleware.middleware)
-      .prepend(updateCartMiddleware.middleware),
+      .prepend(updateCartMiddleware.middleware)
+      .prepend(nextActionMiddleware.middleware)
+      .prepend(resetNextActionMiddleware.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

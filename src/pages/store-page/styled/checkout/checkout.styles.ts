@@ -142,6 +142,35 @@ export const StyledSubmitButtonContainer = styled.div`
       }
     }
   }
+
+  .psdk-apple-pay {
+    height: 50px;
+  }
+
+  .apple-pay-waiting-processing {
+    margin-bottom: 16px;
+    h4 {
+      margin: 0 0 8px;
+      padding: 0;
+      text-align: center;
+      font-family: ${graphikFontFamily};
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: ${graphikFontFamily};
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
 `;
 
 export const StyledCreditCardShortFormContainer = styled.div`
