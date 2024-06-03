@@ -2,14 +2,14 @@
   {
     "id": "potion_of_wisdom",
     "price": {
-      "amount": "4.99",
+      "amount": "0.99",
       "currency": "USD"
     }
   },
   {
     "id": "calm_crystal",
     "price": {
-      "amount": "3.99",
+      "amount": "0.5",
       "currency": "USD"
     }
   }
