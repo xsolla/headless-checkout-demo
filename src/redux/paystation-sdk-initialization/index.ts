@@ -19,6 +19,7 @@ export const initPayStationSdk = createAsyncThunk(
         isWebview: false,
         theme: 'default',
         language: parameters.language,
+        topLevelDomain: 'headless-checkout-demo-react.web.app',
       };
       const isSandboxMode = selectIsSandbox(state);
       if (isSandboxMode) {
