@@ -135,17 +135,19 @@ export const useHandleForm = (formContainerRef: RefObject<HTMLDivElement | null>
   };
 
   const handleSpecialButton = (specialButtonAction: SpecialButtonAction) => {
-    if (!formContainerRef.current) {
-      return;
-    }
+    setTimeout(() => {
+      if (!formContainerRef.current) {
+        return;
+      }
 
-    formContainerRef.current.innerHTML = '';
-    if (specialButtonAction.data.buttonName === 'google-pay') {
-      const button = new GooglePayButtonComponent();
-      button.setButtonColor('white');
-      formContainerRef.current.appendChild(button);
-      dispatch(hideSubmitButton());
-    }
+      formContainerRef.current.innerHTML = '';
+      if (specialButtonAction.data.buttonName === 'google-pay') {
+        const button = new GooglePayButtonComponent();
+        button.setButtonColor('white');
+        formContainerRef.current.appendChild(button);
+        dispatch(hideSubmitButton());
+      }
+    });
   };
 
   const handleQrCodeAction = (qrCodeAction: ShowQrCodeAction) => {
