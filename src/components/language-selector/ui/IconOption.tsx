@@ -8,6 +8,7 @@ const cdnUrl = import.meta.env.VITE_CDN_URL;
 
 const { Option } = components;
 export const IconOption = (props: OptionProps<{ label: string; flag: string }>) => (
+  // @ts-expect-error todo: need to fix types
   <Option {...props}>
     <StyledFlag>
       <Image
