@@ -28,6 +28,7 @@ export const LanguageSelector = (props: LanguageSelectorProps) => {
       options={options}
       components={{
         Option: IconOption,
+        // @ts-expect-error todo: need to fix types
         SingleValue: IconSingleValue,
         IndicatorsContainer: CustomIndicatorContainer,
       }}

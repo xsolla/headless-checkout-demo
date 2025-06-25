@@ -6,6 +6,8 @@ import { useAppDispatch, useAppSelector } from '../../../redux/hooks.ts';
 import { selectCurrentLanguage, setLanguage } from '../../../redux/sdk-configuration';
 import { Lang } from '@xsolla/pay-station-sdk';
 
+type Message = Record<string, string>;
+
 export const LocalizationContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const currentLocale = useAppSelector(selectCurrentLanguage);
   const dispatch = useAppDispatch();
@@ -13,7 +15,7 @@ export const LocalizationContextProvider: FC<{ children: ReactNode }> = ({ child
     (locale: Lang) => dispatch(setLanguage(locale)),
     [currentLocale],
   );
-  const [messages, setMessages] = useState(null);
+  const [messages, setMessages] = useState<Message | undefined>(undefined);
 
   useEffect(() => {
     loadMessages(currentLocale).then((data) => setMessages(data.default));

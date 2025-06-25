@@ -9,6 +9,7 @@ const cdnUrl = import.meta.env.VITE_CDN_URL;
 const { SingleValue } = components;
 
 export const IconSingleValue = (props: OptionProps<{ label: string; flag: string }>) => (
+  // @ts-expect-error todo: fix type props
   <SingleValue {...props}>
     <StyledFlag>
       <Image

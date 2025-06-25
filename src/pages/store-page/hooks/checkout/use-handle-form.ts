@@ -146,6 +146,8 @@ export const useHandleForm = (formContainerRef: RefObject<HTMLDivElement | null>
         button.setButtonColor('white');
         formContainerRef.current.appendChild(button);
         dispatch(hideSubmitButton());
+
+        setIsLoading(false);
       }
     });
   };

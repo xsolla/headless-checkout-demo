@@ -10,7 +10,7 @@ const paymentNavigationSlice = createSlice({
   name: 'payment-navigation',
   initialState,
   reducers: {
-    setNextPage: (state, action: PayloadAction<StorePageRoutes>) => {
+    setNextPage: (state, action: PayloadAction<StorePageRoutes | null>) => {
       state.nextPage = action.payload;
     },
   },
