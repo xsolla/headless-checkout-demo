@@ -19,6 +19,8 @@ export const initPayStationSdk = createAsyncThunk(
         isWebview: false,
         theme: 'default',
         language: parameters.language,
+        topLevelDomain: 'headless-checkout-demo-react.web.app',
+        isApplePayInstantFlowEnabled: true,
       };
       const isSandboxMode = selectIsSandbox(state);
       if (isSandboxMode) {
