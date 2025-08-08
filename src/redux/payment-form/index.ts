@@ -58,7 +58,7 @@ const paymentFormSlice = createSlice({
       }>,
     ) => {
       state.fields = action.payload.fields;
-      state.visibleFields = state.fields?.filter((field) => field.isVisible === '1') ?? null;
+      state.visibleFields = state.fields?.slice() ?? null;
       state.isFormAutoSubmitted = action.payload.isFormAutoSubmitted;
       state.submitButtonText = action.payload.submitButtonText;
       state.isSecondStep = !!action.payload.isSecondStep;
