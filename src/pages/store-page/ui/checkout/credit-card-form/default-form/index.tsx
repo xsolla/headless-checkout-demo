@@ -78,7 +78,7 @@ export const DefaultForm: FC<{
         return;
       }
 
-      if (field.type === 'checkbox') {
+      if (field.type === 'check') {
         const checkbox = new CheckboxComponent();
 
         renderControl(checkbox, field);

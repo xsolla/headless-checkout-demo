@@ -34,6 +34,9 @@ export const FormContainer = forwardRef<
     const isCreditCardForm = pid === creditCardId;
     const isQrCode = pid === alipayId && isSecondStep;
 
+    // demo easy debug fields log
+    console.log('visibleFields', visibleFields);
+
     return (
       <>
         <div className={'form-messages'}>
