@@ -5,6 +5,7 @@ import { router } from './routes';
 import { Provider } from 'react-redux';
 import { store } from './redux/store.ts';
 import { LocalizationContextProvider } from './app/contexts/localization-context/localization-context-provider.tsx';
+import './index.scss';
 
 export default function App() {
   return (

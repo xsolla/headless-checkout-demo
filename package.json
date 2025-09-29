@@ -31,6 +31,8 @@
     "react-router-dom": "^6.20.0",
     "react-select": "^5.8.0",
     "sass": "^1.74.1",
+    "single-spa": "^6.0.3",
+    "single-spa-react": "^6.0.2",
     "styled-components": "^6.1.8",
     "zod": "^3.22.4"
   },

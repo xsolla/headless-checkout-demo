@@ -25,6 +25,21 @@ export default defineConfig({
     }),
     react(),
   ],
+  build: {
+    cssCodeSplit: true,
+    assetsDir: 'assets',
+    emptyOutDir: false,
+    rollupOptions: {
+      input: 'src/microfrontend-main.tsx',
+      external: [],
+      output: {
+        entryFileNames: '[name].js',
+        assetFileNames: 'assets/[name].[ext]',
+        format: 'systemjs',
+      },
+      preserveEntrySignatures: 'strict',
+    },
+  },
   resolve: {
     alias: {
       '@translations': path.resolve(__dirname, './src/translations'),
