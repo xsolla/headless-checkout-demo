@@ -37,6 +37,8 @@ export const useHandleForm = (formContainerRef: RefObject<HTMLDivElement | null>
 
   useEffect(() => {
     if (nextAction) {
+      console.log('nextAction', nextAction);
+
       switch (nextAction.type) {
         case NextActionType.showFields:
           handleShowErrorsAction(nextAction as unknown as ShowErrorsAction);
