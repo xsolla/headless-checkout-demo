@@ -5,7 +5,8 @@ import { SvgIconContainer } from './root.styles.ts';
 const iconCache = new Map();
 
 export const SvgIcon: FC<{ url: string }> = ({ url }) => {
-  const [svgContent, setSvgContent] = useState(iconCache.get(url));
+  const cached = iconCache.get(url);
+  const [svgContent, setSvgContent] = useState(typeof cached === 'string' ? cached : undefined);
 
   useEffect(() => {
     if (!iconCache.has(url)) {
