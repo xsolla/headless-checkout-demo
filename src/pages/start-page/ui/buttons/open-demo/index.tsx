@@ -6,8 +6,8 @@ import {
   selectTokenIsFetching,
 } from '../../../../../redux/sdk-configuration';
 import { useAppDispatch, useAppSelector } from '../../../../../redux/hooks.ts';
-import { Loader } from '../../../../../components/loader';
-import { StyledShopButton } from '../../../styled/shop-button.styles.ts';
+import { StyleButtonText, StyledShopButton } from '../../../styled/shop-button.styles.ts';
+import { ButtonLoader } from '../loader/index.tsx';
 
 export const OpenDemoButton = () => {
   const isSandbox = useAppSelector(selectIsSandbox);
@@ -23,17 +23,11 @@ export const OpenDemoButton = () => {
   }, [isSandbox, isFetching]);
 
   return (
-    <StyledShopButton onClick={handleOpenDemoClick}>
-      <span>
-        {isFetching ? (
-          <Loader />
-        ) : (
-          <FormattedMessage
-            id={'start.page.button'}
-            defaultMessage={'See it live'}
-          ></FormattedMessage>
-        )}
-      </span>
+    <StyledShopButton tabIndex={0} onClick={handleOpenDemoClick}>
+      <StyleButtonText isLoading={isFetching}>
+        <FormattedMessage id={'start.page.button'} defaultMessage={'See it live'} />
+      </StyleButtonText>
+      {isFetching && <ButtonLoader />}
     </StyledShopButton>
   );
 };

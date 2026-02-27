@@ -1,7 +1,9 @@
+import { colors } from '@shared/colors.const';
+import { laptopMin } from '@shared/media-break-points.const';
 import styled from 'styled-components';
-import { LoaderProps } from './loader-props.interface.ts';
 
-export const StyledLoader = styled.div<LoaderProps>`
+export const StyledButtonLoader = styled.div`
+  position: absolute;
   display: flex;
   width: 100%;
   height: 100%;
@@ -11,14 +13,18 @@ export const StyledLoader = styled.div<LoaderProps>`
   &::before {
     content: '';
     display: block;
-    height: ${(props) => (props.height ? props.height : '25px')};
-    width: ${(props) => (props.width ? props.width : '25px')};
+    height: 24px;
+    width: 24px;
     border-radius: 100%;
-    border: ${(props) => (props.borderwidth ? props.borderwidth : '2px')} solid
-      ${(props) => (props.color ? props.color : '#fff')};
+    border: 2px solid ${colors.text.dark};
     border-bottom-color: transparent;
-
+    box-sizing: border-box;
     animation: loader 1s linear infinite;
+
+    @media (min-width: ${laptopMin}) {
+      height: 26px;
+      width: 26px;
+    }
   }
 
   @keyframes loader {

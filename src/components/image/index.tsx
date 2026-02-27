@@ -6,7 +6,7 @@ export const Image = (props: ImageProps) => (
     <LazyLoadImage
       src={props.imgUrl}
       placeholderSrc={props.placeHolderIcon}
-      style={{ width: props.placeHolderWidth }}
+      className={props.class}
     />
   </div>
 );
