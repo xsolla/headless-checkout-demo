@@ -23,17 +23,12 @@ export const OpenDemoButton = () => {
   }, [isSandbox, isFetching]);
 
   return (
-    <StyledShopButton onClick={handleOpenDemoClick}>
-      <span>
-        {isFetching ? (
-          <Loader />
-        ) : (
-          <FormattedMessage
-            id={'start.page.button'}
-            defaultMessage={'See it live'}
-          ></FormattedMessage>
-        )}
-      </span>
+    <StyledShopButton tabIndex={0} onClick={handleOpenDemoClick}>
+      {isFetching ? (
+        <Loader />
+      ) : (
+        <FormattedMessage id={'start.page.button'} defaultMessage={'See it live'} />
+      )}
     </StyledShopButton>
   );
 };

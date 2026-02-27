@@ -4,7 +4,7 @@ import { SvgIconContainer } from './root.styles.ts';
 
 const iconCache = new Map();
 
-export const SvgIcon: FC<{ url: string }> = ({ url }) => {
+export const SvgIcon: FC<{ url: string; className?: string }> = ({ url, className }) => {
   const cached = iconCache.get(url);
   const [svgContent, setSvgContent] = useState(typeof cached === 'string' ? cached : undefined);
 
@@ -19,5 +19,7 @@ export const SvgIcon: FC<{ url: string }> = ({ url }) => {
     iconCache.get(url).then(setSvgContent).catch(console.error);
   }, [url]);
 
-  return svgContent ? <SvgIconContainer dangerouslySetInnerHTML={{ __html: svgContent }} /> : null;
+  return svgContent ? (
+    <SvgIconContainer className={className} dangerouslySetInnerHTML={{ __html: svgContent }} />
+  ) : null;
 };

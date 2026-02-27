@@ -6,6 +6,7 @@ export const getToken = async (parameters: {
   items: string[];
 }): Promise<string> => {
   const { sandbox, locale, items } = parameters;
+
   const response = await tokenApiClient.get('', {
     params: { ...(sandbox ? { sandbox: '1' } : {}), locale, items: items.join(',') },
   });

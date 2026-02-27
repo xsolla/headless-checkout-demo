@@ -1,42 +1,58 @@
 import styled from 'styled-components';
-import { screenXsMax } from '../../../shared/media-break-points.const.ts';
+import { colors } from '../../../shared/colors.const.ts';
+import { desktopMin, laptopMin, tabletMin } from '../../../shared/media-break-points.const.ts';
 
 export const StyledHeader = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 9px;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 100%;
+  height: 64px;
+  background: ${colors.bg.primary};
 
-  .company {
-    padding: 0;
-    margin: 38px 0 0;
-    font-size: 22px;
-    font-weight: 600;
-    font-family: SharpgroteskSmb20, sans-serif;
-    line-height: 24px;
-    text-align: left;
+  @media (min-width: ${tabletMin}) {
+    height: 64px;
   }
 
-  @media (max-width: ${screenXsMax}) {
-    margin-bottom: 50px;
+  @media (min-width: ${laptopMin}) {
+    height: 70px;
+  }
 
-    .company {
-      margin: 20px 0 0;
-      font-size: 19.5px;
-    }
+  @media (min-width: ${desktopMin}) {
+    height: 88px;
   }
 `;
 
-export const StyledLogo = styled.div`
-  margin-right: 29px;
+export const StyledHeaderIconWrapper = styled.div`
+  width: 155px;
+  height: 32px;
 
-  img {
+  svg {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
-  @media (max-width: ${screenXsMax}) {
-    margin-right: 19px;
-    width: 65px;
-    height: 65px;
+  @media (min-width: ${tabletMin}) {
+    width: 184px;
+    height: 38px;
+  }
+
+  @media (min-width: ${desktopMin}) {
+    width: 232px;
+    height: 48px;
+  }
+`;
+
+export const StyledHeaderSelectWrapper = styled.div`
+  display: none;
+
+  @media (min-width: ${laptopMin}) {
+    display: block;
+    width: 200px;
+  }
+
+  @media (min-width: ${desktopMin}) {
+    width: 250px;
   }
 `;
