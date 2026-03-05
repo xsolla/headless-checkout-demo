@@ -6,7 +6,7 @@ export const StyledRootDiv = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding: 0 8px 8px;
   background: ${colors.bg.primary};
   font-family: Pilat, sans-serif;
