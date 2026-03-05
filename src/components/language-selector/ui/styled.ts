@@ -24,11 +24,11 @@ export const StyledFlag = styled.div`
   }
 `;
 
-export const StyledArrow = styled.img<{ isOpen?: boolean }>`
+export const StyledArrow = styled.img<{ $isOpen?: boolean }>`
   width: 16px;
   height: 16px;
   transition: transform 0.2s ease;
-  transform: ${({ isOpen: $isOpen }) => ($isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
+  transform: ${({ $isOpen: $isOpen }) => ($isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
 
   @media (min-width: ${laptopMin}) {
     width: 18px;

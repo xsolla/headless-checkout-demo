@@ -8,6 +8,6 @@ const { IndicatorsContainer } = components;
 export const CustomIndicatorContainer = (props) => (
   <IndicatorsContainer {...props}>
     {/* eslint-disable-next-line react/prop-types */}
-    <StyledArrow src={ArrowDown} isOpen={props.selectProps.menuIsOpen} />
+    <StyledArrow src={ArrowDown} $isOpen={props.selectProps.menuIsOpen} />
   </IndicatorsContainer>
 );

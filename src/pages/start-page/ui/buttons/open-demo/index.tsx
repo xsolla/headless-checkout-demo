@@ -24,7 +24,7 @@ export const OpenDemoButton = () => {
 
   return (
     <StyledShopButton tabIndex={0} onClick={handleOpenDemoClick}>
-      <StyleButtonText isLoading={isFetching}>
+      <StyleButtonText $isLoading={isFetching}>
         <FormattedMessage id={'start.page.button'} defaultMessage={'See it live'} />
       </StyleButtonText>
       {isFetching && <ButtonLoader />}

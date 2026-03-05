@@ -47,6 +47,6 @@ export const StyledShopButton = styled.div`
   }
 `;
 
-export const StyleButtonText = styled.span<{ isLoading: boolean }>`
-  opacity: ${(props) => (props.isLoading ? '0' : '1')};
+export const StyleButtonText = styled.span<{ $isLoading: boolean }>`
+  opacity: ${(props) => (props.$isLoading ? '0' : '1')};
 `;
