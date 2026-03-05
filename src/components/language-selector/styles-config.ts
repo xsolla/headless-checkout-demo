@@ -79,8 +79,8 @@ export const languageSelectorStylesConfig: StylesConfig = {
   }),
   menu: (styles) => ({
     ...styles,
-    background: colors.bg.primary,
     padding: '0',
+    background: colors.bg.primary,
     border: '1px solid #e5e7eb',
     borderRadius: '4px',
     boxShadow: '0px 4px 16px rgba(0, 0, 0, 0.08)',
@@ -96,6 +96,7 @@ export const languageSelectorStylesConfig: StylesConfig = {
   }),
   menuList: (styles) => ({
     ...styles,
+    maxHeight: '500px',
     padding: '0',
     scrollbarWidth: 'none',
     '::-webkit-scrollbar-thumb': {
