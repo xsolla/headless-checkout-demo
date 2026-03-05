@@ -40,6 +40,9 @@ export const StyledPromoTitle = styled.h1`
   line-height: 90%;
   font-size: 48px;
   letter-spacing: -4%;
+  word-break: keep-all;
+  line-break: strict;
+  overflow-wrap: break-word;
 
   @media (min-width: ${tabletMin}) {
     font-size: 72px;
