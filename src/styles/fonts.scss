@@ -182,3 +182,81 @@
     url('./assets/fonts/montserrat/Montserrat-BoldItalic.woff2') format('woff2'),
     url('./assets/fonts/montserrat/Montserrat-BoldItalic.woff') format('woff');
 }
+
+/** Pilat Light **/
+@font-face {
+  font-family: 'Pilat';
+  font-weight: 300;
+  font-style: normal;
+  src:
+    url('./assets/fonts/pilat/woff/Pilat-Light.woff2') format('woff2'),
+    url('./assets/fonts/pilat/woff/Pilat-Light.woff') format('woff'),
+    url('./assets/fonts/pilat/otf/Pilat-Light.otf') format('opentype');
+}
+
+/** Pilat Book **/
+@font-face {
+  font-family: 'Pilat';
+  font-weight: 350;
+  font-style: normal;
+  src:
+    url('./assets/fonts/pilat/woff/Pilat-Book.woff2') format('woff2'),
+    url('./assets/fonts/pilat/woff/Pilat-Book.woff') format('woff'),
+    url('./assets/fonts/pilat/otf/Pilat-Book.otf') format('opentype');
+}
+
+/** Pilat Regular **/
+@font-face {
+  font-family: 'Pilat';
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url('./assets/fonts/pilat/woff/Pilat-Regular.woff2') format('woff2'),
+    url('./assets/fonts/pilat/woff/Pilat-Regular.woff') format('woff'),
+    url('./assets/fonts/pilat/otf/Pilat-Regular.otf') format('opentype');
+}
+
+/** Pilat Demi **/
+@font-face {
+  font-family: 'Pilat';
+  font-weight: 600;
+  font-style: normal;
+  src:
+    url('./assets/fonts/pilat/woff/Pilat-Demi.woff2') format('woff2'),
+    url('./assets/fonts/pilat/woff/Pilat-Demi.woff') format('woff'),
+    url('./assets/fonts/pilat/otf/Pilat-Demi.otf') format('opentype');
+}
+
+/** Pilat Bold **/
+@font-face {
+  font-family: 'Pilat';
+  font-weight: 700;
+  font-style: normal;
+  src:
+    url('./assets/fonts/pilat/woff/Pilat-Bold.woff2') format('woff2'),
+    url('./assets/fonts/pilat/woff/Pilat-Bold.woff') format('woff'),
+    url('./assets/fonts/pilat/otf/Pilat-Bold.otf') format('opentype');
+}
+
+/** Pilat Heavy **/
+@font-face {
+  font-family: 'Pilat';
+  font-weight: 900;
+  font-style: normal;
+  src:
+    url('./assets/fonts/pilat/woff/Pilat-Heavy.woff2') format('woff2'),
+    url('./assets/fonts/pilat/woff/Pilat-Heavy.woff') format('woff'),
+    url('./assets/fonts/pilat/otf/Pilat-Heavy.otf') format('opentype');
+}
+
+/** Aktiv Grotesk Regular **/
+@font-face {
+  font-family: 'AktivGrotesk';
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url('./assets/fonts/grotesk/AktivGrotesk_Regular.woff2') format('woff2'),
+    url('./assets/fonts/grotesk/AktivGrotesk_Regular.woff') format('woff'),
+    url('./assets/fonts/grotesk/AktivGrotesk_Regular.otf') format('opentype'),
+    url('./assets/fonts/grotesk/AktivGrotesk_Regular.ttf') format('truetype');
+}

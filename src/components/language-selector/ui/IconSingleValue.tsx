@@ -1,8 +1,7 @@
 import React from 'react';
 import { components, OptionProps } from 'react-select';
 import { StyledFlag } from './styled.ts';
-import DefaultIcon from '../../../assets/location--line.svg';
-import { Image } from '../../image';
+import { SvgIcon } from '../../svg-icon/index.tsx';
 
 const cdnUrl = import.meta.env.VITE_CDN_URL;
 
@@ -12,11 +11,7 @@ export const IconSingleValue = (props: OptionProps<{ label: string; flag: string
   // @ts-expect-error todo: fix type props
   <SingleValue {...props}>
     <StyledFlag>
-      <Image
-        placeHolderIcon={DefaultIcon}
-        imgUrl={`${cdnUrl}/icons/flag-icons/${props.data.flag}.svg`}
-        placeHolderWidth='18px'
-      ></Image>
+      <SvgIcon className='flag-icon' url={`${cdnUrl}/icons/flag-icons/${props.data.flag}.svg`} />
     </StyledFlag>
     {props.data.label}
   </SingleValue>

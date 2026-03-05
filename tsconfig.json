@@ -12,7 +12,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "paths": {
-      "@translations/*": ["./src/translations/*"]
+      "@translations/*": ["./src/translations/*"],
+      "@shared/*": ["./src/shared/*"],
     }
   },
   "include": ["src", "test"],

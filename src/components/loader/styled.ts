@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { LoaderProps } from './loader-props.interface.ts';
+
 export const StyledLoader = styled.div<LoaderProps>`
   display: flex;
   width: 100%;

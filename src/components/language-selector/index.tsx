@@ -21,12 +21,17 @@ const defaultLanguage: Language = {
 };
 export const LanguageSelector = (props: LanguageSelectorProps) => {
   const intl = useIntl();
-  const { onChange } = props;
+  const { onChange, currentLocale: currentLanguage } = props;
+  const selectedLanguage = currentLanguage
+    ? options.find((lang) => lang.value === currentLanguage) ?? defaultLanguage
+    : defaultLanguage;
   return (
     <Select
-      defaultValue={defaultLanguage}
+      isSearchable={false}
+      value={selectedLanguage}
       options={options}
       components={{
+        // @ts-expect-error todo: need to fix types
         Option: IconOption,
         // @ts-expect-error todo: need to fix types
         SingleValue: IconSingleValue,

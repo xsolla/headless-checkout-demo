@@ -1,5 +1,5 @@
 export interface ImageProps {
-  placeHolderIcon: string;
   imgUrl: string;
-  placeHolderWidth?: string;
+  class?: string;
+  placeHolderIcon: string;
 }

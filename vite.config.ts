@@ -28,6 +28,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@translations': path.resolve(__dirname, './src/translations'),
+      '@shared': path.resolve(__dirname, './src/shared'),
     },
   },
 });
