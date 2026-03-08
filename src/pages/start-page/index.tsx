@@ -7,6 +7,7 @@ import {
 } from './styled/header.styles.ts';
 import {
   StyledPromo,
+  StyledPromoBgImage,
   StyledPromoTitle,
   StyledPromoBadge,
   StyledBadgeLogo,
@@ -55,6 +56,14 @@ export function StartPage() {
         </StyledHeaderSelectWrapper>
       </StyledHeader>
       <StyledPromo>
+        <StyledPromoBgImage
+          alt=''
+          sizes='100vw'
+          srcSet='/images/start-page-bg-mobile.webp 600w, /images/start-page-bg-tablet.webp 1280w, /images/start-page-bg-laptop.webp 1920w, /images/start-page-bg-desktop.webp 2560w'
+          src='/images/start-page-bg-laptop.webp'
+          loading='eager'
+          fetchPriority='high'
+        />
         <StyledPromoTitle>
           <FormattedMessage id={'start.page.title'} defaultMessage={'Headless Checkout demo'} />
         </StyledPromoTitle>
