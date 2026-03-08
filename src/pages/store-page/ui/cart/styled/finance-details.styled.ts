@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { screenXsMax } from '../../../../../shared/media-break-points.const.ts';
+import { screenXsMax } from '@shared/media-break-points.const.ts';
+import { graphikFontFamily, montserratFontFamily } from '@shared/fonts/fonts.const.ts';
 
 export const StyledFinanceDetails = styled.div`
   psdk-finance-details {
@@ -41,7 +42,7 @@ export const StyledFinanceDetails = styled.div`
 
       .title,
       .price {
-        font-family: Montserrat, sans-serif;
+        font-family: ${montserratFontFamily};
         font-size: 14px;
         font-weight: 400;
         line-height: 16px;
@@ -72,14 +73,14 @@ export const StyledFinanceDetails = styled.div`
       .title {
         margin-bottom: 4px;
         color: rgba(255, 255, 255, 0.5);
-        font-family: GraphikLCWebUikit, sans-serif;
+        font-family: ${graphikFontFamily};
         font-size: 12px;
         font-weight: 400;
         line-height: 15px;
       }
 
       .content {
-        font-family: GraphikLCWebUikit, sans-serif;
+        font-family: ${graphikFontFamily};
         font-size: 14px;
         font-weight: 400;
         line-height: 18px;
@@ -99,14 +100,14 @@ export const StyledFinanceDetails = styled.div`
       color: rgba(255, 255, 255, 1);
 
       .title {
-        font-family: Montserrat, sans-serif;
+        font-family: ${montserratFontFamily};
         font-size: 18px;
         font-weight: 400;
         line-height: 22px;
       }
 
       .price {
-        font-family: Montserrat, sans-serif;
+        font-family: ${montserratFontFamily};
         font-size: 28px;
         font-weight: 700;
         line-height: 34px;

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { screenXsMax } from '../../../../../shared/media-break-points.const.ts';
+import { screenXsMax } from '@shared/media-break-points.const.ts';
+import { montserratFontFamily } from '@shared/fonts/fonts.const.ts';
 export const StyledCartItemContainer = styled.div`
   display: flex;
 
@@ -36,7 +37,7 @@ export const StyledCartItemContainer = styled.div`
 
     .title {
       margin-bottom: 8px;
-      font-family: Montserrat, sans-serif;
+      font-family: ${montserratFontFamily};
       font-size: 18px;
       font-weight: 600;
       line-height: 22px;
@@ -44,7 +45,7 @@ export const StyledCartItemContainer = styled.div`
     }
 
     .price {
-      font-family: Montserrat, sans-serif;
+      font-family: ${montserratFontFamily};
       font-size: 18px;
       font-weight: 400;
       line-height: 22px;

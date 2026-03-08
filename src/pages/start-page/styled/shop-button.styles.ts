@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '@shared/colors.const.ts';
-import { desktopMin, laptopMin } from '../../../shared/media-break-points.const.ts';
+import { desktopMin, laptopMin } from '@shared/media-break-points.const.ts';
+import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
 
 export const StyledShopButton = styled.div`
   position: relative;
@@ -12,7 +13,7 @@ export const StyledShopButton = styled.div`
   background: ${colors.control.primary.bg};
   border: 1px solid ${colors.control.primary.border};
   border-radius: 4px;
-  font-family: AktivGrotesk, sans-serif;
+  font-family: ${aktivGroteskFontFamily};
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 1%;

@@ -1,0 +1,28 @@
+$system-font-stack:
+  system-ui,
+  -apple-system,
+  'Segoe UI',
+  Roboto,
+  'Helvetica Neue',
+  Arial,
+  sans-serif;
+
+@mixin fontMontserrat {
+  font-family: Montserrat, $system-font-stack;
+}
+
+@mixin fontGraphik {
+  font-family: GraphikLCWebUikit, $system-font-stack;
+}
+
+@mixin fontPilat {
+  font-family: Pilat, $system-font-stack;
+}
+
+@mixin fontAktivGrotesk {
+  font-family: AktivGrotesk, $system-font-stack;
+}
+
+@mixin fontBagnard {
+  font-family: Bagnard, $system-font-stack;
+}

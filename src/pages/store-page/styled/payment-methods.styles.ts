@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { graphikFontFamily } from '../../../shared/styled/graphik-font-family.const.ts';
-import { montserratFontFamily } from '../../../shared/styled/montserrat-font-family.const.ts';
+import { graphikFontFamily, montserratFontFamily } from '@shared/fonts/fonts.const.ts';
 
 export const StyledPaymentMethodsContainer = styled.div`
   display: flex;
