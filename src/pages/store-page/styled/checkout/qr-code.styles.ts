@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { montserratFontFamily } from '../../../../shared/styled/montserrat-font-family.const.ts';
+import { montserratFontFamily } from '@shared/fonts/fonts.const.ts';
 
 export const StyledQrCodeFormContainer = styled.div`
   display: flex;

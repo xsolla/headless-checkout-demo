@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { screenXsMax } from '../../../shared/media-break-points.const.ts';
-import { graphikFontFamily } from '../../../shared/styled/graphik-font-family.const.ts';
-import { loaderStyles } from '../../../shared/styled/loader.styles.const.ts';
+import { screenXsMax } from '@shared/media-break-points.const.ts';
+import { graphikFontFamily } from '@shared/fonts/fonts.const.ts';
+import { loaderStyles } from '@shared/styled/loader.styles.const.ts';
 
 export const StyledPaymentStatus = styled.section`
   display: flex;

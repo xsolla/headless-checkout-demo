@@ -1,11 +1,14 @@
+@import './font-mixins';
+
 psdk-text,
 psdk-checkbox,
 psdk-phone,
 psdk-card-number,
 psdk-google-pay-button,
 psdk-apple-pay {
+  @include fontMontserrat;
+
   width: 100%;
-  font-family: Montserrat, sans-serif;
 
   .label {
     display: none;
@@ -30,7 +33,7 @@ psdk-apple-pay {
 }
 
 psdk-select {
-  font-family: Montserrat, sans-serif;
+  @include fontMontserrat;
 
   .select {
     background: rgba(255, 255, 255, 0.07);
@@ -162,9 +165,10 @@ psdk-qr-code {
 
 psdk-apple-pay {
   .apple-pay-error {
+    @include fontMontserrat;
+
     margin: 0;
     padding: 0;
-    font-family: Montserrat, sans-serif;
     font-size: 14px;
     line-height: 20px;
     padding: 12px;
@@ -188,7 +192,7 @@ psdk-checkbox {
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 4px
+    gap: 4px;
   }
 
   .checkbox-dummy {

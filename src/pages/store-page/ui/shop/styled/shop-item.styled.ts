@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { montserratFontFamily } from '@shared/fonts/fonts.const.ts';
+
 export const StyledShopItemContainer = styled.div`
   display: block;
   height: 100%;
@@ -31,7 +33,7 @@ export const StyledShopItemContainer = styled.div`
     padding: 13px 20px 20px 20px;
 
     .title {
-      font-family: Montserrat, sans-serif;
+      font-family: ${montserratFontFamily};
       font-size: 18px;
       font-weight: 600;
       line-height: 22px;
@@ -39,7 +41,7 @@ export const StyledShopItemContainer = styled.div`
     }
 
     .price {
-      font-family: Montserrat, sans-serif;
+      font-family: ${montserratFontFamily};
       font-size: 18px;
       font-weight: 400;
       line-height: 22px;

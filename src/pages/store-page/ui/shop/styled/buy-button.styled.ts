@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { montserratFontFamily } from '@shared/fonts/fonts.const.ts';
 
 export const StyledBuyButton = styled.button`
   width: 100%;
@@ -7,7 +8,7 @@ export const StyledBuyButton = styled.button`
   background: rgba(247, 247, 248, 1);
   border: 1px solid rgba(255, 255, 255, 1);
   color: rgba(2, 2, 3, 1);
-  font-family: Montserrat, sans-serif;
+  font-family: ${montserratFontFamily};
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;

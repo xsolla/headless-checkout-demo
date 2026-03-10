@@ -1,5 +1,6 @@
 import { colors } from '@shared/colors.const';
-import { desktopMin, laptopMin } from '../../shared/media-break-points.const';
+import { desktopMin, laptopMin } from '@shared/media-break-points.const';
+import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const';
 
 export const optionStyles = {
   display: 'flex',
@@ -7,7 +8,7 @@ export const optionStyles = {
   width: '100%',
   height: '100%',
   color: colors.text.dark,
-  fontFamily: 'AktivGrotesk, sans-serif',
+  fontFamily: aktivGroteskFontFamily,
   fontSize: '14px',
   fontWeight: '400',
   letterSpacing: '1%',

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { screenXsMax } from '../../../shared/media-break-points.const.ts';
-import { graphikFontFamily } from '../../../shared/styled/graphik-font-family.const.ts';
+import { graphikFontFamily } from '@shared/fonts/fonts.const.ts';
 
 export const StyledUserName = styled.div`
   display: flex;

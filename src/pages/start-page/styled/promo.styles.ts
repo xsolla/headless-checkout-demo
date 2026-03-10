@@ -1,8 +1,4 @@
 import styled from 'styled-components';
-import startPageBgMobile from '../../../assets/images/start-page-bg-mobile.webp';
-import startPageBgTablet from '../../../assets/images/start-page-bg-tablet.webp';
-import startPageBgLaptop from '../../../assets/images/start-page-bg-laptop.webp';
-import startPageBgDesktop from '../../../assets/images/start-page-bg-desktop.webp';
 import { tabletMin, laptopMin, desktopMin } from '../../../shared/media-break-points.const.ts';
 import { colors } from '@shared/colors.const.ts';
 
@@ -13,26 +9,34 @@ export const StyledPromo = styled.div`
   flex-direction: column;
   width: 100%;
   padding: 8px;
-  background: url(${startPageBgMobile}) center / cover no-repeat;
-  background-position-x: left;
+  overflow: hidden;
 
   @media (min-width: ${tabletMin}) {
     padding: 16px;
-    background-image: url(${startPageBgTablet});
-    background-position-x: center;
-  }
-
-  @media (min-width: ${laptopMin}) {
-    background-image: url(${startPageBgLaptop});
   }
 
   @media (min-width: ${desktopMin}) {
-    background-image: url(${startPageBgDesktop});
     padding: 20px;
   }
 `;
 
+export const StyledPromoBgImage = styled.img`
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  z-index: 0;
+
+  @media (min-width: ${tabletMin}) {
+    object-position: center center;
+  }
+`;
+
 export const StyledPromoTitle = styled.h1`
+  position: relative;
+  z-index: 1;
   text-align: center;
   margin: 0;
   font-weight: 300;
@@ -58,6 +62,8 @@ export const StyledPromoTitle = styled.h1`
 `;
 
 export const StyledPromoBadge = styled.div`
+  position: relative;
+  z-index: 1;
   margin-top: auto;
   display: flex;
   align-self: flex-start;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { screenXsMax } from '../../../shared/media-break-points.const.ts';
-import { bagnardFontFamily } from '../../../shared/styled/bagnard-font-family.const.ts';
+import { bagnardFontFamily } from '@shared/fonts/fonts.const.ts';
 
 export const StyledRootDiv = styled.div`
   position: relative;

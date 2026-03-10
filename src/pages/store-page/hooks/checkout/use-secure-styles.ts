@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { setSecureComponentStyles } from '../../../../sdk/styles/set-secure-component-styles.ts';
 import styled from 'styled-components';
+import { montserratFontFamily } from '@shared/fonts/fonts.const.ts';
 
 const useSecureStyles = styled.div`
   .icon {
@@ -26,7 +27,7 @@ const useSecureStyles = styled.div`
     color: rgba(255, 255, 255, 1);
 
     &::placeholder {
-      font-family: Montserrat, sans-serif;
+      font-family: ${montserratFontFamily};
       font-weight: 400;
       font-size: 14px;
       color: rgba(255, 255, 255, 0.55);
