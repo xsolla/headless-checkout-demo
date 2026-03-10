@@ -10,6 +10,7 @@ export const StyledHeader = styled.div`
   width: 100%;
   height: 64px;
   background: ${colors.bg.primary};
+  z-index: 2;
 
   @media (min-width: ${tabletMin}) {
     height: 64px;
