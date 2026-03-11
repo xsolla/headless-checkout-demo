@@ -47,14 +47,21 @@ export const StyledMain = styled.main`
   }
 `;
 
+export const StyledMainContent = styled.main`
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 1148px;
+`;
+
 export const StoreTitle = styled.h1`
   margin: 0 0 37px;
-  align-self: flex-start;
   font-family: ${pilatFontFamily};
   font-size: 40px;
   font-weight: 700;
   line-height: 48px;
-  text-align: center;
+  text-align: left;
   color: ${colors.text.dark};
 
   @media (min-width: ${tabletMin}) {
