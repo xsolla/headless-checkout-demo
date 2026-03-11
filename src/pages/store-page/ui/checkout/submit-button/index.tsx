@@ -1,6 +1,8 @@
 import { FC } from 'react';
 import { StyledSubmitButtonContainer } from '../../../styled/checkout/checkout.styles.ts';
 import { useIntl } from 'react-intl';
+import { SvgIcon } from '../../../../../components/svg-icon/index.tsx';
+import Dron from '../../../../../assets/icons/brand-icon.svg';
 
 export const SubmitButton: FC<{ text?: string; className?: string; isLoading?: boolean }> = ({
   text,
@@ -17,6 +19,11 @@ export const SubmitButton: FC<{ text?: string; className?: string; isLoading?: b
           intl.formatMessage({ id: 'store.page.checkout.pay-now', defaultMessage: 'Pay now' })
         }
       ></psdk-submit-button>
+      {!isLoading && (
+        <div className='brand-icon-wrapper'>
+          <SvgIcon url={Dron} />
+        </div>
+      )}
     </StyledSubmitButtonContainer>
   );
 };

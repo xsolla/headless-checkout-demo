@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const BrandLogoIconContainer = styled.div<{ $isDefaultIcon: boolean }>`
   svg {
-    border-radius: 12px;
+    border-radius: 8px;
 
     &,
     & > * {
@@ -16,6 +16,6 @@ export const BrandLogoIconContainer = styled.div<{ $isDefaultIcon: boolean }>`
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: ${(props) => (props.$isDefaultIcon ? 'rgba(135, 107, 250, 1)' : '')};
-  border-radius: 12px;
+  background: ${(props) => (props.$isDefaultIcon ? 'rgba(0, 0, 0, 0.05)' : '')};
+  border-radius: 8px;
 `;

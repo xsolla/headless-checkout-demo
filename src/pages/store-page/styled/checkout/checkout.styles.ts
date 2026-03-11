@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '@shared/colors.const.ts';
-import { aktivGroteskFontFamily, pilatFontFamily } from '@shared/fonts/fonts.const.ts';
+import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
+import { tabletMin } from '@shared/media-break-points.const';
 
 export const StyledCheckoutContainer = styled.div<{ $isLoading: boolean; $isSecondStep: boolean }>`
   margin-top: ${(props) => (props.$isSecondStep ? '0' : '16px')};
@@ -22,8 +23,8 @@ export const StyledCheckoutContainer = styled.div<{ $isLoading: boolean; $isSeco
       background: rgba(0, 0, 0, 0.05);
       border-radius: 12px;
       color: rgba(0, 0, 0, 0.6);
-      font-family: ${pilatFontFamily};
-      font-size: 14px;
+      font-family: ${aktivGroteskFontFamily};
+      font-size: 16px;
       line-height: 20px;
       margin: 0;
     }
@@ -51,17 +52,17 @@ export const StyledCheckoutContainer = styled.div<{ $isLoading: boolean; $isSeco
 export const StyledDefaultFormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  row-gap: 12px;
+  row-gap: 8px;
 `;
 
 export const StyledFormSkeletonContainer = styled.div`
   display: flex;
   flex-direction: column;
-  row-gap: 12px;
+  row-gap: 8px;
 
   .form-skeleton {
     display: flex;
-    column-gap: 12px;
+    column-gap: 8px;
   }
 
   .skeleton {
@@ -94,18 +95,27 @@ export const StyledFormSkeletonContainer = styled.div`
 `;
 
 export const StyledSubmitButtonContainer = styled.div`
+  position: relative;
+
+  .brand-icon-wrapper {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   psdk-default-submit-button button {
     cursor: pointer;
     width: 100%;
-    height: 48px;
+    height: 56px;
     font-family: ${aktivGroteskFontFamily};
     color: ${colors.control.primary.text};
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 400;
     line-height: 20px;
-    text-align: center;
+    text-align: left;
     background: ${colors.control.primary.bg};
-    padding: 14px;
+    padding: 0 20px;
     border-radius: 8px;
     border: 1px solid ${colors.control.primary.border};
 
@@ -177,7 +187,7 @@ export const StyledSubmitButtonContainer = styled.div`
 export const StyledCreditCardShortFormContainer = styled.div`
   psdk-card-number {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 
     .wrapper {
       position: relative;
@@ -192,7 +202,7 @@ export const StyledCreditCardShortFormContainer = styled.div`
 
   .card-data-wrapper {
     display: flex;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 
   .expire-wrapper {
@@ -229,7 +239,7 @@ export const StyledCreditCardLongFormContainer = styled.div`
 
   .row {
     display: flex;
-    column-gap: 12px;
+    column-gap: 8px;
 
     &:empty {
       display: none;
@@ -238,8 +248,8 @@ export const StyledCreditCardLongFormContainer = styled.div`
 
   h4 {
     font-size: 16px;
-    font-weight: 500;
-    line-height: 22px;
+    font-weight: 400;
+    line-height: 20px;
     color: ${colors.text.dark};
     margin: 0;
   }
@@ -258,6 +268,13 @@ export const StyledCreditCardLongFormContainer = styled.div`
 
     .description {
       display: none;
+    }
+  }
+
+  @media (min-width: ${tabletMin}) {
+    h4 {
+      font-size: 18px;
+      line-height: 24px;
     }
   }
 `;

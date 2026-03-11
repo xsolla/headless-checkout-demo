@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '@shared/colors.const.ts';
 import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
+import { tabletMin } from '@shared/media-break-points.const';
 
 export const StyledPaymentMethodsContainer = styled.div`
   display: flex;
@@ -11,9 +12,9 @@ export const StyledPaymentMethodsContainer = styled.div`
 
 export const StyledPaymentMethodContainer = styled.div<{ $isFetching: boolean }>`
   width: 100%;
-  border-radius: 16px;
   padding: 16px;
-  background: ${colors.bg.secondary};
+  border-radius: 8px;
+  background: ${colors.bg.primary};
 
   .payment-method {
     display: flex;
@@ -23,8 +24,9 @@ export const StyledPaymentMethodContainer = styled.div<{ $isFetching: boolean }>
     .name {
       font-family: ${aktivGroteskFontFamily};
       font-weight: 400;
-      font-size: 12px;
-      margin-left: 12px;
+      font-size: 16px;
+      line-height: 20px;
+      margin-left: 16px;
       color: ${colors.text.dark};
     }
 
@@ -32,6 +34,13 @@ export const StyledPaymentMethodContainer = styled.div<{ $isFetching: boolean }>
       margin-left: auto;
 
       pointer-events: ${(props) => (props.$isFetching ? 'none' : 'auto')};
+    }
+
+    @media (min-width: ${tabletMin}) {
+      .name {
+        font-size: 18px;
+        line-height: 24px;
+      }
     }
   }
 `;
@@ -41,10 +50,10 @@ export const StyledMoreMethodsButtonContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 72px;
-  border-radius: 16px;
-  padding: 12px 16px;
-  background: ${colors.bg.secondary};
+  height: 52px;
+  border-radius: 8px;
+  padding: 16px;
+  background: ${colors.bg.primary};
 
   button {
     font-family: ${aktivGroteskFontFamily};
@@ -54,9 +63,15 @@ export const StyledMoreMethodsButtonContainer = styled.div`
     letter-spacing: 0.5px;
     width: 100%;
     height: 100%;
-    color: ${colors.control.primary.border};
+    color: ${colors.control.primary.text};
     border: none;
     background: none;
     cursor: pointer;
+
+    @media (min-width: ${tabletMin}) {
+      height: 56px;
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 `;

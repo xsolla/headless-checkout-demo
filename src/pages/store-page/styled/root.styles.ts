@@ -49,6 +49,7 @@ export const StyledMain = styled.main`
 
 export const StoreTitle = styled.h1`
   margin: 0 0 37px;
+  align-self: flex-start;
   font-family: ${pilatFontFamily};
   font-size: 40px;
   font-weight: 700;

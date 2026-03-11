@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { colors } from '@shared/colors.const.ts';
-import { tabletMin } from '@shared/media-break-points.const.ts';
 
 export const StyledCartContainer = styled.div`
   padding: 16px;
@@ -13,10 +12,5 @@ export const StyledCartContainer = styled.div`
     height: 1px;
     margin-bottom: 20px;
     background: rgba(0, 0, 0, 0.1);
-  }
-
-  @media (min-width: ${tabletMin}) {
-    gap: 0;
-    padding: 20px 20px 18px;
   }
 `;

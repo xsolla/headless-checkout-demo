@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { setSecureComponentStyles } from '../../../../sdk/styles/set-secure-component-styles.ts';
 import styled from 'styled-components';
-import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
 
 const useSecureStyles = styled.div`
   .icon {
@@ -13,24 +12,21 @@ const useSecureStyles = styled.div`
     font-size: 16px;
   }
 
-  @media (min-width: 740px) {
-    font-size: 14px;
-  }
-
   input {
     position: relative;
     outline: none;
-    background: rgba(0, 0, 0, 0.04);
+    background: rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    padding: 12px 10px;
+    padding: 11px 12px;
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
     color: rgba(0, 0, 0, 1);
 
     &::placeholder {
-      font-family: ${aktivGroteskFontFamily};
-      font-weight: 400;
-      font-size: 14px;
-      color: rgba(0, 0, 0, 0.45);
+      color: rgba(0, 0, 0, 0.6);
     }
 
     &:focus {

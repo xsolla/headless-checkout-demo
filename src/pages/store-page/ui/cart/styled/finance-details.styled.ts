@@ -7,6 +7,7 @@ export const StyledFinanceDetails = styled.div`
   psdk-finance-details {
     display: flex;
     flex-direction: column;
+    font-family: ${aktivGroteskFontFamily};
 
     .cart-items {
       display: none;
@@ -35,7 +36,7 @@ export const StyledFinanceDetails = styled.div`
       display: flex;
       justify-content: space-between;
       margin-bottom: 8px;
-      color: rgba(0, 0, 0, 0.5);
+      color: rgba(0, 0, 0, 0.6);
 
       &:last-child {
         margin-bottom: 0;
@@ -43,10 +44,13 @@ export const StyledFinanceDetails = styled.div`
 
       .title,
       .price {
-        font-family: ${pilatFontFamily};
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 400;
-        line-height: 16px;
+        line-height: 15px;
+      }
+
+      .price {
+        font-family: ${pilatFontFamily};
       }
 
       .price-container {
@@ -73,7 +77,7 @@ export const StyledFinanceDetails = styled.div`
     .transaction-invoice {
       .title {
         margin-bottom: 4px;
-        color: rgba(0, 0, 0, 0.5);
+        color: rgba(0, 0, 0, 0.6);
         font-family: ${aktivGroteskFontFamily};
         font-size: 12px;
         font-weight: 400;
@@ -94,24 +98,27 @@ export const StyledFinanceDetails = styled.div`
   }
 
   psdk-total {
+    display: block;
+
     .total-row {
+      margin-top: 8px;
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       color: ${colors.text.dark};
 
       .title {
-        font-family: ${pilatFontFamily};
-        font-size: 18px;
+        font-family: ${aktivGroteskFontFamily};
+        font-size: 16px;
         font-weight: 400;
-        line-height: 22px;
+        line-height: 20px;
       }
 
       .price {
         font-family: ${pilatFontFamily};
-        font-size: 28px;
+        font-size: 24px;
         font-weight: 700;
-        line-height: 34px;
+        line-height: 32px;
       }
     }
   }

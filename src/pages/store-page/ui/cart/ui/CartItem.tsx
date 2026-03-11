@@ -8,12 +8,13 @@ import { removeItem } from '../../../../../redux/cart';
 import { StyledRemoveButton } from '../styled/remove-button.styled.ts';
 export const CartItem = (props: CartItemProps) => {
   const title = props.title;
+  const imageClassNames = `image image-${props.id}`;
   const dispatch = useAppDispatch();
 
   return (
     <StyledCartItemContainer>
       <div className='image-container'>
-        <img className='image' src={`/shop-items/${props.id}.png`} />
+        <img className={imageClassNames} src={`/shop-items/${props.id}.png`} />
       </div>
 
       <div className='details-wrapper'>

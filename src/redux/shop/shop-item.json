@@ -1,23 +1,23 @@
 [
   {
-    "id": "giant-coin-pack",
-    "title": "Giant coin pack",
+    "id": "giant-crystal-pack",
+    "title": "Giant crystal pack",
     "price": {
       "amount": "8.00",
       "currency": "USD"
     }
   },
   {
-    "id": "secret-key",
-    "title": "Secret key",
+    "id": "secret-tool",
+    "title": "Secret tool",
     "price": {
       "amount": "4.99",
       "currency": "USD"
     }
   },
   {
-    "id": "legend-sword",
-    "title": "Legendary sword",
+    "id": "legend-knife",
+    "title": "Legendary knife",
     "price": {
       "amount": "8.00",
       "currency": "USD"

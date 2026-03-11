@@ -1,27 +1,26 @@
 import styled from 'styled-components';
-import { tabletMin } from '@shared/media-break-points.const.ts';
 import { colors } from '@shared/colors.const.ts';
-import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
+import { aktivGroteskFontFamily, pilatFontFamily } from '@shared/fonts/fonts.const.ts';
 import { loaderStyles } from '@shared/styled/loader.styles.const.ts';
 
 export const StyledPaymentStatus = styled.section`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 280px;
   margin-bottom: 38px;
-  padding: 26px;
+  padding: 60px 20px;
   border-radius: 16px;
-  background: ${colors.bg.secondary};
+  background: ${colors.bg.primary};
   box-shadow: 0 1.92px 7.69px 0 rgba(0, 0, 0, 0.08);
 
   .status-image {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
-    margin: 23px 0 10px;
+    margin-bottom: 12px;
     height: 100px;
     width: 180px;
 
@@ -36,9 +35,9 @@ export const StyledPaymentStatus = styled.section`
       margin: 0 0 8px;
       padding: 0;
       text-align: center;
-      font-family: ${aktivGroteskFontFamily};
+      font-family: ${pilatFontFamily};
       font-size: 20px;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 28px;
       color: ${colors.text.dark};
     }
@@ -51,7 +50,7 @@ export const StyledPaymentStatus = styled.section`
       font-size: 14px;
       font-weight: 400;
       line-height: 18px;
-      color: rgba(0, 0, 0, 0.6);
+      color: rgba(0, 0, 0, 0.75);
     }
 
     .message {
@@ -76,14 +75,6 @@ export const StyledPaymentStatus = styled.section`
         border: 5px solid ${colors.control.primary.border};
         border-bottom-color: transparent;
       }
-    }
-  }
-
-  @media (min-width: ${tabletMin}) {
-    flex-direction: column;
-
-    .status-image {
-      display: flex;
     }
   }
 `;

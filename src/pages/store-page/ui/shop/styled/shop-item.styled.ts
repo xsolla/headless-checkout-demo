@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import { colors } from '@shared/colors.const.ts';
-import { aktivGroteskFontFamily, pilatFontFamily } from '@shared/fonts/fonts.const.ts';
+import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
+import { tabletMin } from '@shared/media-break-points.const';
 
 export const StyledShopItemContainer = styled.div`
   display: block;
   height: 100%;
   border-radius: 8px;
-  background: ${colors.bg.secondary};
+  background: ${colors.bg.primary};
   overflow: hidden;
 
   .image-container {
@@ -23,6 +24,10 @@ export const StyledShopItemContainer = styled.div`
     img {
       width: auto;
       height: 100%;
+
+      &.image-giant-coin-pack {
+        height: 80%;
+      }
     }
   }
 
@@ -32,7 +37,6 @@ export const StyledShopItemContainer = styled.div`
     justify-content: center;
     gap: 14px;
     padding: 16px;
-    background: ${colors.bg.primary};
 
     .title {
       font-family: ${aktivGroteskFontFamily};
@@ -50,6 +54,12 @@ export const StyledShopItemContainer = styled.div`
       line-height: 22px;
       text-align: left;
       color: ${colors.text.dark};
+    }
+
+    @media (min-width: ${tabletMin}) {
+      .title {
+        margin-right: 24px;
+      }
     }
   }
 `;

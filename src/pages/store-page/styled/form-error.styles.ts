@@ -1,14 +1,15 @@
 import styled from 'styled-components';
-import { pilatFontFamily } from '@shared/fonts/fonts.const.ts';
+import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
 
 export const StyledFormErrorContainer = styled.div`
-  font-family: ${pilatFontFamily};
-  font-size: 14px;
+  font-family: ${aktivGroteskFontFamily};
+  font-size: 16px;
   line-height: 20px;
+  text-align: center;
   padding: 12px;
-  border-radius: 12px;
-  color: rgba(180, 30, 60, 1);
-  background: rgba(255, 51, 109, 0.1);
+  border-radius: 8px;
+  color: #e84f30;
+  background: #ffbfb2;
 
   a,
   a:hover,

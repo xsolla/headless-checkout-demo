@@ -23,6 +23,10 @@ export const StyledCartItemContainer = styled.div`
     img {
       width: 100%;
       height: auto;
+
+      &.image-giant-coin-pack {
+        width: 80%;
+      }
     }
   }
 

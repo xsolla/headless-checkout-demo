@@ -8,6 +8,7 @@ import { useAppDispatch, useAppSelector } from '../../../../../redux/hooks.ts';
 import { InCartState } from './InCartState.tsx';
 export const ShopItem = (props: ShopItemProps) => {
   const title = props.title;
+  const imageClassNames = `image image-${props.id}`;
   const [isInCart, setIsInCart] = useState(false);
   const dispatch = useAppDispatch();
 
@@ -20,7 +21,7 @@ export const ShopItem = (props: ShopItemProps) => {
   return (
     <StyledShopItemContainer>
       <div className='image-container'>
-        <img className='image' src={`/shop-items/${props.id}.png`} />
+        <img className={imageClassNames} src={`/shop-items/${props.id}.png`} />
       </div>
 
       <div className='details-wrapper'>
