@@ -16,6 +16,7 @@ export function CartItems() {
         <CartItem
           key={id}
           id={cartItemsEntities[id].id}
+          image={cartItemsEntities[id].image}
           title={cartItemsEntities[id].title}
           price={cartItemsEntities[id].price}
           removable={cartItemsEntities[id].removable && shopIsVisible}

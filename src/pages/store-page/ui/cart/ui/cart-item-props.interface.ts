@@ -2,6 +2,7 @@ import { Price } from '@xsolla/pay-station-sdk/dist/core/finance-details/price.i
 
 export interface CartItemProps {
   id: string;
+  image: string;
   title: string;
   price: Price;
   removable?: boolean;

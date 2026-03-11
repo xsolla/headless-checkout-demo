@@ -1,17 +1,19 @@
 [
   {
-    "id": "omni-bomb",
+    "id": "potion_of_wisdom",
+    "image": "omni-bomb",
     "title": "Omni-bomb",
     "price": {
-      "amount": "4.99",
+      "amount": "0.99",
       "currency": "USD"
     }
   },
   {
-    "id": "coins",
+    "id": "calm_crystal",
+    "image": "coins",
     "title": "Coins x 200",
     "price": {
-      "amount": "3.99",
+      "amount": "0.50",
       "currency": "USD"
     }
   }

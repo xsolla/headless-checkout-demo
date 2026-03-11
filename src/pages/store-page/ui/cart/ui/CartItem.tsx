@@ -14,7 +14,7 @@ export const CartItem = (props: CartItemProps) => {
   return (
     <StyledCartItemContainer>
       <div className='image-container'>
-        <img className={imageClassNames} src={`/shop-items/${props.id}.png`} />
+        <img className={imageClassNames} src={`/shop-items/${props.image}.png`} />
       </div>
 
       <div className='details-wrapper'>
