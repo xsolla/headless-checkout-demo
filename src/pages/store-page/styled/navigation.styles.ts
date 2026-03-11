@@ -1,13 +1,14 @@
 import styled from 'styled-components';
-import { graphikFontFamily } from '@shared/fonts/fonts.const.ts';
+import { colors } from '@shared/colors.const.ts';
+import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
 
 export const StyledNavigation = styled.nav`
   flex-grow: 1;
-  padding-left: 6px;
 
   ul {
+    height: 40px;
     display: flex;
-    gap: 8px;
+    gap: 12px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -16,8 +17,9 @@ export const StyledNavigation = styled.nav`
   li {
     display: flex;
     align-items: center;
-    padding: 7px 14px;
+    padding: 0 20px;
     margin: 0;
+    cursor: pointer;
   }
 
   li.active {
@@ -25,19 +27,17 @@ export const StyledNavigation = styled.nav`
 
     a {
       padding: 7px 14px;
-      display: inline-block;
-      color: #000;
-      background-color: #fff;
-      border-radius: 20px;
+      color: #22a8c3;
     }
   }
 
   a {
     user-select: none;
-    font-family: ${graphikFontFamily};
-    font-size: 20px;
-    font-weight: 500;
+    font-family: ${aktivGroteskFontFamily};
+    font-size: 18px;
+    font-weight: 400;
     line-height: 20px;
     text-align: center;
+    color: ${colors.text.dark};
   }
 `;

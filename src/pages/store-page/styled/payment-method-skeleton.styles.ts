@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '@shared/colors.const.ts';
 
 export const StyledPaymentMethodSkeleton = styled.div`
   display: flex;
@@ -7,9 +8,9 @@ export const StyledPaymentMethodSkeleton = styled.div`
   border-radius: 16px;
   background: linear-gradient(
     90deg,
-    rgba(16, 15, 22, 0.6) 0%,
-    rgba(217, 217, 217, 0.1) 12%,
-    rgba(16, 15, 22, 0.6) 24%
+    ${colors.bg.secondary} 0%,
+    rgba(0, 0, 0, 0.05) 12%,
+    ${colors.bg.secondary} 24%
   );
   background-size: 200% 100%;
   animation: 1.5s shine linear infinite;

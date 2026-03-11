@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { graphikFontFamily, montserratFontFamily } from '@shared/fonts/fonts.const.ts';
+import { colors } from '@shared/colors.const.ts';
+import { aktivGroteskFontFamily, pilatFontFamily } from '@shared/fonts/fonts.const.ts';
 
 export const StyledCheckoutContainer = styled.div<{ $isLoading: boolean; $isSecondStep: boolean }>`
   margin-top: ${(props) => (props.$isSecondStep ? '0' : '16px')};
@@ -18,17 +19,17 @@ export const StyledCheckoutContainer = styled.div<{ $isLoading: boolean; $isSeco
 
     .form-message {
       padding: 12px;
-      background: rgba(65, 57, 96, 1);
+      background: rgba(0, 0, 0, 0.05);
       border-radius: 12px;
-      color: rgba(191, 192, 217, 1);
-      font-family: ${montserratFontFamily};
+      color: rgba(0, 0, 0, 0.6);
+      font-family: ${pilatFontFamily};
       font-size: 14px;
       line-height: 20px;
       margin: 0;
     }
 
     & a {
-      color: rgba(191, 192, 217, 1);
+      color: rgba(0, 0, 0, 0.6);
     }
   }
 
@@ -69,9 +70,9 @@ export const StyledFormSkeletonContainer = styled.div`
     border-radius: 8px;
     background: linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.07) 0%,
-      rgba(16, 15, 22, 0.6) 12%,
-      rgba(255, 255, 255, 0.07) 24%
+      ${colors.bg.secondary} 0%,
+      rgba(0, 0, 0, 0.05) 12%,
+      ${colors.bg.secondary} 24%
     );
     background-size: 200% 100%;
     animation: 1.5s shine linear infinite;
@@ -97,23 +98,24 @@ export const StyledSubmitButtonContainer = styled.div`
     cursor: pointer;
     width: 100%;
     height: 48px;
-    font-family: ${graphikFontFamily};
-    color: rgba(255, 255, 255, 1);
+    font-family: ${aktivGroteskFontFamily};
+    color: ${colors.control.primary.text};
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
     text-align: center;
-    background: linear-gradient(270deg, #7f38cf 0%, #7a41ce 49.35%, #4a4fb5 100%);
+    background: ${colors.control.primary.bg};
     padding: 14px;
     border-radius: 8px;
-    border: 1px solid rgba(238, 238, 238, 0.28);
+    border: 1px solid ${colors.control.primary.border};
 
     &:hover {
-      background: linear-gradient(270deg, #7800ff 0%, #6d0dfa 49.35%, #1620e7 100%);
+      background: ${colors.control.primary.hover.bg};
+      border-color: ${colors.control.primary.hover.border};
     }
 
     &:active {
-      background: linear-gradient(270deg, #1620e7 0%, #6d0dfa 49.35%, #7800ff 100%);
+      background: ${colors.control.primary.hover.border};
     }
 
     .loader {
@@ -128,7 +130,7 @@ export const StyledSubmitButtonContainer = styled.div`
         display: block;
         width: 25px;
         height: 25px;
-        border: 2px solid rgba(255, 255, 255, 1);
+        border: 2px solid ${colors.control.primary.text};
         border-bottom-color: transparent;
         border-radius: 100%;
         animation: loader 1s linear infinite;
@@ -152,22 +154,22 @@ export const StyledSubmitButtonContainer = styled.div`
       margin: 0 0 8px;
       padding: 0;
       text-align: center;
-      font-family: ${graphikFontFamily};
+      font-family: ${aktivGroteskFontFamily};
       font-size: 20px;
       font-weight: 500;
       line-height: 28px;
-      color: rgba(255, 255, 255, 1);
+      color: ${colors.text.dark};
     }
 
     p {
       margin: 0;
       padding: 0;
       text-align: center;
-      font-family: ${graphikFontFamily};
+      font-family: ${aktivGroteskFontFamily};
       font-size: 14px;
       font-weight: 400;
       line-height: 18px;
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(0, 0, 0, 0.6);
     }
   }
 `;
@@ -212,7 +214,7 @@ export const StyledCreditCardShortFormContainer = styled.div`
 export const StyledCreditCardLongFormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  font-family: ${montserratFontFamily};
+  font-family: ${aktivGroteskFontFamily};
 
   .billing-information,
   .address {
@@ -238,7 +240,7 @@ export const StyledCreditCardLongFormContainer = styled.div`
     font-size: 16px;
     font-weight: 500;
     line-height: 22px;
-    color: rgba(255, 255, 255, 1);
+    color: ${colors.text.dark};
     margin: 0;
   }
 
@@ -250,7 +252,7 @@ export const StyledCreditCardLongFormContainer = styled.div`
       display: block;
       font-size: 12px;
       font-weight: 400;
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(0, 0, 0, 0.6);
       margin-bottom: 4px;
     }
 

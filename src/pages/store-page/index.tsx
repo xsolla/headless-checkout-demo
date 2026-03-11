@@ -9,7 +9,6 @@ import {
 import { Header } from './ui/Header.tsx';
 import { ShoppingCart } from './ui/ShoppingCart.tsx';
 import { PaymentDetails } from './ui/PaymentDetails.tsx';
-import { StyledMobileSecondOverlayDiv, StyledOverlayDiv } from './styled/overlays.styles.ts';
 import { FormattedMessage } from 'react-intl';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks.ts';
 import { createToken, selectToken } from '../../redux/sdk-configuration';
@@ -57,8 +56,6 @@ export function StorePage() {
           </StyledColumns>
         </StyledMain>
       </StyledContentContainer>
-      <StyledOverlayDiv></StyledOverlayDiv>
-      <StyledMobileSecondOverlayDiv></StyledMobileSecondOverlayDiv>
     </StyledRootDiv>
   );
 }

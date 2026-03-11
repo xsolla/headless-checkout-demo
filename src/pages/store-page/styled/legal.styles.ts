@@ -1,13 +1,14 @@
 import styled from 'styled-components';
-import { montserratFontFamily } from '@shared/fonts/fonts.const.ts';
+import { colors } from '@shared/colors.const.ts';
+import { pilatFontFamily } from '@shared/fonts/fonts.const.ts';
 
 export const StyledLegal = styled.div`
-  font-family: ${montserratFontFamily};
+  font-family: ${pilatFontFamily};
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 
   a {
-    color: rgba(210, 206, 254, 1);
+    color: ${colors.control.primary.border};
     text-decoration: none;
   }
 

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { screenXsMax } from '../../../shared/media-break-points.const.ts';
+import { colors } from '@shared/colors.const.ts';
+import { tabletMin } from '@shared/media-break-points.const.ts';
 
 export const StyledReturnLoader = styled.section`
   display: flex;
@@ -9,12 +10,16 @@ export const StyledReturnLoader = styled.section`
   margin-bottom: 12px;
   padding: 48px;
   border-radius: 16px;
-  background: rgba(16, 15, 22, 0.6);
-  box-shadow: 0 1.92px 7.69px 0 rgba(0, 0, 0, 0.18);
+  background: ${colors.bg.secondary};
+  box-shadow: 0 1.92px 7.69px 0 rgba(0, 0, 0, 0.08);
 
-  @media (max-width: ${screenXsMax}) {
+  .status-image {
+    display: none;
+  }
+
+  @media (min-width: ${tabletMin}) {
     .status-image {
-      display: none;
+      display: block;
     }
   }
 `;

@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-import { screenXsMax } from '../../../shared/media-break-points.const.ts';
-import { bagnardFontFamily } from '@shared/fonts/fonts.const.ts';
+import { colors } from '@shared/colors.const.ts';
+import { tabletMin } from '@shared/media-break-points.const.ts';
+import { pilatFontFamily } from '@shared/fonts/fonts.const.ts';
 
 export const StyledRootDiv = styled.div`
   position: relative;
-  background-color: #190e39;
+  background-color: ${colors.bg.primary};
   width: 100%;
   height: 100vh;
 `;
@@ -17,11 +18,19 @@ export const StyledContentContainer = styled.div`
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  color: white;
+  color: ${colors.text.dark};
+  padding: 20px 16px 0 16px;
   padding-bottom: 40px;
+  background: #f3f3f2;
+  background-image: url(/images/store-page-bg.png);
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: -140px top;
 
-  @media (max-width: ${screenXsMax}) {
-    padding: 20px 16px 0 16px;
+  @media (min-width: ${tabletMin}) {
+    padding: 0;
+    padding-bottom: 40px;
+    background-position: top right;
   }
 `;
 
@@ -29,35 +38,29 @@ export const StyledMain = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 62px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 32px 0 0;
 
-  @media (max-width: ${screenXsMax}) {
-    padding: 32px 0 0;
+  @media (min-width: ${tabletMin}) {
+    padding-top: 62px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 `;
 
 export const StoreTitle = styled.h1`
-  padding: 0 0 0 30px;
-  margin: 0 0 20px;
-  font-family: ${bagnardFontFamily};
-  font-size: 96px;
-  font-weight: 400;
-  line-height: 96px;
+  margin: 0 0 37px;
+  font-family: ${pilatFontFamily};
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
   text-align: center;
-  color: rgba(231, 230, 254, 1);
+  color: ${colors.text.dark};
 
-  @media (max-width: ${screenXsMax}) {
-    margin-bottom: 32px;
-    padding: 0;
-    font-size: 60px;
-    font-weight: 400;
-    line-height: 60px;
-    text-align: center;
-  }
+  @media (min-width: ${tabletMin}) {
+    margin-bottom: 47px;
+    font-size: 48px;
+    line-height: 58px;
 
-  @media (min-width: ${screenXsMax}) {
     &.without-shop {
       margin-bottom: 80px;
     }
@@ -65,40 +68,40 @@ export const StoreTitle = styled.h1`
 `;
 
 export const StyledSectionTitle = styled.h2`
-  padding: 0;
-  margin: 0 0 20px;
-  font-family: ${bagnardFontFamily};
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 40px;
+  margin: 0 0 16px;
+  font-family: ${pilatFontFamily};
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 34px;
   text-align: left;
-  color: rgba(231, 230, 254, 1);
+  color: ${colors.text.dark};
 
-  @media (max-width: ${screenXsMax}) {
-    margin: 0 0 16px;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 32px;
+  @media (min-width: ${tabletMin}) {
+    margin-bottom: 20px;
+    font-size: 32px;
+    line-height: 38px;
   }
 `;
 
 export const StyledColumns = styled.div`
-  display: flex;
-  justify-content: space-between;
+  display: block;
   padding: 0;
   margin: 0;
   width: 100%;
   max-width: 1148px;
 
-  @media (max-width: ${screenXsMax}) {
-    display: block;
-
-    .payment-details-column {
-      margin-bottom: 20px;
-    }
+  .payment-details-column {
+    margin-bottom: 20px;
   }
 
-  @media (min-width: ${screenXsMax}) {
+  @media (min-width: ${tabletMin}) {
+    display: flex;
+    justify-content: space-between;
+
+    .payment-details-column {
+      margin-bottom: 0;
+    }
+
     &.with-shop {
       .cart-column {
         max-width: 600px;

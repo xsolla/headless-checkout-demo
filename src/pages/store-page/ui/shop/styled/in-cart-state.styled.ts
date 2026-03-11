@@ -1,15 +1,15 @@
 import styled from 'styled-components';
-import { graphikFontFamily } from '@shared/fonts/fonts.const.ts';
+import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
 
 export const StyledInCartState = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 8px;
-  padding: 7px 0px;
-  font-family: ${graphikFontFamily};
+  font-family: ${aktivGroteskFontFamily};
   font-size: 14px;
-  font-weight: 500;
-  line-height: 18px;
-  letter-spacing: 0.5px;
-  color: rgba(163, 245, 200, 1);
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: #3dc322;
 `;

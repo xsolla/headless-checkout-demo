@@ -1,18 +1,20 @@
-import userIcon from '../../../assets/user.png';
 import React from 'react';
-import { StyledUserName } from '../styled/user.styles.ts';
-import { useIntl } from 'react-intl';
+import { StyledUserButton } from '../styled/user.styles.ts';
+import userIcon from '../../../assets/icons/icon_user--line.svg';
+import logoutIcon from '../../../assets/icons/icon_logout--line.svg';
 
 export const User = () => {
-  const intl = useIntl();
-  const imgAlt = intl.formatMessage({ id: 'store.page.user' });
-
   return (
-    <StyledUserName>
-      <span className='icon'>
-        <img src={userIcon} alt={imgAlt} />
+    <StyledUserButton>
+      <span className='button__inner'>
+        <span className='button__icon'>
+          <img src={userIcon} alt='' />
+        </span>
+        <span className='button__label'>fluffy_kitt</span>
+        <span className='button__icon'>
+          <img src={logoutIcon} alt='' />
+        </span>
       </span>
-      <span>fluffy_kitt</span>
-    </StyledUserName>
+    </StyledUserButton>
   );
 };

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { graphikFontFamily, montserratFontFamily } from '@shared/fonts/fonts.const.ts';
+import { colors } from '@shared/colors.const.ts';
+import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
 
 export const StyledPaymentMethodsContainer = styled.div`
   display: flex;
@@ -12,7 +13,7 @@ export const StyledPaymentMethodContainer = styled.div<{ $isFetching: boolean }>
   width: 100%;
   border-radius: 16px;
   padding: 16px;
-  background: rgba(16, 15, 22, 0.6);
+  background: ${colors.bg.secondary};
 
   .payment-method {
     display: flex;
@@ -20,11 +21,11 @@ export const StyledPaymentMethodContainer = styled.div<{ $isFetching: boolean }>
     cursor: pointer;
 
     .name {
-      font-family: ${graphikFontFamily};
+      font-family: ${aktivGroteskFontFamily};
       font-weight: 400;
       font-size: 12px;
       margin-left: 12px;
-      color: rgba(255, 255, 255, 1);
+      color: ${colors.text.dark};
     }
 
     .expand-button {
@@ -43,17 +44,17 @@ export const StyledMoreMethodsButtonContainer = styled.div`
   height: 72px;
   border-radius: 16px;
   padding: 12px 16px;
-  background: rgba(16, 15, 22, 0.6);
+  background: ${colors.bg.secondary};
 
   button {
-    font-family: ${montserratFontFamily};
+    font-family: ${aktivGroteskFontFamily};
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.5px;
     width: 100%;
     height: 100%;
-    color: rgba(135, 107, 250, 1);
+    color: ${colors.control.primary.border};
     border: none;
     background: none;
     cursor: pointer;

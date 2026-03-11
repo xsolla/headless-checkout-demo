@@ -1,8 +1,12 @@
 import styled from 'styled-components';
-import { screenXsMax } from '@shared/media-break-points.const.ts';
-import { montserratFontFamily } from '@shared/fonts/fonts.const.ts';
+import { colors } from '@shared/colors.const.ts';
+import { tabletMin } from '@shared/media-break-points.const.ts';
+import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
+
 export const StyledCartItemContainer = styled.div`
   display: flex;
+  flex-shrink: 1;
+  flex-grow: 1;
 
   .image-container {
     display: flex;
@@ -10,11 +14,11 @@ export const StyledCartItemContainer = styled.div`
     justify-content: center;
     flex-shrink: 0;
     overflow: hidden;
-    width: 80px;
-    height: 80px;
+    width: 64px;
+    height: 64px;
     margin-right: 13px;
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    background: #f3f3f2;
 
     img {
       width: 100%;
@@ -24,65 +28,63 @@ export const StyledCartItemContainer = styled.div`
 
   .details-wrapper {
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
 
     .details {
-      flex-grow: 1;
+      flex-grow: 0;
     }
 
     .price-wrapper {
       flex-shrink: 0;
-      margin-left: 8px;
+      margin-left: 0;
     }
 
     .title {
-      margin-bottom: 8px;
-      font-family: ${montserratFontFamily};
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 22px;
+      margin-bottom: 4px;
+      font-family: ${aktivGroteskFontFamily};
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
       text-align: left;
+      color: ${colors.text.dark};
     }
 
     .price {
-      font-family: ${montserratFontFamily};
-      font-size: 18px;
+      font-family: ${aktivGroteskFontFamily};
+      font-size: 16px;
       font-weight: 400;
-      line-height: 22px;
+      line-height: 20px;
       text-align: left;
+      color: ${colors.text.dark};
     }
   }
 
-  @media (max-width: ${screenXsMax}) {
-    flex-shrink: 1;
-    flex-grow: 1;
+  @media (min-width: ${tabletMin}) {
+    flex-shrink: 0;
+    flex-grow: 0;
 
     .image-container {
-      width: 60px;
-      height: 60px;
+      width: 80px;
+      height: 80px;
     }
 
     .details-wrapper {
-      flex-direction: column;
+      flex-direction: row;
 
       .details {
-        flex-grow: 0;
+        flex-grow: 1;
       }
 
       .title {
-        margin-bottom: 4px;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 20px;
+        margin-bottom: 8px;
+        font-size: 18px;
+        line-height: 24px;
       }
 
       .price {
-        font-size: 16px;
-        line-height: 20px;
-      }
-
-      .price-wrapper {
-        margin-left: 0;
+        font-size: 18px;
+        line-height: 24px;
       }
     }
   }

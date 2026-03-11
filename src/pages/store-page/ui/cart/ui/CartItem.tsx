@@ -1,14 +1,13 @@
 import React from 'react';
 import { StyledCartItemContainer } from '../styled/cart-item.styled.ts';
 import { CartItemProps } from './cart-item-props.interface.ts';
-import { FormattedMessage, useIntl } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import { Currency } from 'react-intl-number-format';
 import { useAppDispatch } from '../../../../../redux/hooks.ts';
 import { removeItem } from '../../../../../redux/cart';
 import { StyledRemoveButton } from '../styled/remove-button.styled.ts';
 export const CartItem = (props: CartItemProps) => {
-  const intl = useIntl();
-  const title = intl.formatMessage({ id: `store.items.${props.id}` });
+  const title = props.title;
   const dispatch = useAppDispatch();
 
   return (

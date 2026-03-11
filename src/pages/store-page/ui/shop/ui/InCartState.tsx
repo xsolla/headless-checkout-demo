@@ -1,6 +1,6 @@
-import { FormattedMessage } from 'react-intl';
 import React from 'react';
-import cartIcon from '../../../../../assets/cart.svg';
+import { FormattedMessage } from 'react-intl';
+import cartIcon from '../../../../../assets/icons/cart.svg';
 import { StyledInCartState } from '../styled/in-cart-state.styled.ts';
 
 export const InCartState = () => (

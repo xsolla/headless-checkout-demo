@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '@shared/colors.const.ts';
 
 export const StyledBackButton = styled.button`
   border: none;
@@ -14,7 +15,7 @@ export const StyledBackButton = styled.button`
     }
 
     path {
-      fill: rgba(255, 255, 255, 1);
+      fill: ${colors.text.dark};
     }
   }
 `;

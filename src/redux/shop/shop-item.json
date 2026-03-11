@@ -1,29 +1,33 @@
 [
   {
-    "id": "giant_gem_pack",
+    "id": "giant-coin-pack",
+    "title": "Giant coin pack",
     "price": {
-      "amount": "1.00",
+      "amount": "8.00",
       "currency": "USD"
     }
   },
   {
-    "id": "nature_crystal",
+    "id": "secret-key",
+    "title": "Secret key",
     "price": {
-      "amount": "0.50",
+      "amount": "4.99",
       "currency": "USD"
     }
   },
   {
-    "id": "royal_chest_of_gems",
+    "id": "legend-sword",
+    "title": "Legendary sword",
     "price": {
-      "amount": "0.55",
+      "amount": "8.00",
       "currency": "USD"
     }
   },
   {
-    "id": "magic_sacred_pack",
+    "id": "epic-set",
+    "title": "Epic set",
     "price": {
-      "amount": "0.45",
+      "amount": "4.99",
       "currency": "USD"
     }
   }
