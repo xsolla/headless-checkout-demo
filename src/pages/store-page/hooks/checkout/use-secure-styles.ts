@@ -26,6 +26,7 @@ const useSecureStyles = styled.div`
     color: rgba(0, 0, 0, 1);
 
     &::placeholder {
+      font-family: Arial;
       color: rgba(0, 0, 0, 0.6);
     }
 
