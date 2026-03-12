@@ -22,15 +22,10 @@ export const StyledContentContainer = styled.div`
   padding: 20px 16px 0 16px;
   padding-bottom: 40px;
   background: #f3f3f2;
-  background-image: url(/images/store-page-bg.png);
-  background-repeat: no-repeat;
-  background-size: initial;
-  background-position: -140px top;
 
   @media (min-width: ${tabletMin}) {
     padding: 0;
     padding-bottom: 40px;
-    background-position: top right;
   }
 `;
 
