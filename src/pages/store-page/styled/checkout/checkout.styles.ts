@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { graphikFontFamily, montserratFontFamily } from '@shared/fonts/fonts.const.ts';
+import { colors } from '@shared/colors.const.ts';
+import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
+import { tabletMin } from '@shared/media-break-points.const';
 
 export const StyledCheckoutContainer = styled.div<{ $isLoading: boolean; $isSecondStep: boolean }>`
   margin-top: ${(props) => (props.$isSecondStep ? '0' : '16px')};
@@ -18,17 +20,17 @@ export const StyledCheckoutContainer = styled.div<{ $isLoading: boolean; $isSeco
 
     .form-message {
       padding: 12px;
-      background: rgba(65, 57, 96, 1);
+      background: rgba(0, 0, 0, 0.05);
       border-radius: 12px;
-      color: rgba(191, 192, 217, 1);
-      font-family: ${montserratFontFamily};
-      font-size: 14px;
+      color: rgba(0, 0, 0, 0.6);
+      font-family: ${aktivGroteskFontFamily};
+      font-size: 16px;
       line-height: 20px;
       margin: 0;
     }
 
     & a {
-      color: rgba(191, 192, 217, 1);
+      color: rgba(0, 0, 0, 0.6);
     }
   }
 
@@ -50,17 +52,17 @@ export const StyledCheckoutContainer = styled.div<{ $isLoading: boolean; $isSeco
 export const StyledDefaultFormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  row-gap: 12px;
+  row-gap: 8px;
 `;
 
 export const StyledFormSkeletonContainer = styled.div`
   display: flex;
   flex-direction: column;
-  row-gap: 12px;
+  row-gap: 8px;
 
   .form-skeleton {
     display: flex;
-    column-gap: 12px;
+    column-gap: 8px;
   }
 
   .skeleton {
@@ -69,9 +71,9 @@ export const StyledFormSkeletonContainer = styled.div`
     border-radius: 8px;
     background: linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.07) 0%,
-      rgba(16, 15, 22, 0.6) 12%,
-      rgba(255, 255, 255, 0.07) 24%
+      ${colors.bg.secondary} 0%,
+      rgba(0, 0, 0, 0.05) 12%,
+      ${colors.bg.secondary} 24%
     );
     background-size: 200% 100%;
     animation: 1.5s shine linear infinite;
@@ -93,27 +95,37 @@ export const StyledFormSkeletonContainer = styled.div`
 `;
 
 export const StyledSubmitButtonContainer = styled.div`
+  position: relative;
+
+  .brand-icon-wrapper {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   psdk-default-submit-button button {
     cursor: pointer;
     width: 100%;
-    height: 48px;
-    font-family: ${graphikFontFamily};
-    color: rgba(255, 255, 255, 1);
-    font-size: 16px;
-    font-weight: 500;
+    height: 56px;
+    font-family: ${aktivGroteskFontFamily};
+    color: ${colors.control.primary.text};
+    font-size: 18px;
+    font-weight: 400;
     line-height: 20px;
-    text-align: center;
-    background: linear-gradient(270deg, #7f38cf 0%, #7a41ce 49.35%, #4a4fb5 100%);
-    padding: 14px;
+    text-align: left;
+    background: ${colors.control.primary.bg};
+    padding: 0 20px;
     border-radius: 8px;
-    border: 1px solid rgba(238, 238, 238, 0.28);
+    border: 1px solid ${colors.control.primary.border};
 
     &:hover {
-      background: linear-gradient(270deg, #7800ff 0%, #6d0dfa 49.35%, #1620e7 100%);
+      background: ${colors.control.primary.hover.bg};
+      border-color: ${colors.control.primary.hover.border};
     }
 
     &:active {
-      background: linear-gradient(270deg, #1620e7 0%, #6d0dfa 49.35%, #7800ff 100%);
+      background: ${colors.control.primary.hover.border};
     }
 
     .loader {
@@ -128,7 +140,7 @@ export const StyledSubmitButtonContainer = styled.div`
         display: block;
         width: 25px;
         height: 25px;
-        border: 2px solid rgba(255, 255, 255, 1);
+        border: 2px solid ${colors.control.primary.text};
         border-bottom-color: transparent;
         border-radius: 100%;
         animation: loader 1s linear infinite;
@@ -152,22 +164,22 @@ export const StyledSubmitButtonContainer = styled.div`
       margin: 0 0 8px;
       padding: 0;
       text-align: center;
-      font-family: ${graphikFontFamily};
+      font-family: ${aktivGroteskFontFamily};
       font-size: 20px;
       font-weight: 500;
       line-height: 28px;
-      color: rgba(255, 255, 255, 1);
+      color: ${colors.text.dark};
     }
 
     p {
       margin: 0;
       padding: 0;
       text-align: center;
-      font-family: ${graphikFontFamily};
+      font-family: ${aktivGroteskFontFamily};
       font-size: 14px;
       font-weight: 400;
       line-height: 18px;
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(0, 0, 0, 0.6);
     }
   }
 `;
@@ -175,7 +187,7 @@ export const StyledSubmitButtonContainer = styled.div`
 export const StyledCreditCardShortFormContainer = styled.div`
   psdk-card-number {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 
     .wrapper {
       position: relative;
@@ -190,7 +202,7 @@ export const StyledCreditCardShortFormContainer = styled.div`
 
   .card-data-wrapper {
     display: flex;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 
   .expire-wrapper {
@@ -212,7 +224,7 @@ export const StyledCreditCardShortFormContainer = styled.div`
 export const StyledCreditCardLongFormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  font-family: ${montserratFontFamily};
+  font-family: ${aktivGroteskFontFamily};
 
   .billing-information,
   .address {
@@ -227,7 +239,7 @@ export const StyledCreditCardLongFormContainer = styled.div`
 
   .row {
     display: flex;
-    column-gap: 12px;
+    column-gap: 8px;
 
     &:empty {
       display: none;
@@ -236,9 +248,9 @@ export const StyledCreditCardLongFormContainer = styled.div`
 
   h4 {
     font-size: 16px;
-    font-weight: 500;
-    line-height: 22px;
-    color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    line-height: 20px;
+    color: ${colors.text.dark};
     margin: 0;
   }
 
@@ -250,12 +262,19 @@ export const StyledCreditCardLongFormContainer = styled.div`
       display: block;
       font-size: 12px;
       font-weight: 400;
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(0, 0, 0, 0.6);
       margin-bottom: 4px;
     }
 
     .description {
       display: none;
+    }
+  }
+
+  @media (min-width: ${tabletMin}) {
+    h4 {
+      font-size: 18px;
+      line-height: 24px;
     }
   }
 `;

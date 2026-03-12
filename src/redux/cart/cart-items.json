@@ -1,6 +1,8 @@
 [
   {
     "id": "potion_of_wisdom",
+    "image": "omni-bomb",
+    "title": "Omni-bomb",
     "price": {
       "amount": "0.99",
       "currency": "USD"
@@ -8,8 +10,10 @@
   },
   {
     "id": "calm_crystal",
+    "image": "coins",
+    "title": "Coins x 200",
     "price": {
-      "amount": "0.5",
+      "amount": "0.50",
       "currency": "USD"
     }
   }

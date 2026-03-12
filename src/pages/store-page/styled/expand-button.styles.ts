@@ -9,7 +9,7 @@ export const StyledExpandButton = styled.button`
     transition: all 0.3s ease;
 
     path {
-      fill: rgba(255, 255, 255, 0.5);
+      fill: rgba(0, 0, 0, 0.5);
     }
   }
 `;

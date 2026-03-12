@@ -11,7 +11,7 @@ export const loaderStyles = `
         display: block;
         width: 25px;
         height: 25px;
-        border: 2px solid rgba(255, 255, 255, 1);
+        border: 2px solid rgba(0, 0, 0, 1);
         border-bottom-color: transparent;
         border-radius: 100%;
         animation: loader 1s linear infinite;

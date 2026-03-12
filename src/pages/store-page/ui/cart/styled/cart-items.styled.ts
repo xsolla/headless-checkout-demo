@@ -1,18 +1,14 @@
 import styled from 'styled-components';
-import { screenXsMax, screenXsMin } from '../../../../../shared/media-break-points.const.ts';
+import { tabletMin } from '@shared/media-break-points.const.ts';
+
 export const StyledCartItemsContainer = styled.div`
   display: flex;
   gap: 12px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-  @media (min-width: ${screenXsMax}) {
+  @media (min-width: ${tabletMin}) {
     flex-direction: column;
-  }
-
-  @media (max-width: ${screenXsMax}) {
-    justify-content: space-between;
-  }
-
-  @media (max-width: calc(${screenXsMin} - 1px)) {
-    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 `;

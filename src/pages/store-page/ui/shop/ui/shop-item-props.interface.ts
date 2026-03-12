@@ -2,5 +2,7 @@ import { Price } from '@xsolla/pay-station-sdk/dist/core/finance-details/price.i
 
 export interface ShopItemProps {
   id: string;
+  image: string;
+  title: string;
   price: Price;
 }

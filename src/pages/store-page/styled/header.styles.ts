@@ -1,26 +1,29 @@
 import styled from 'styled-components';
-import { screenXsMax } from '../../../shared/media-break-points.const.ts';
+import { tabletMin } from '@shared/media-break-points.const.ts';
 
 export const StyledDesktopHeader = styled.header`
   position: sticky;
   top: 0;
-  display: flex;
+  display: none;
   align-items: center;
-  padding: 23px 48px 23px 60px;
-  background: rgba(0, 0, 0, 0.8);
+  gap: 8px;
+  height: 64px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 2;
 
-  @media (max-width: ${screenXsMax}) {
-    display: none;
+  @media (min-width: ${tabletMin}) {
+    display: flex;
   }
 `;
 
 export const StyledMobileHeader = styled.header`
-  display: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
 
-  @media (max-width: ${screenXsMax}) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 4px;
+  @media (min-width: ${tabletMin}) {
+    display: none;
   }
 `;

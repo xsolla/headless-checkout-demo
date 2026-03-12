@@ -4,12 +4,12 @@ import {
   StyledColumns,
   StyledContentContainer,
   StyledMain,
+  StyledMainContent,
   StyledRootDiv,
 } from './styled/root.styles.ts';
 import { Header } from './ui/Header.tsx';
 import { ShoppingCart } from './ui/ShoppingCart.tsx';
 import { PaymentDetails } from './ui/PaymentDetails.tsx';
-import { StyledMobileSecondOverlayDiv, StyledOverlayDiv } from './styled/overlays.styles.ts';
 import { FormattedMessage } from 'react-intl';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks.ts';
 import { createToken, selectToken } from '../../redux/sdk-configuration';
@@ -44,21 +44,21 @@ export function StorePage() {
       <StyledContentContainer>
         <Header />
         <StyledMain>
-          <StoreTitle className={shopClassName}>
-            <FormattedMessage id={'store.page.title'} defaultMessage={'Store'}></FormattedMessage>
-          </StoreTitle>
-          <StyledColumns className={shopClassName}>
-            <div className='cart-column'>
-              <ShoppingCart></ShoppingCart>
-            </div>
-            <div className='payment-details-column'>
-              <PaymentDetails></PaymentDetails>
-            </div>
-          </StyledColumns>
+          <StyledMainContent>
+            <StoreTitle className={shopClassName}>
+              <FormattedMessage id={'store.page.title'} defaultMessage={'Store'}></FormattedMessage>
+            </StoreTitle>
+            <StyledColumns className={shopClassName}>
+              <div className='cart-column'>
+                <ShoppingCart></ShoppingCart>
+              </div>
+              <div className='payment-details-column'>
+                <PaymentDetails></PaymentDetails>
+              </div>
+            </StyledColumns>
+          </StyledMainContent>
         </StyledMain>
       </StyledContentContainer>
-      <StyledOverlayDiv></StyledOverlayDiv>
-      <StyledMobileSecondOverlayDiv></StyledMobileSecondOverlayDiv>
     </StyledRootDiv>
   );
 }

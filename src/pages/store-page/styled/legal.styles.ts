@@ -1,13 +1,15 @@
 import styled from 'styled-components';
-import { montserratFontFamily } from '@shared/fonts/fonts.const.ts';
+import { colors } from '@shared/colors.const.ts';
+import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
 
 export const StyledLegal = styled.div`
-  font-family: ${montserratFontFamily};
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  font-family: ${aktivGroteskFontFamily};
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.6);
 
   a {
-    color: rgba(210, 206, 254, 1);
+    color: ${colors.control.primary.border};
     text-decoration: none;
   }
 

@@ -31,7 +31,7 @@ export const PaymentStatus = () => {
     <StyledPaymentStatus>
       {statusState && statusState !== PaymentStatusStates.processing && (
         <p className='status-image'>
-          <img className='image' src={`/status/${statusState}.png`} />
+          <img className='image' src={`/status/${statusState}-redesign.png`} />
         </p>
       )}
       <psdk-status></psdk-status>

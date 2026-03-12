@@ -16,19 +16,21 @@ export const Header = () => {
       <StyledDesktopHeader>
         <Navigation />
         <StyledBalance>
-          <span className='icon'>
-            <img src={balanceIcon} alt={imgAlt} />
+          <span className='button__inner'>
+            <span className='button__icon'>
+              <img src={balanceIcon} alt={imgAlt} />
+            </span>
+            <span className='button__label'>10 000</span>
           </span>
-          <span>10 000</span>
         </StyledBalance>
         <User />
       </StyledDesktopHeader>
 
       <StyledMobileHeader>
         <StyledMenuButton>
-          <img src={menuIcon} />
+          <img src={menuIcon} alt='' />
         </StyledMenuButton>
-        <User></User>
+        <User />
       </StyledMobileHeader>
     </>
   );

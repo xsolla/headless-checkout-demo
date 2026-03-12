@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { setSecureComponentStyles } from '../../../../sdk/styles/set-secure-component-styles.ts';
 import styled from 'styled-components';
-import { montserratFontFamily } from '@shared/fonts/fonts.const.ts';
 
 const useSecureStyles = styled.div`
   .icon {
@@ -13,38 +12,36 @@ const useSecureStyles = styled.div`
     font-size: 16px;
   }
 
-  @media (min-width: 740px) {
-    font-size: 14px;
-  }
-
   input {
     position: relative;
     outline: none;
-    background: rgba(255, 255, 255, 0.07);
-    border: none;
+    background: rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    padding: 12px 10px;
-    color: rgba(255, 255, 255, 1);
+    padding: 11px 12px;
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 1);
 
     &::placeholder {
-      font-family: ${montserratFontFamily};
-      font-weight: 400;
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.55);
+      font-family: Arial;
+      color: rgba(0, 0, 0, 0.6);
     }
 
     &:focus {
-      background: rgba(23, 19, 32, 1);
-      border: 1px solid rgba(255, 233, 204, 1);
+      background: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(49, 202, 232, 1);
     }
 
     &.invalid {
-      border: 1px solid rgba(255, 102, 138, 1);
+      border: 1px solid rgba(220, 38, 38, 1);
     }
 
     &:-webkit-autofill {
-      -webkit-text-fill-color: rgba(255, 255, 255, 1);
-      -webkit-box-shadow: 0 0 0 1000px rgba(23, 19, 32, 1) inset;
+      -webkit-text-fill-color: rgba(0, 0, 0, 1);
+      -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 1) inset;
     }
   }
 `;

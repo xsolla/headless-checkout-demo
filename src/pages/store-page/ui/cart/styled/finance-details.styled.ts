@@ -1,11 +1,13 @@
 import styled from 'styled-components';
-import { screenXsMax } from '@shared/media-break-points.const.ts';
-import { graphikFontFamily, montserratFontFamily } from '@shared/fonts/fonts.const.ts';
+import { colors } from '@shared/colors.const.ts';
+import { tabletMin } from '@shared/media-break-points.const.ts';
+import { aktivGroteskFontFamily, pilatFontFamily } from '@shared/fonts/fonts.const.ts';
 
 export const StyledFinanceDetails = styled.div`
   psdk-finance-details {
     display: flex;
     flex-direction: column;
+    font-family: ${aktivGroteskFontFamily};
 
     .cart-items {
       display: none;
@@ -14,7 +16,7 @@ export const StyledFinanceDetails = styled.div`
     .divider {
       margin: 0 0 20px;
       border: none;
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(0, 0, 0, 0.1);
     }
 
     .cart-items + .divider {
@@ -24,7 +26,7 @@ export const StyledFinanceDetails = styled.div`
     .transaction-details + .cart-items + .divider {
       margin-top: 0;
 
-      @media (max-width: ${screenXsMax}) {
+      @media (max-width: calc(${tabletMin} - 1px)) {
         margin-bottom: 12px;
       }
     }
@@ -34,7 +36,7 @@ export const StyledFinanceDetails = styled.div`
       display: flex;
       justify-content: space-between;
       margin-bottom: 8px;
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(0, 0, 0, 0.6);
 
       &:last-child {
         margin-bottom: 0;
@@ -42,10 +44,13 @@ export const StyledFinanceDetails = styled.div`
 
       .title,
       .price {
-        font-family: ${montserratFontFamily};
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 400;
-        line-height: 16px;
+        line-height: 15px;
+      }
+
+      .price {
+        font-family: ${pilatFontFamily};
       }
 
       .price-container {
@@ -61,9 +66,9 @@ export const StyledFinanceDetails = styled.div`
       margin-bottom: 8px;
       margin-top: 16px;
       padding-top: 16px;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
 
-      @media (max-width: ${screenXsMax}) {
+      @media (max-width: calc(${tabletMin} - 1px)) {
         margin-top: 12px;
         padding-top: 12px;
       }
@@ -72,15 +77,15 @@ export const StyledFinanceDetails = styled.div`
     .transaction-invoice {
       .title {
         margin-bottom: 4px;
-        color: rgba(255, 255, 255, 0.5);
-        font-family: ${graphikFontFamily};
+        color: rgba(0, 0, 0, 0.6);
+        font-family: ${aktivGroteskFontFamily};
         font-size: 12px;
         font-weight: 400;
         line-height: 15px;
       }
 
       .content {
-        font-family: ${graphikFontFamily};
+        font-family: ${aktivGroteskFontFamily};
         font-size: 14px;
         font-weight: 400;
         line-height: 18px;
@@ -93,24 +98,27 @@ export const StyledFinanceDetails = styled.div`
   }
 
   psdk-total {
+    display: block;
+
     .total-row {
+      margin-top: 8px;
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      color: rgba(255, 255, 255, 1);
+      color: ${colors.text.dark};
 
       .title {
-        font-family: ${montserratFontFamily};
-        font-size: 18px;
+        font-family: ${aktivGroteskFontFamily};
+        font-size: 16px;
         font-weight: 400;
-        line-height: 22px;
+        line-height: 20px;
       }
 
       .price {
-        font-family: ${montserratFontFamily};
-        font-size: 28px;
+        font-family: ${pilatFontFamily};
+        font-size: 24px;
         font-weight: 700;
-        line-height: 34px;
+        line-height: 32px;
       }
     }
   }

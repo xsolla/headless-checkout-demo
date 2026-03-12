@@ -1,12 +1,14 @@
 import styled from 'styled-components';
-import { montserratFontFamily } from '@shared/fonts/fonts.const.ts';
+import { colors } from '@shared/colors.const.ts';
+import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
+import { tabletMin } from '@shared/media-break-points.const';
 
 export const StyledShopItemContainer = styled.div`
   display: block;
   height: 100%;
-  border-radius: 16px;
-  background: rgba(16, 15, 22, 0.6);
-  box-shadow: 0 1.92px 7.69px 0 rgba(0, 0, 0, 0.18);
+  border-radius: 8px;
+  background: ${colors.bg.primary};
+  overflow: hidden;
 
   .image-container {
     display: flex;
@@ -16,12 +18,16 @@ export const StyledShopItemContainer = styled.div`
     overflow: hidden;
     height: 150px;
     width: 100%;
-    border-radius: 16px 16px 10px 10px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(128, 234, 255, 0.3);
+    border-radius: 8px;
 
     img {
       width: auto;
       height: 100%;
+
+      &.image-giant-coin-pack {
+        height: 80%;
+      }
     }
   }
 
@@ -30,22 +36,30 @@ export const StyledShopItemContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     gap: 14px;
-    padding: 13px 20px 20px 20px;
+    padding: 16px;
 
     .title {
-      font-family: ${montserratFontFamily};
+      font-family: ${aktivGroteskFontFamily};
       font-size: 18px;
-      font-weight: 600;
-      line-height: 22px;
+      font-weight: 400;
+      line-height: 24px;
       text-align: left;
+      color: ${colors.text.dark};
     }
 
     .price {
-      font-family: ${montserratFontFamily};
+      font-family: ${aktivGroteskFontFamily};
       font-size: 18px;
       font-weight: 400;
       line-height: 22px;
       text-align: left;
+      color: ${colors.text.dark};
+    }
+
+    @media (min-width: ${tabletMin}) {
+      .title {
+        margin-right: 24px;
+      }
     }
   }
 `;
