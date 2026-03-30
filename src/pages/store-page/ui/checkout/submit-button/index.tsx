@@ -3,6 +3,7 @@ import { StyledSubmitButtonContainer } from '../../../styled/checkout/checkout.s
 import { useIntl } from 'react-intl';
 import { SvgIcon } from '../../../../../components/svg-icon/index.tsx';
 import Dron from '../../../../../assets/icons/brand-icon.svg';
+import { useApplePayQrStyles } from '../../../hooks/checkout/use-apple-pay-qr-styles.ts';
 
 export const SubmitButton: FC<{ text?: string; className?: string; isLoading?: boolean }> = ({
   text,
@@ -10,6 +11,9 @@ export const SubmitButton: FC<{ text?: string; className?: string; isLoading?: b
   isLoading,
 }) => {
   const intl = useIntl();
+
+  useApplePayQrStyles();
+
   return (
     <StyledSubmitButtonContainer className={className}>
       <psdk-submit-button
