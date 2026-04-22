@@ -1,7 +1,6 @@
 import { StylesConfig } from 'react-select';
 import { optionStyles } from './option-styles.ts';
 import { desktopMin, laptopMin } from '../../shared/media-break-points.const.ts';
-import { colors } from '@shared/colors.const.ts';
 
 export const languageSelectorStylesConfig: StylesConfig = {
   option: (styles, { isFocused }) => ({
@@ -9,11 +8,11 @@ export const languageSelectorStylesConfig: StylesConfig = {
     ...optionStyles,
     height: '40px',
     padding: '0 15px',
-    background: isFocused ? colors.control.tertiary.bgOpacity : 'transparent',
+    background: isFocused ? 'rgba(221, 223, 216, 0.15)' : 'transparent',
     cursor: 'pointer',
 
     ':active': {
-      background: colors.control.tertiary.bgOpacity,
+      background: 'rgba(221, 223, 216, 0.15)',
     },
   }),
   singleValue: (styles) => ({
@@ -40,26 +39,16 @@ export const languageSelectorStylesConfig: StylesConfig = {
     justifyContent: 'space-between',
     paddingLeft: '15px',
     paddingRight: '15px',
-    background:
-      isFocused || menuIsOpen ? colors.control.tertiary.active.bg : colors.control.tertiary.bg,
+    background: isFocused || menuIsOpen ? 'rgba(128, 234, 255, 0.15)' : '#ecede9',
     borderWidth: '1px',
     borderStyle: 'solid',
-    borderColor:
-      isFocused || menuIsOpen
-        ? colors.control.tertiary.active.border
-        : colors.control.tertiary.border,
+    borderColor: isFocused || menuIsOpen ? '#80eaff' : '#dddfd8',
     borderRadius: '4px',
     cursor: 'pointer',
 
     ':hover': {
-      background:
-        isFocused || menuIsOpen
-          ? colors.control.tertiary.active.bg
-          : colors.control.tertiary.hover.bg,
-      borderColor:
-        isFocused || menuIsOpen
-          ? colors.control.tertiary.active.border
-          : colors.control.tertiary.hover.border,
+      background: isFocused || menuIsOpen ? 'rgba(128, 234, 255, 0.15)' : '#dddfd8',
+      borderColor: isFocused || menuIsOpen ? '#80eaff' : '#c2c4ba',
     },
 
     [`@media (min-width: ${laptopMin})`]: {
@@ -80,7 +69,7 @@ export const languageSelectorStylesConfig: StylesConfig = {
   menu: (styles) => ({
     ...styles,
     padding: '0',
-    background: colors.bg.primary,
+    background: '#fff',
     border: '1px solid #e5e7eb',
     borderRadius: '4px',
     boxShadow: '0px 4px 16px rgba(0, 0, 0, 0.08)',

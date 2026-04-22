@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { colors } from '@shared/colors.const.ts';
 import { desktopMin, tabletMin } from '@shared/media-break-points.const.ts';
 import { pilatFontFamily } from '@shared/fonts/fonts.const.ts';
 
@@ -9,7 +8,7 @@ export const StyledRootDiv = styled.div`
   width: 100%;
   min-height: 100vh;
   padding: 0 8px 8px;
-  background: ${colors.bg.primary};
+  background: #fff;
   font-family: ${pilatFontFamily};
   overflow: hidden;
 

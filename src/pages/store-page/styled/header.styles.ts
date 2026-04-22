@@ -1,3 +1,4 @@
+import { colors } from '@shared/colors.const';
 import styled from 'styled-components';
 import { tabletMin } from '@shared/media-break-points.const.ts';
 
@@ -9,7 +10,7 @@ export const StyledDesktopHeader = styled.header`
   gap: 8px;
   height: 64px;
   padding: 16px;
-  background: rgba(255, 255, 255, 0.7);
+  background: ${colors.background.primary};
   z-index: 2;
 
   @media (min-width: ${tabletMin}) {

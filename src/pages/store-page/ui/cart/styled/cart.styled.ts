@@ -4,7 +4,7 @@ import { colors } from '@shared/colors.const.ts';
 export const StyledCartContainer = styled.div`
   padding: 16px;
   border-radius: 8px;
-  background: ${colors.bg.primary};
+  background: ${colors.background.primary};
   box-shadow: 0 1.92px 7.69px 0 rgba(0, 0, 0, 0.08);
 
   .divider {

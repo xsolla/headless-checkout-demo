@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { StyledRootDiv } from './styled/root.styles.ts';
 import {
   StyledHeader,
@@ -20,7 +20,7 @@ import {
   StyledFooterSelectWrapper,
 } from './styled/footer.styles.ts';
 import { useAppSelector } from '../../redux/hooks.ts';
-import { selectTokenGenerated } from '../../redux/sdk-configuration';
+import { selectTokenGenerated, selectTokenIsFetching } from '../../redux/sdk-configuration';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Routes } from '../../routes/routes.enum.ts';
 import { StorePageRoutes } from '../../routes/store-page/store-page-routes.enum.ts';
@@ -33,17 +33,33 @@ import { FormattedMessage } from 'react-intl';
 
 export function StartPage() {
   const tokenGenerated = useAppSelector(selectTokenGenerated);
+  const isFetching = useAppSelector(selectTokenIsFetching);
   const navigate = useNavigate();
   const [params] = useSearchParams();
+  const prevIsFetching = useRef(isFetching);
 
   useEffect(() => {
-    if (tokenGenerated) {
+    const justFinishedFetching = prevIsFetching.current && !isFetching;
+    if (justFinishedFetching && tokenGenerated) {
       navigate({
         pathname: `/${Routes.storePage}/${StorePageRoutes.paymentMethods}`,
         search: params.toString(),
       });
     }
-  }, [tokenGenerated]);
+    prevIsFetching.current = isFetching;
+  }, [isFetching, tokenGenerated]);
+
+  useEffect(() => {
+    window.history.replaceState(null, '', window.location.href);
+    window.history.pushState(null, '', window.location.href);
+
+    const blockBackNavigation = () => {
+      window.history.pushState(null, '', window.location.href);
+    };
+
+    window.addEventListener('popstate', blockBackNavigation);
+    return () => window.removeEventListener('popstate', blockBackNavigation);
+  }, []);
 
   return (
     <StyledRootDiv>

@@ -7,7 +7,7 @@ export const StyledShopItemContainer = styled.div`
   display: block;
   height: 100%;
   border-radius: 8px;
-  background: ${colors.bg.primary};
+  background: ${colors.background.primary};
   overflow: hidden;
 
   .image-container {
@@ -44,7 +44,7 @@ export const StyledShopItemContainer = styled.div`
       font-weight: 400;
       line-height: 24px;
       text-align: left;
-      color: ${colors.text.dark};
+      color: ${colors.content.primary};
     }
 
     .price {
@@ -53,7 +53,7 @@ export const StyledShopItemContainer = styled.div`
       font-weight: 400;
       line-height: 22px;
       text-align: left;
-      color: ${colors.text.dark};
+      color: ${colors.content.primary};
     }
 
     @media (min-width: ${tabletMin}) {

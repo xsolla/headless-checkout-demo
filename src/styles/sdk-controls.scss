@@ -1,3 +1,4 @@
+@import './colors';
 @import './font-mixins';
 
 psdk-text,
@@ -5,7 +6,8 @@ psdk-checkbox,
 psdk-phone,
 psdk-card-number,
 psdk-google-pay-button,
-psdk-apple-pay {
+psdk-apple-pay,
+psdk-card-number {
   @include fontMontserrat;
 
   width: 100%;
@@ -25,7 +27,7 @@ psdk-apple-pay {
   }
 
   .field-error {
-    color: #e84f30;
+    color: $color-content-alert-primary;
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
@@ -58,7 +60,7 @@ psdk-select {
     }
 
     &.invalid {
-      border: 1px solid rgba(220, 38, 38, 1);
+      border: 1px solid $color-border-alert;
     }
 
     #dropdown-icon {

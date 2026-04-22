@@ -8,9 +8,9 @@ export const StyledPaymentMethodSkeleton = styled.div`
   border-radius: 16px;
   background: linear-gradient(
     90deg,
-    ${colors.bg.secondary} 0%,
-    rgba(0, 0, 0, 0.05) 12%,
-    ${colors.bg.secondary} 24%
+    ${colors.background.primary} 0%,
+    ${colors.content.secondary} 16%,
+    ${colors.background.primary} 32%
   );
   background-size: 200% 100%;
   animation: 1.5s shine linear infinite;

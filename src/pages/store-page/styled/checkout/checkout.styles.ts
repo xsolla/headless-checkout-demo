@@ -22,7 +22,7 @@ export const StyledCheckoutContainer = styled.div<{ $isLoading: boolean; $isSeco
       padding: 12px;
       background: rgba(0, 0, 0, 0.05);
       border-radius: 12px;
-      color: rgba(0, 0, 0, 0.6);
+      color: ${colors.content.tertiary};
       font-family: ${aktivGroteskFontFamily};
       font-size: 16px;
       line-height: 20px;
@@ -30,7 +30,7 @@ export const StyledCheckoutContainer = styled.div<{ $isLoading: boolean; $isSeco
     }
 
     & a {
-      color: rgba(0, 0, 0, 0.6);
+      color: ${colors.content.tertiary};
     }
   }
 
@@ -71,9 +71,9 @@ export const StyledFormSkeletonContainer = styled.div`
     border-radius: 8px;
     background: linear-gradient(
       90deg,
-      ${colors.bg.secondary} 0%,
-      rgba(0, 0, 0, 0.05) 12%,
-      ${colors.bg.secondary} 24%
+      ${colors.background.primary} 0%,
+      ${colors.content.secondary} 12%,
+      ${colors.background.primary} 24%
     );
     background-size: 200% 100%;
     animation: 1.5s shine linear infinite;
@@ -109,23 +109,23 @@ export const StyledSubmitButtonContainer = styled.div`
     width: 100%;
     height: 56px;
     font-family: ${aktivGroteskFontFamily};
-    color: ${colors.control.primary.text};
+    color: ${colors.control.brand.text.primary};
     font-size: 18px;
     font-weight: 400;
     line-height: 20px;
     text-align: left;
-    background: ${colors.control.primary.bg};
+    background: ${colors.control.brand.primary.bg};
     padding: 0 20px;
     border-radius: 8px;
-    border: 1px solid ${colors.control.primary.border};
+    border: 1px solid ${colors.control.brand.primary.border};
 
     &:hover {
-      background: ${colors.control.primary.hover.bg};
-      border-color: ${colors.control.primary.hover.border};
+      background: ${colors.control.brand.primary.bgHover};
+      border-color: ${colors.control.brand.primary.borderHover};
     }
 
     &:active {
-      background: ${colors.control.primary.hover.border};
+      background: ${colors.control.brand.primary.bgHover};
     }
 
     .loader {
@@ -140,7 +140,7 @@ export const StyledSubmitButtonContainer = styled.div`
         display: block;
         width: 25px;
         height: 25px;
-        border: 2px solid ${colors.control.primary.text};
+        border: 2px solid ${colors.control.brand.primary.bg};
         border-bottom-color: transparent;
         border-radius: 100%;
         animation: loader 1s linear infinite;
@@ -168,7 +168,7 @@ export const StyledSubmitButtonContainer = styled.div`
       font-size: 20px;
       font-weight: 500;
       line-height: 28px;
-      color: ${colors.text.dark};
+      color: ${colors.control.brand.text.primary};
     }
 
     p {
@@ -179,7 +179,7 @@ export const StyledSubmitButtonContainer = styled.div`
       font-size: 14px;
       font-weight: 400;
       line-height: 18px;
-      color: rgba(0, 0, 0, 0.6);
+      color: ${colors.control.brand.text.secondary};
     }
   }
 `;
@@ -250,7 +250,7 @@ export const StyledCreditCardLongFormContainer = styled.div`
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
-    color: ${colors.text.dark};
+    color: ${colors.control.brand.text.primary};
     margin: 0;
   }
 
@@ -262,7 +262,7 @@ export const StyledCreditCardLongFormContainer = styled.div`
       display: block;
       font-size: 12px;
       font-weight: 400;
-      color: rgba(0, 0, 0, 0.6);
+      color: ${colors.control.brand.text.tertiary};
       margin-bottom: 4px;
     }
 

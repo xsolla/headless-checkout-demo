@@ -6,11 +6,15 @@ export const StyledLegal = styled.div`
   font-family: ${aktivGroteskFontFamily};
   font-size: 14px;
   line-height: 18px;
-  color: rgba(0, 0, 0, 0.6);
+  color: ${colors.content.tertiary};
 
   a {
-    color: ${colors.control.primary.border};
+    color: ${colors.control.link.primary};
     text-decoration: none;
+
+    &:hover {
+      color: ${colors.control.link.primaryHover};
+    }
   }
 
   .company {

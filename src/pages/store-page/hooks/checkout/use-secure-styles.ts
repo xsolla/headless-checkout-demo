@@ -1,8 +1,9 @@
+import { colors } from '@shared/colors.const.ts';
 import { useEffect } from 'react';
 import { setSecureComponentStyles } from '../../../../sdk/styles/set-secure-component-styles.ts';
 import styled from 'styled-components';
 
-const useSecureStyles = styled.div`
+const SecureStylesComponent = styled.div`
   .icon {
     z-index: 1;
   }
@@ -15,40 +16,41 @@ const useSecureStyles = styled.div`
   input {
     position: relative;
     outline: none;
-    background: rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgb(46, 62, 65);
+    border: 1px solid rgb(59, 80, 85);
     border-radius: 8px;
     padding: 11px 12px;
     font-family: Arial;
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
-    color: rgba(0, 0, 0, 1);
+    color: ${colors.content.primary};
 
     &::placeholder {
       font-family: Arial;
-      color: rgba(0, 0, 0, 0.6);
+      color: ${colors.content.tertiary};
     }
 
     &:focus {
-      background: rgba(255, 255, 255, 1);
-      border: 1px solid rgba(49, 202, 232, 1);
+      background: rgb(46, 62, 65);
+      border: 1px solid ${colors.border.brand};
     }
 
     &.invalid {
-      border: 1px solid rgba(220, 38, 38, 1);
+      border: 2px solid ${colors.border.alert} !important;
     }
 
     &:-webkit-autofill {
-      -webkit-text-fill-color: rgba(0, 0, 0, 1);
-      -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 1) inset;
+      -webkit-text-fill-color: ${colors.content.primary};
+      -webkit-box-shadow: 0 0 0 1000px rgb(46, 62, 65) inset;
     }
   }
 `;
 
 export function useSecureComponentStyles() {
   useEffect(() => {
-    const styles = useSecureStyles.componentStyle.rules[0] as string;
+    const rules = SecureStylesComponent.componentStyle.rules;
+    const styles = rules.flat().join('');
     void setSecureComponentStyles(styles);
   }, []);
 }

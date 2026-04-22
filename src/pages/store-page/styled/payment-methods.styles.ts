@@ -14,7 +14,7 @@ export const StyledPaymentMethodContainer = styled.div<{ $isFetching: boolean }>
   width: 100%;
   padding: 16px;
   border-radius: 8px;
-  background: ${colors.bg.primary};
+  background: ${colors.background.primary};
 
   .payment-method {
     display: flex;
@@ -27,12 +27,11 @@ export const StyledPaymentMethodContainer = styled.div<{ $isFetching: boolean }>
       font-size: 16px;
       line-height: 20px;
       margin-left: 16px;
-      color: ${colors.text.dark};
+      color: ${colors.content.primary};
     }
 
     .expand-button {
       margin-left: auto;
-
       pointer-events: ${(props) => (props.$isFetching ? 'none' : 'auto')};
     }
 
@@ -53,7 +52,7 @@ export const StyledMoreMethodsButtonContainer = styled.div`
   height: 52px;
   border-radius: 8px;
   padding: 16px;
-  background: ${colors.bg.primary};
+  background: ${colors.background.primary};
 
   button {
     font-family: ${aktivGroteskFontFamily};
@@ -63,7 +62,7 @@ export const StyledMoreMethodsButtonContainer = styled.div`
     letter-spacing: 0.5px;
     width: 100%;
     height: 100%;
-    color: ${colors.control.primary.text};
+    color: ${colors.content.primary};
     border: none;
     background: none;
     cursor: pointer;

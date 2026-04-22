@@ -16,7 +16,7 @@ export const StyledFinanceDetails = styled.div`
     .divider {
       margin: 0 0 20px;
       border: none;
-      background: rgba(0, 0, 0, 0.1);
+      background: ${colors.border.secondary};
     }
 
     .cart-items + .divider {
@@ -36,7 +36,7 @@ export const StyledFinanceDetails = styled.div`
       display: flex;
       justify-content: space-between;
       margin-bottom: 8px;
-      color: rgba(0, 0, 0, 0.6);
+      color: ${colors.content.tertiary};
 
       &:last-child {
         margin-bottom: 0;
@@ -77,7 +77,7 @@ export const StyledFinanceDetails = styled.div`
     .transaction-invoice {
       .title {
         margin-bottom: 4px;
-        color: rgba(0, 0, 0, 0.6);
+        color: ${colors.content.tertiary};
         font-family: ${aktivGroteskFontFamily};
         font-size: 12px;
         font-weight: 400;
@@ -105,7 +105,7 @@ export const StyledFinanceDetails = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      color: ${colors.text.dark};
+      color: ${colors.content.tertiary};
 
       .title {
         font-family: ${aktivGroteskFontFamily};

@@ -12,7 +12,7 @@ export const StyledPaymentStatus = styled.section`
   margin-bottom: 38px;
   padding: 60px 20px;
   border-radius: 16px;
-  background: ${colors.bg.primary};
+  background: ${colors.background.primary};
   box-shadow: 0 1.92px 7.69px 0 rgba(0, 0, 0, 0.08);
 
   .status-image {
@@ -39,7 +39,7 @@ export const StyledPaymentStatus = styled.section`
       font-size: 20px;
       font-weight: 600;
       line-height: 28px;
-      color: ${colors.text.dark};
+      color: ${colors.content.primary};
     }
 
     .description {
@@ -50,7 +50,7 @@ export const StyledPaymentStatus = styled.section`
       font-size: 14px;
       font-weight: 400;
       line-height: 18px;
-      color: rgba(0, 0, 0, 0.75);
+      color: ${colors.content.secondary};
     }
 
     .message {
@@ -72,7 +72,7 @@ export const StyledPaymentStatus = styled.section`
       &::before {
         width: 40px;
         height: 40px;
-        border: 5px solid ${colors.control.primary.border};
+        border: 5px solid ${colors.control.brand.primary.border};
         border-bottom-color: transparent;
       }
     }
