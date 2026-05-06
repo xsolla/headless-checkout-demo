@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import { colors } from '@shared/colors.const.ts';
 import { desktopMin, laptopMin, tabletMin } from '../../../shared/media-break-points.const.ts';
 
 export const StyledFooter = styled.div`
   flex-shrink: 0;
   width: 100%;
-  background: ${colors.bg.secondary};
+  background: #f5f6f4;
   padding: 8px;
   margin-top: 4px;
 
@@ -26,7 +25,7 @@ export const StyledFooterText = styled.p`
   font-size: 18px;
   font-weight: 350;
   line-height: 105%;
-  color: ${colors.text.dark};
+  color: #000;
 
   @media (min-width: ${tabletMin}) {
     width: 70%;

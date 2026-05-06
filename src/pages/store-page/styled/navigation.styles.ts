@@ -27,7 +27,7 @@ export const StyledNavigation = styled.nav`
 
     a {
       padding: 7px 14px;
-      color: #22a8c3;
+      color: ${colors.content.brandPrimary};
     }
   }
 
@@ -38,6 +38,6 @@ export const StyledNavigation = styled.nav`
     font-weight: 400;
     line-height: 20px;
     text-align: center;
-    color: ${colors.text.dark};
+    color: ${colors.content.primary};
   }
 `;

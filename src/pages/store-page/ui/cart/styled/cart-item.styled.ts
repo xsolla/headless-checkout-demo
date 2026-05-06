@@ -51,7 +51,7 @@ export const StyledCartItemContainer = styled.div`
       font-weight: 400;
       line-height: 20px;
       text-align: left;
-      color: ${colors.text.dark};
+      color: ${colors.content.primary};
     }
 
     .price {
@@ -60,7 +60,7 @@ export const StyledCartItemContainer = styled.div`
       font-weight: 400;
       line-height: 20px;
       text-align: left;
-      color: ${colors.text.dark};
+      color: ${colors.content.primary};
     }
   }
 

@@ -1,3 +1,4 @@
+import { colors } from '@shared/colors.const.ts';
 import styled from 'styled-components';
 import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
 
@@ -9,15 +10,15 @@ export const StyledRemoveButton = styled.button`
   width: auto;
   padding: 0 20px;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.12);
-  border: 1px solid #c1c2bc;
+  background-color: ${colors.control.mono.secondary.bg};
+  border: 1px solid ${colors.control.mono.secondary.border};
   border-radius: 4px;
   cursor: pointer;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
 
-  color: #000;
+  color: ${colors.control.mono.text.secondary};
   font-size: 12px;
   font-weight: 400;
   font-family: ${aktivGroteskFontFamily};
@@ -25,11 +26,11 @@ export const StyledRemoveButton = styled.button`
   white-space: normal;
 
   &:hover {
-    background-color: rgba(21, 28, 30, 0.12);
+    background-color: ${colors.control.mono.secondary.bgHover};
   }
 
   &:active {
-    background-color: rgba(32, 42, 44, 0.12);
+    background-color: ${colors.control.mono.secondary.bgHover};
   }
 
   &:focus-visible {

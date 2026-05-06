@@ -15,7 +15,7 @@ export const StyledBackButton = styled.button`
     }
 
     path {
-      fill: ${colors.text.dark};
+      fill: ${colors.control.brand.primary.border};
     }
   }
 `;

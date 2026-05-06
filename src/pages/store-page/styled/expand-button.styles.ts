@@ -1,3 +1,4 @@
+import { colors } from '@shared/colors.const.ts';
 import styled from 'styled-components';
 
 export const StyledExpandButton = styled.button`
@@ -9,7 +10,7 @@ export const StyledExpandButton = styled.button`
     transition: all 0.3s ease;
 
     path {
-      fill: rgba(0, 0, 0, 0.5);
+      fill: ${colors.content.tertiary};
     }
   }
 `;

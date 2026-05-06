@@ -1,3 +1,4 @@
+import { colors } from '@shared/colors.const.ts';
 import styled from 'styled-components';
 import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
 
@@ -10,15 +11,15 @@ export const StyledBuyButton = styled.button`
   height: 48px;
   padding: 0;
   margin: 0;
-  background-color: #ccf6ff;
-  border: 1px solid #80eaff;
+  background-color: ${colors.control.brand.secondary.bg};
+  border: 1px solid ${colors.control.brand.secondary.border};
   border-radius: 8px;
   cursor: pointer;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
 
-  color: #000;
+  color: ${colors.control.brand.text.secondary};
   font-size: 16px;
   font-weight: 400;
   font-family: ${aktivGroteskFontFamily};
@@ -27,15 +28,15 @@ export const StyledBuyButton = styled.button`
   text-decoration: none;
 
   &:hover {
-    background-color: #e5fbff;
+    background-color: ${colors.control.brand.secondary.bgHover};
   }
 
   &:active {
-    background-color: #b2f2ff;
+    background-color: ${colors.control.brand.secondary.bgHover};
   }
 
   &:focus-visible {
-    outline: 2px solid #80eaff;
+    outline: 2px solid ${colors.control.brand.secondary.borderHover};
     outline-offset: 2px;
   }
 

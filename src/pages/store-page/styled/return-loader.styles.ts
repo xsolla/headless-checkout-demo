@@ -10,7 +10,7 @@ export const StyledReturnLoader = styled.section`
   margin-bottom: 12px;
   padding: 48px;
   border-radius: 16px;
-  background: ${colors.bg.secondary};
+  background: ${colors.background.secondary};
   box-shadow: 0 1.92px 7.69px 0 rgba(0, 0, 0, 0.08);
 
   .status-image {

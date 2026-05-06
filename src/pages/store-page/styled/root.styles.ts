@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import { colors } from '@shared/colors.const.ts';
 import { tabletMin } from '@shared/media-break-points.const.ts';
 import { pilatFontFamily } from '@shared/fonts/fonts.const.ts';
+import darkBackgroundImage from '../../../assets/bg/dark.jpg';
 
 export const StyledRootDiv = styled.div`
   position: relative;
-  background-color: ${colors.bg.primary};
+  background-color: #fff;
   width: 100%;
   height: 100vh;
 `;
@@ -18,10 +19,10 @@ export const StyledContentContainer = styled.div`
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  color: ${colors.text.dark};
+  color: ${colors.content.primary};
   padding: 20px 16px 0 16px;
   padding-bottom: 40px;
-  background: #f3f3f2;
+  background: ${colors.background.secondary};
 
   @media (min-width: ${tabletMin}) {
     padding: 0;
@@ -34,6 +35,7 @@ export const StyledMain = styled.main`
   flex-direction: column;
   align-items: center;
   padding: 32px 0 0;
+  background: ${colors.background.secondary} url(${darkBackgroundImage}) center / cover no-repeat;
 
   @media (min-width: ${tabletMin}) {
     padding-top: 62px;
@@ -57,7 +59,7 @@ export const StoreTitle = styled.h1`
   font-weight: 700;
   line-height: 48px;
   text-align: left;
-  color: ${colors.text.dark};
+  color: ${colors.content.primary};
 
   @media (min-width: ${tabletMin}) {
     margin-bottom: 47px;
@@ -77,7 +79,7 @@ export const StyledSectionTitle = styled.h2`
   font-weight: 600;
   line-height: 34px;
   text-align: left;
-  color: ${colors.text.dark};
+  color: ${colors.content.primary};
 
   @media (min-width: ${tabletMin}) {
     margin-bottom: 20px;

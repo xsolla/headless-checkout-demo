@@ -16,7 +16,7 @@ export const StyledButtonLoader = styled.div`
     height: 24px;
     width: 24px;
     border-radius: 100%;
-    border: 2px solid ${colors.text.dark};
+    border: 2px solid ${colors.control.brand.primary.border};
     border-bottom-color: transparent;
     box-sizing: border-box;
     animation: loader 1s linear infinite;

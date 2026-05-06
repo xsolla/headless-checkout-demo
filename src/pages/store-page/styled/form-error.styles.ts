@@ -1,3 +1,4 @@
+import { colors } from '@shared/colors.const.ts';
 import styled from 'styled-components';
 import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
 
@@ -8,12 +9,12 @@ export const StyledFormErrorContainer = styled.div`
   text-align: center;
   padding: 12px;
   border-radius: 8px;
-  color: #e84f30;
-  background: #ffbfb2;
+  color: ${colors.content.alertPrimary};
+  background: ${colors.background.alertSecondary};
 
-  a,
+  /* a,
   a:hover,
   a:visited {
-    color: rgba(180, 30, 60, 1);
-  }
+    color: ${colors.control.alert.text.tertiary};
+  } */
 `;

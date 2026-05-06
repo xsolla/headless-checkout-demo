@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { colors } from '@shared/colors.const.ts';
 import { desktopMin, laptopMin } from '@shared/media-break-points.const.ts';
 import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
 
@@ -10,8 +9,8 @@ export const StyledShopButton = styled.div`
   align-items: center;
   height: 40px;
   padding: 0 15px;
-  background: ${colors.control.primary.bg};
-  border: 1px solid ${colors.control.primary.border};
+  background: #80eaff;
+  border: 1px solid #31cae8;
   border-radius: 4px;
   font-family: ${aktivGroteskFontFamily};
   font-size: 14px;
@@ -19,18 +18,18 @@ export const StyledShopButton = styled.div`
   letter-spacing: 1%;
   line-height: 100%;
   text-align: center;
-  color: ${colors.text.dark};
+  color: #000;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    background: ${colors.control.primary.hover.bg};
-    border-color: ${colors.control.primary.hover.border};
+    background: #55dcf6;
+    border-color: #22a8c3;
   }
 
   &:active {
-    background: ${colors.control.primary.border};
-    border-color: ${colors.control.primary.border};
+    background: #31cae8;
+    border-color: #31cae8;
   }
 
   @media (min-width: ${laptopMin}) {

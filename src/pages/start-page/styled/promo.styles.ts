@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { tabletMin, laptopMin, desktopMin } from '../../../shared/media-break-points.const.ts';
-import { colors } from '@shared/colors.const.ts';
 
 export const StyledPromo = styled.div`
   position: relative;
@@ -40,7 +39,7 @@ export const StyledPromoTitle = styled.h1`
   text-align: center;
   margin: 0;
   font-weight: 300;
-  color: ${colors.text.light};
+  color: #e8eced;
   line-height: 90%;
   font-size: 48px;
   letter-spacing: -4%;
@@ -68,7 +67,7 @@ export const StyledPromoBadge = styled.div`
   display: flex;
   align-self: flex-start;
   align-items: center;
-  background: ${colors.brand.mindaro.m11};
+  background: #f5ffd6;
 `;
 
 export const StyledBadgeLogo = styled.div`
@@ -77,7 +76,7 @@ export const StyledBadgeLogo = styled.div`
   justify-content: center;
   width: 25px;
   height: 25px;
-  background: ${colors.brand.mindaro.m9};
+  background: #d9ff66;
 
   @media (min-width: ${laptopMin}) {
     width: 30px;
@@ -112,7 +111,7 @@ export const StyledBadgeIconWrapper = styled.div`
 
 export const StyledBadgeText = styled.div`
   padding: 0 6px;
-  color: ${colors.text.dark};
+  color: #000;
   font-weight: 350;
   font-size: 18px;
   line-height: 100%;

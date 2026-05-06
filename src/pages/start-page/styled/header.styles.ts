@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { colors } from '@shared/colors.const.ts';
 import { desktopMin, laptopMin, tabletMin } from '../../../shared/media-break-points.const.ts';
 
 export const StyledHeader = styled.div`
@@ -9,7 +8,7 @@ export const StyledHeader = styled.div`
   flex-shrink: 0;
   width: 100%;
   height: 64px;
-  background: ${colors.bg.primary};
+  background: #fff;
   z-index: 2;
 
   @media (min-width: ${tabletMin}) {

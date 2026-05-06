@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 import rollupReplace from '@rollup/plugin-replace';
 import * as path from 'path';
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   test: {
     globals: true,
     environment: 'jsdom',
@@ -23,7 +23,21 @@ export default defineConfig({
         'process.env.NODE_ENV': JSON.stringify('development'),
       },
     }),
-    react(),
+    react({
+      babel: {
+        plugins: [
+          [
+            'babel-plugin-styled-components',
+            {
+              displayName: mode === 'development',
+              fileName: mode === 'development',
+              ssr: false,
+              pure: false,
+            },
+          ],
+        ],
+      },
+    }),
   ],
   resolve: {
     alias: {
@@ -31,4 +45,4 @@ export default defineConfig({
       '@shared': path.resolve(__dirname, './src/shared'),
     },
   },
-});
+}));

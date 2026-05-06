@@ -1,3 +1,4 @@
+import { colors } from '@shared/colors.const';
 import styled from 'styled-components';
 import { aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
 
@@ -10,8 +11,8 @@ export const StyledUserButton = styled.button`
   width: auto;
   padding: 0;
   margin: 0;
-  background-color: #f3f3f2;
-  border: 1px solid #31cae8;
+  background-color: ${colors.background.secondary};
+  border: 1px solid ${colors.content.brandSecondary};
   border-radius: 4px;
   cursor: pointer;
   outline: none;
@@ -21,15 +22,15 @@ export const StyledUserButton = styled.button`
   overflow: visible;
 
   &:hover {
-    background-color: rgba(34, 168, 195, 0.04);
+    background-color: ${colors.background.primary};
   }
 
   &:active {
-    background-color: rgba(34, 168, 195, 0.08);
+    background-color: ${colors.background.primary};
   }
 
   &:focus-visible {
-    outline: 2px solid rgba(34, 168, 195, 0.6);
+    outline: 2px solid ${colors.content.brandSecondary};
     outline-offset: 2px;
   }
 
@@ -51,7 +52,7 @@ export const StyledUserButton = styled.button`
   }
 
   .button__label {
-    color: rgb(34, 168, 195);
+    color: ${colors.content.brandPrimary};
     font-size: 16px;
     font-weight: 400;
     font-family: ${aktivGroteskFontFamily};

@@ -7,7 +7,7 @@ export const optionStyles = {
   alignItems: 'center',
   width: '100%',
   height: '100%',
-  color: colors.text.dark,
+  color: colors.content.inverse,
   fontFamily: aktivGroteskFontFamily,
   fontSize: '14px',
   fontWeight: '400',

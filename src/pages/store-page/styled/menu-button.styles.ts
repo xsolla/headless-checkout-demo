@@ -1,3 +1,4 @@
+import { colors } from '@shared/colors.const';
 import styled from 'styled-components';
 
 export const StyledMenuButton = styled.button`
@@ -9,7 +10,7 @@ export const StyledMenuButton = styled.button`
   height: 40px;
   padding: 0;
   margin: 0;
-  background-color: #f3f3f2;
+  background-color: ${colors.background.secondary};
   border: 1px solid #31cae8;
   border-radius: 4px;
   cursor: pointer;
