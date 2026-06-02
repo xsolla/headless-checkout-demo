@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import { colors } from '@shared/colors.const.ts';
 import { montserratFontFamily, aktivGroteskFontFamily } from '@shared/fonts/fonts.const.ts';
+import { innerLoader } from '@shared/styled/loader.styles.const';
 
 export const SDKControlsGlobalStyles = createGlobalStyle`
   psdk-text,
@@ -163,8 +164,27 @@ export const SDKControlsGlobalStyles = createGlobalStyle`
   }
 
   psdk-google-pay-button {
+    position: relative;
     display: block;
     height: 48px;
+
+    .google-button-loader {
+      display: none;
+    }
+
+    &.psdk-is-loading {
+      .google-button-loader {
+        ${innerLoader('#000')}
+
+        position: absolute;
+        inset: 0;
+        width: auto;
+        height: 40px;
+        margin: 2px;
+        background: #fff;
+        border-radius: 4px;
+      }
+    }
   }
 
   psdk-qr-code {

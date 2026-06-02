@@ -24,3 +24,28 @@ export const loaderStyles = `
       }
     }
 `;
+
+export const innerLoader = (color: string, size = '20px') => `
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  &::before {
+    content: '';
+    display: block;
+    width: ${size};
+    height: ${size};
+    border: 2px solid ${color};
+    border-bottom-color: transparent;
+    border-radius: 100%;
+    animation: inner-loader 1s linear infinite;
+  }
+
+  @keyframes inner-loader {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+`;

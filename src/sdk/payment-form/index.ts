@@ -12,6 +12,6 @@ export const setupAndAwaitFieldsLoading = (fields: Field[]): Promise<void> => {
   return payStationSdkApiClient.form.setupAndAwaitFieldsLoading(fields);
 };
 
-export const onNextAction = (callbackFn: (nextAction: NextAction) => void): void => {
+export const onNextAction = (callbackFn: (nextAction: NextAction) => void): (() => void) => {
   return payStationSdkApiClient.form.onNextAction(callbackFn);
 };
