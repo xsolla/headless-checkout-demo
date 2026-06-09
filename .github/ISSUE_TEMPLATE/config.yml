@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Xsolla Developer Portal
+    url: https://developers.xsolla.com
+    about: Integration guides, API reference, and account-specific help.
+  - name: Pay Station documentation
+    url: https://developers.xsolla.com/doc/pay-station/
+    about: Full documentation for the Pay Station product this demo uses.
