@@ -187,6 +187,29 @@ export const SDKControlsGlobalStyles = createGlobalStyle`
     }
   }
 
+  psdk-apple-pay {
+    display: block;
+
+    .apple-button-loader {
+      display: none;
+    }
+
+    &.psdk-is-loading {
+      position: relative;
+
+      .apple-button-loader {
+        ${innerLoader('#fff')}
+
+        position: absolute;
+        inset: 0;
+        width: auto;
+        height: 48px;
+        background: #000;
+        border-radius: 5px;
+      }
+    }
+  }
+
   psdk-qr-code {
     display: flex;
     min-height: 170px;

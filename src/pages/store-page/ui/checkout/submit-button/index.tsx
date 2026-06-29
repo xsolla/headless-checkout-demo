@@ -5,11 +5,12 @@ import { SvgIcon } from '../../../../../components/svg-icon/index.tsx';
 import Dron from '../../../../../assets/icons/brand-icon.svg';
 import { useApplePayQrStyles } from '../../../hooks/checkout/use-apple-pay-qr-styles.ts';
 
-export const SubmitButton: FC<{ text?: string; className?: string; isLoading?: boolean }> = ({
-  text,
-  className,
-  isLoading,
-}) => {
+export const SubmitButton: FC<{
+  text?: string;
+  className?: string;
+  isLoading?: boolean;
+  showBrandLogo?: boolean;
+}> = ({ text, className, isLoading, showBrandLogo = true }) => {
   const intl = useIntl();
 
   useApplePayQrStyles();
@@ -23,7 +24,7 @@ export const SubmitButton: FC<{ text?: string; className?: string; isLoading?: b
           intl.formatMessage({ id: 'store.page.checkout.pay-now', defaultMessage: 'Pay now' })
         }
       ></psdk-submit-button>
-      {!isLoading && (
+      {!isLoading && showBrandLogo && (
         <div className='brand-icon-wrapper'>
           <SvgIcon url={Dron} />
         </div>
