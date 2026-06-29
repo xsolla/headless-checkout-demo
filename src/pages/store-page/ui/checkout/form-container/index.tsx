@@ -1,11 +1,15 @@
+import { Field } from '@xsolla/pay-station-sdk/dist/core/form/field.interface';
+import { forwardRef } from 'react';
+import {
+  alipayId,
+  applePayId,
+  creditCardId,
+} from '../../../../../shared/payment/payment-methods-ids.const.ts';
 import { CreditCardForm } from '../credit-card-form';
 import { DefaultForm } from '../credit-card-form/default-form';
-import { forwardRef } from 'react';
-import { Field } from '@xsolla/pay-station-sdk/dist/core/form/field.interface';
-import { SubmitButton } from '../submit-button';
 import { FormError } from '../form-error';
-import { alipayId, creditCardId } from '../../../../../shared/payment/payment-methods-ids.const.ts';
 import { QrForm } from '../qr-form';
+import { SubmitButton } from '../submit-button';
 
 export const FormContainer = forwardRef<
   HTMLDivElement,
@@ -31,6 +35,7 @@ export const FormContainer = forwardRef<
     },
     ref,
   ) => {
+    const isApplePayForm = pid === applePayId;
     const isCreditCardForm = pid === creditCardId;
     const isQrCode = pid === alipayId && isSecondStep;
 
@@ -57,7 +62,11 @@ export const FormContainer = forwardRef<
           </div>
         )}
         {isSubmitButtonVisible && (
-          <SubmitButton text={submitButtonText} className={'submit-button'} />
+          <SubmitButton
+            text={submitButtonText}
+            className={'submit-button'}
+            showBrandLogo={!isApplePayForm}
+          />
         )}
       </>
     );
